@@ -1,0 +1,1667 @@
+apl-dyalog⎕← ⍬ ≡ 0⍴0
+apl-dyalog⎕← ⊢  1 2 3
+apl-dyalog⎕← ⌽⍣3 ⊢ 'Yyy'
+apl-dyalog⎕← 'L' ⊢ 'R'
+apl-dyalog⎕← 'true' ⊢ 'false'
+apl-dyalog⎕← ⊣  1 2 3
+apl-dyalog⎕← 'L' ⊣ 'R'
+apl-dyalog⎕← 'true' ⊣ 'false'
+apl-dyalog⎕← + 1.2 0j4 ¯5j¯6 'abc'
+apl-dyalog⎕←+1J2 ¯1J¯2
+apl-dyalog⎕← 1 2 3 4 + 10
+⎕← 1 2 3 + 2 ¯4 1
+apl-dyalog⎕← - 3.2 ¯7 0
+apl-dyalog⎕← 3 7 9 - 5
+⎕← 5 1 4 - 2 3 4
+apl-dyalog⎕← × 3.1 ¯2 0 3j4
+apl-dyalog⎕← 2 ¯3 4.5 × ¯3 ¯4 2
+⎕← 3 1 4 × 11
+apl-dyalog⎕← 1 0.5 0.25 0 × 0.5
+apl-dyalogA ← 2 3⍴10 20,30 40,50 60
+B ← 2 3⍴1 2,3 4,5 6
+⎕← A × B
+apl-dyalog⎕← 1 1 0 1 0 × 3 1 4 1 5
+apl-dyalog⎕← 15 1 2 7 ∨ 35 1 4 0
+apl-dyalog⎕← 15 1 2 7 ∧ 35 1 4 0
+apl-dyalog⎕← ⌈ 3.4 ¯3.4 3 1
+apl-dyalog⎕← 1.1 ¯2 ⌈ 8.1 ¯3.4
+apl-dyalog⎕← ⌊ 3.4 ¯3.4 3 1
+apl-dyalog⎕← 1.1 ¯2 ⌊ 8.1 ¯3.4
+apl-dyalog⎕← ⌽ 'trams'
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ⌽ mat
+apl-dyalog⎕← 3 ⌽ 'HatStand'
+⎕← ¯2 ⌽ 1 2 3 4 5 7
+apl-dyalogmat ← 2 3 4⍴⍳24
+⎕← ⊖mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ⊖mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 0 1 2 ¯1 ⊖ mat
+apl-dyalog⎕← ÷ 1 2 3
+apl-dyalog⎕← 1 2 3 ÷ 4 5 7
+⎕← 10 ÷ ¯2 0.5
+apl-dyalog⎕← | 2.3 ¯4 0 3j4
+apl-dyalog⎕← 2 10 ¯2.5 | 7 ¯13 8
+apl-dyalog⎕← ! 3 9 ¯0.11
+apl-dyalog⎕← 2 1 3 ! 3 10 ¯0.11
+apl-dyalog⎕← 1 1 0 1 0 ! 3 1 4 1 4
+apl-dyalog⍝ Click ⃝⏵ to geerate new numbers⎕← ? 6 6 6 6 6
+apl-dyalog⍝ Click ⃝⏵ to geerate new numbers⎕← ? 0 0
+apl-dyalog⍝ Click ⃝⏵ to geerate new numbers⎕← 13 ? 52
+apl-dyalog⎕← 1 2 3 < 4 2 ¯1
+⎕← 1 2 3 < 2
+apl-dyalog⎕← 0 1 0 1 < 0 0 1 1
+apl-dyalog⎕← 1 2 3 ≤ 4 2 ¯1
+⎕← 1 2 3 ≤ 2
+apl-dyalog⎕← 1 2 3 = 4 2 ¯1
+⎕← 'Banana' = 'a'
+⎕← 7 = '7'
+apl-dyalog⎕← 0 1 0 1 = 0 0 1 1
+apl-dyalog⎕← 1 2 3 ≥ 4 2 ¯1
+⎕← 1 2 3 ≥ 2
+apl-dyalog⎕← 1 2 3 > 4 2 ¯1
+⎕← 1 2 3 > 2
+apl-dyalog⎕← 0 1 0 1 > 0 0 1 1
+apl-dyalog⎕← 1 2 3 ≠ 4 2 ¯1
+⎕← 'Banana' ≠ 'a'
+⎕← 7 ≠ '7'
+apl-dyalog⎕← ≡ 7
+⎕← ≡ 'abc'
+⎕← ≡ (1 2)(3 4)
+⎕← ≡ (1 2)(3 4)5
+apl-dyalog⎕← 'b' 'e' 'x' ≡ 'bex'
+⎕← 1 ≡ 1 1
+apl-dyalogmat ← 2 3⍴⍳6
+⎕← ≢ mat
+⎕← ⍴ mat
+apl-dyalog⎕← ≢ 'a'
+⎕← ≢ 7 4 2
+⎕← ≢ 5 4 3⍴0
+⎕← ≢ (1 2)(3 4)
+apl-dyalog⎕← 'bex' ≢ 'b','e','x'
+⎕← 1 ≢ 1 1
+apl-dyalogmat ← 2 3 4⍴⍳24
+⎕← ↓ mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ↓ mat
+apl-dyalogmat ← 3 4⍴⍳24
+⎕← 1 ↓ mat
+apl-dyalogmat ← 3 4⍴⍳24
+⎕← 1 ¯2 ↓ mat
+apl-dyalog⎕← ↑ (6 4) 5 3
+apl-dyalog⎕← ↑ 'Hip' 'Hop'
+apl-dyalog⎕← 5 ↑ 3 1 4
+⎕← ¯5 ↑ 3 1 4
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ¯2 ↑ mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 2 ¯3 ↑ mat
+apl-dyalog⎕← ¯2 3 ↑ 7
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ⍴ mat
+⎕← ⍴⍴ mat
+⎕← ⍴ 'your boat'
+⎕← ⍴ 7
+⎕← ⍴⍴ 7
+apl-dyalog⎕← 2 3 4 ⍴ 1 2 3 4 5 6 7
+apl-dyalog⎕← * 0 1 2
+apl-dyalog⎕← 49 5 ¯4 * 0.5 2 0.5
+apl-dyalog⎕← ⍟ 1 2 3 2.7182818285
+apl-dyalog⎕← 2 10 ⍟ 32 1000
+apl-dyalog⎕← ○ 0 1 2
+apl-dyalog⎕← 1 ○ 0 1.5707963 3.1415927
+⎕← 2 ○ 0 1.5707963 3.1415927
+⎕← 3 ○ 0 1.5707963 3.1415927
+apl-dyalog⎕← ~ 0 1 0 1
+apl-dyalog⎕← 3 1 4 1 5 ~ 5 1
+⎕← 'aa' 'bb' 'cc' 'bb'  ~ 'bb' 'xx'
+apl-dyalog⎕← 2 ⍴ 3
+⎕← 2 ⍴⍨ 3
+apl-dyalog⎕← 'true' ⊣ 'false'
+⎕← 'true' ⊣⍨ 'false'
+apl-dyalog⎕← ⍴⍨ 3
+apl-dyalog⎕← ¯1 ⌽∘⍳¨ 3 4 5
+apl-dyalogneq=` 1∘+
+⎕=` neq23
+apl-dyalog⎕← ⌽∘⍳¨ 3 4 5
+apl-dyalog⎕← 3 ↑¨ 1 2 (3 4) 'V'
+apl-dyalog⎕← ⊃¨ 1 2 3 'ABC' (9 8 7+
+apl-dyalog⎕← 2 +/ 1 2 3 4 5
+apl-dyalog⎕← 3 1 ¯2 2 / 6 7 8 9
+apl-dyalog⎕← 1 0 1 0 1 / 'Heart'
+apl-dyalog⎕← +/ 1 2 3 4 5
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← +⌿ mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 1 0 2 ⌿ mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 1 0 1 ⌿ mat
+apl-dyalogcube ← 2 2 2⍴⍳8
+⎕← , cube
+apl-dyalog⎕← 1 2 3 , 4 5 6
+apl-dyalogcube ← 2 2⍴⍳4
+⎕← cube , 99
+apl-dyalogcube ← 2 2⍴⍳4
+⎕← cube , 0 99
+apl-dyaloghypercube ← 2 2 2 2⍴⍳16
+⎕← ⍪ oghyper
+apl-dyalogcube ← 2 2 2⍴⍳8
+⎕← ⍪ cube
+apl-dyalog⎕← ⍪ 2 3 4
+apl-dyalogmat ← 2 3⍴⍳6
+⎕← mat ⍪ mat
+apl-dyalogmat ← 2 3⍴⍳6
+⎕← mat ⍪ 0
+apl-dyalogmat ← 2 3⍴⍳6
+⎕← mat ⍪ 7 8 9
+apl-dyalog⎕← ⊃ 'Word'
+apl-dyalog⎕← 3 ⊃ 'Wrd'
+⎕← 2 ⊃ (1 2)(3 4 5)
+⎕← 2 1 ⊃ (1 2)(3 4 5)
+apl-dyalog⎕← 1(2 3)
+⎕← ⊂ 1(2 3)
+⎕← ⊂⊂ 1(2 3)
+apl-dyalog⎕← 'this'
+⎕← ⊆ 'this'
+⎕← 'this' 'that'
+⎕← ⊆ 'this' 'that'
+apl-dyalog⎕← 1 0 0 1 1 ⊆ 1 2 3 4 5
+⎕← 1 1 2 2 2 ⊆ ⍳5
+IXeSRC Person
+
+e← Person
+e← ⌷ Person
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 2 3 ⌷ mat
+⎕← 2 2 3 ⌷
+apl-dyalog⎕← ⍳ 10
+apl-dyalog⎕← ⍳ 2 3
+' ⍳ 'ACF'
+mat ← 3 2⍴⍳6
+⎕← mat ⍳ 5 6
+apl-dyalog⎕← 'Abe' 'Bob' 'Carl' ⍳ 'Bob' 'Abe'
+apl-dyalogmat← 2 3⍴⍳6
+⎕←∊ 0 mat (7 8) 9
+⎕←∊ 2 3⍴1 'abc'
+apl-dyalog⎕←'abc' 4 ∊ 4 'ab' 'abcd'
+at← 2 3⍴⍳6
+⎕←at ∊ 6 2 7 5
+apl-dyalog⎕← ⍸ 1 0 0 1 1
+bmat← 2 3⍴0 1 0 1 0 1
+⎕← ⍸ bmat
+apl-dyalogamat ← 3 3⍴0 1 0 0 0 1 1 1 0
+⎕← ⍸ amat
+apl-dyalog⎕← 'AEIOU' ⍸ 'DYALOG'J⎕← 2 4 6 ⍸ 1 2 3 4 5 6 7
+mat←3 2⍴⍳6J⎕← mat ⍸ 3 3J⎕← mat ⍸ 3 4
+apl-dyalog⎕← ∪ 'ab' 'ba' 'ab' 1 1 2
+mat←2 3⍴'flyshyfly'
+⎕← ∪ mat
+apl-dyalog⎕← 'ab' 'cde' 'fg' ∪ 'a'⎕
+apl-dyalog⎕← 22 'ab' 'fg' ∩ 'a' 'ab' 22
+apl-dyalog⎕← 1 +∘÷⍣= 1
+apl-dyalog⎕← 1∘+∘÷⍣= 1
+apl-dyalog⎕← ⍋ 2 5 1 3 4
+⎕← ⍋⍋ 2 5 1 3 4  ⍝ invert back again
+apl-dyalog⎕← ⍋ 'Banana'
+⎕← 'Banana'[⍋ 'Banana']
+⎕← 'an' ⍋ 'Banana'
+⎕← 'Banana'['an' ⍋ 'Banana']
+apl-dyalog⎕← ⍒ 33 11 44 66 22
+names ← 'Je' 'Sue' 'Sam'
+ages ← 34 22 25
+⎕← names[⍒ages]
+⎕← ⍒ 'ABC' ⎕NULL ⍬ ¯3j4 'A'
+apl-dyalog⎕← ⍒ 'Banana'
+⎕← 'Banana'[⍒ 'Banana']
+⎕← 'an' ⍒ 'Banana'
+⎕← 'Banana'['an' ⍒ 'Banana']
+apl-dyalog⎕← 3 ¯2 4 \ 7 8
+⎕← 1 0 1 0 1 \ 'Hat'
+apl-dyalog⎕← +\ 1 2 3 4 5
+mat← 3 4⍴1 3 6 10 5 11 18 26 9 19 30 42
+⎕← +\ mat
+apl-dyalogmat←3 4⍴⍳12
+⎕← 1 0 2 1 ⍀ mat
+apl-dyalogmat←3 4⍴⍳12
+⎕← +⍀ mat
+apl-dyalogmat←2 3 4⍴⍳24
+⎕← ⍉ mat
+apl-dyalogmat←2 3⍴⍳6
+⎕← ⍉ mat
+apl-dyalogmat ← 2 3 4⍴⍳24
+⎕← 1 3 2 ⍉ mat
+apl-dyalog⎕← 'Banana' {⍺ ⍵}⌸ 3 1 4 1 5 9
+⎕← ---
+⎕← 'Banana' {⍺,+/⍵}⌸ 3 1 4 1 5 9
+⎕← ---
+⎕← 'Banana' {⍺ ⍵}⌸ 1 2 3 4 5 7
+apl-dyalog⎕← {⍺ ⍵}⌸ 'Banana'
+apl-dyalog⎕← 'ana' ⍷ 'Banana'
+apl-dyalog⎕← 1 2 3 +.× 4 5 6
+⎕← 3 ∧.= 3 3 3 3
+mat ← 2 2⍴⍳4
+⎕← mat +.× mat
+apl-dyalog⎕← 2 ⊥ 1 1 0 1         ⍝ binary decode
+⎕← 24 60 60 ⊥ 2 46 40  ⍝ mixed radix: conversion of hours, minutes and seconds to seconds
+apl-dyalog⎕← 3 ⊥ 1 0 6  ⍝ f(3) for f(x) = 1x² + 0x¹ + 6x⁰ = x² + 6
+apl-dyalog⎕← 2 2 2 2 ⊤ 5 7 12  ⍝ binary encode
+⎕← 24 60 60 ⊤ 10000  ⍝ mixed radix: encode of 10000 seconds to hours, minutes and seconds
+apl-dyalogmat ← 2 2⍴⍳4
+⎕← ⌹ mat
+apl-dyalogmat ← 3 2⍴1 2 0 1 2 4
+e← ⌹ mat
+apl-dyalogmat ← 2 2⍴⍳4
+⎕← 5 6 ⌹ mat
+apl-dyalogmat ← 2 2⍴⍳4
+⎕← mat ⌹ mat
+apl-dyalog'ns' ⎕NS ⍬
+ns.a ← 2
+ns.b ← 3
+⎕← 'ns' ⍎ 'a+b'
+apl-dyalog⎕← ⌽ 12 34
+⎕← ⌽ ⍕ 12 34
+apl-dyalog⎕← 739⌶ 0  ⍝ "Temporary Directoru
+apl-dyalogvar←40
+var+←2
+⎕←var
+apl-dyalogvar←42
+⎕←var
+act←{             ⍝ Factorial ⍵.
+    ⍷≤1: 1         ⍝ small ⍵: finished
+    ⍷×∇ ⍷-1        ⍝ otherwise: recurse
+}
+⎕←Fact 5
+oo
+  ⎕←'F1'
+  →
+  ⎕←'F2'
+∇
+∇ r←Goo
+  ⎕←'G1'
+  Foo
+  ⎕←'G2'
+∇
+Goo
+oo
+  ⎕←'F1'
+  →0
+  ⎕←'F2'
+∇
+∇ r←Goo
+  ⎕←'G1'
+  Foo
+  ⎕←'G2'
+∇
+Goo
+oo
+  ⎕←'F1'
+  →SKIP
+  ⎕←'F2'
+ SKIP:
+  ⎕←'F3'
+∇
+Foo
+apl-dyalog⎕←2 {⍵+1} 5
+apl-dyalog⎕←2 {⍺+1} 5
+apl-dyalog⎕←3 -⍨ 10×2
+apl-dyalog⎕← 1 2 3 ∘.× 4 5 6 7
+apl-dyalog⎕← var×⍳4 ⊣ var←10
+apl-dyalog_Pow←{               ⍝ pwer operator: apply ⍵⍵ times
+    ⍵⍵=0:⍵           ⍝ ⍵⍵ is 0: finished
+    ⍺⍺ ∇∇(⍵⍵-1)⍺⍺ ⍵  ⍝ otherwise: recurse
+}
+⎕← ({1+⍵} _Pow 3) 5
+apl-dyalog⎕← ↑ 'Tic' 'Tac' 'Toe'
+apl-dyalog⎕←3 +{⍺ ⍵⍵ ⍵}× 4
+apl-dyalog⎕←3 +{⍺ ⍺⍺ ⍵} 4
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ⌽[1] mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 0 1 2 ¯1 ⌽[1] mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← ↓[1] mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 1 ↓[2] mat
+apl-dyalog⎕← ↑[0.5] 'Hip' 'Hp'
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 1 ↑[2] mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← 2 0 1 /[1] mat
+apl-dyalogmat ← 3 4⍴⍳12
+⎕← +/[1] mat
+oo'
+apl-dyalogcube ← 2 2 2⍴⍳8
+⎕← ,[2 3] cube
+apl-dyalog⎕← 1 2 3 ,[0.5] 4 5 7
+apl-dyalogcube ← 2 2 2⍴⍳8
+⎕← ⊂[2 3] cube
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← 1 0 1 ⊂[1] mat
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← 1 1 2 ⊆[1] mat
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← 2 ⌷[2] mat
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← 1 0 1 1 \[1] mat
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← +\[1] mat
+apl-dyalogvar←20 30 40
+var[1 1 3]+←2
+⎕←0
+v
+apl-dyalogprev ← -∘1
+⎕← prev 23
+sqrt ← *∘0.5
+⎕← sqrt sqrt 16 81
+apl-dyalognmat ← 3 4⍴⍳12            ⍝ numeric matrix
+⎕← 10 20 30 (+⍤0 1) nmat  ⍝ scalars plus vectors
+apl-dyalogcube ← 2 2 3⍵⍳12
+⎕← (,⍤2) cube
+cmat ← 2 3⍵'abczxy'  ⍝ character matrix
+⎕← (⍋⍤1) cmat        ⍝ grade-up by ro
+apl-dyalog⎕←'XYZ'@{0 1 1 0 0 1} 'abcdef'
+apl-dyalog⎕← 10 (×@2 4) 1 2 3 4 5
+apl-dyalog⎕← 10 (×@(≤∘3)) 3 1 4 1 5
+apl-dyalog⎕← (0@2 4) 1 2 3 4 5
+apl-dyalogmat ← 3 2⍴⍳6
+⎕← (8 9@2) mat
+apl-dyalog⎕← (÷@2 4) 1 2 3 4 5
+apl-dyalog⎕← ⌽@(2∘|) 1 2 3 4 5  ⍝ Reversal of sub-array 1 3 5
+apl-dyalog⎕← 1 (+⍣3) 5
+apl-dyalog⎕← (1∘/⍣3) 5
+apl-dyalog'disp'⎕CY'dfns'
+mat ← 4 4⍴⍳16
+⎕← disp ({⊂⍵⌺3 3) mat
+⎕← ({+/,⍵⌺3 3) mat
+apl-dyalog⎕←'APL'(16 27 31) (8⌶) 'PA'(27 16)  ⍝ "Inverted Table Index Of"
+apl-dyalog⎕← 1 ⎕JSON 1 2 (3 4)
+⎕← 1 (⎕JSON ⍠'Compact'0) 1 2 (3 4)
+apl-dyalog⎕← ('a' ⎕R 'x' ⍠ 'IC' 1) 'ABC'  ⍝ 'a' replaced with 'x' Ignorng Case
+apl-dyalogvar←20 30 40
+(2 0 1/var)+←2
+⎕←var
+apl-dyalogvar←20 30 40
+plus←+
+{var[1 1 3]plus∘⊢←2}⍬
+⎕←var
+apl-dyalogvar←20 30 40
+plus←+
+{(2 0 1/var)plus∘⊢←2}⍬
+⎕←var
+apl-dyalog⎕← ⎕CMD 'dir /'
+apl-dyalog⎕← ⎕A
+apl-dyalog⎕IO ← 0
+a ← 1 2 3
+b ← 'abc'
+⎕← ⎕IO
+⎕← a b
+⎕CLEAR
+⎕IO
+a b
+oo
+  :Trap 0
+      ÷0
+  :EndTrap
+  r←⎕EN
+∇
+⎕← Foo
+apl-dyalog⎕TRAP←0'E' '⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EEN EEN EEN EEN EEN EEN EE.(EN EM ⎕DMX.(EN EEN EEN EEN EEN EEN EEN EE.(EN EM ⎕DMX.(EN EEN EEN EEN EEN EEN EEN EE.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM ⎕DMX.(EN EM@
+GREATE 0
+'fileB' ⎕FGREATE 0
+⎕← ⎕FLIB '.'
+F
+this won't error
+F 123
+this wo't error
+apl-dyalog∇ r←foo
+  r←goo
+∇
+∇ r←goo
+  r←⎕SI
+∇foo
+o
+  r←var
+∇
+Sum←+⌿
+Swap←{⍵ ⍺⍺ ⍺}
+
+⎕← ⎕NC '42' 'nothing' 'var' 'Fo' 'Sum' 'Swap'
+apl-dyalog⎕RL←314
+⎕←?10 10 10
+⎕RL←314
+⎕←?10 10 10
+⎕RL←⍬ 1
+⎕←?10 10 10
+⎕RL←⍬ 1
+⎕←?10 10 10
+apl-dyalog⎕TRAP ← (11 'E' '''Bad argument(s)''')(0 'E' '''Bad code!''')
+÷0
+1 2 3 + 4 5
+oo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕NR 'Foo'
+apl-dyalog⎕← ⎕AI
+⎕DL 0.2  ⍝ waits for 0.2 seconds
+⎕← ⎕AI
+⌻⍣100 ?100 100⍴0  ⍝ epensive computation
+⎕← ⎕AI
+oo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕CR 'Foo'
+apl-dyalog⎕← ⎕CSV ⊂'here,42,there' 'this,1966,that'
+apl-dyalog'abc' ⎕NQUT 'file.txt'
+tn ← 'file.txt' ⎕NTIE 0
+⎕← ⎕NSIZE tn
+apl-dyalogvar1 ← 1 2 3 4 5 6 7 8
+var2 ← 1 2 3 4 5 6 7 8 9
+⎕← ⎕SIZE 'var1' 'var2'
+apl-dyalog⎕← ⎕SH 'ls O/
+apl-dyalog:Class Animal
+:EndClass
+ 
+:Class Bird: Animal
+:EndClass
+ 
+:Class Parrot: Bird
+:EndClassPolly ← ⎕NEW Parrot
+⎕← ⎕CLASS Polly
+apl-dyalog:Namespace yy
+     ∇ r←foo
+       r←zz.goo
+     ∇
+:EndNamespace
+:Namespace zz
+     ∇ r←goo
+       r←⎕XSI
+     ∇
+:EndNamespace)NS xx
+)CS xx
+##Nyy.foo
+apl-dyalog∇ Options;opts;inp
+ ⍝ requests and executes an option
+  opts ←'input' 'report' 'end'
+ IN:inp←Ask'option:'
+  →EX⍴⍨(⊂inp)∊opts
+  ⎕←'invalid option. select from',n
+  op →IN
+ EX:→EX+n
+  ⍳⊂inp
+  inputop →IN
+  reportop →IN
+ END:
+Ng sgf oo  eN;
+ EX:
+apl-dyalog⍝ Click ⃝⏵ to refresh⎕← ⎕TS
+apl-dyalog⎕← ⎕NEXISTS 'file.txt'
+'abc' ⎕NPUT 'file.txt'
+⎕← ⎕NEXISTS 'file.txt'
+AVAIL
+oo←{
+  ⍺+⍵
+}
+⎕←⎕OR 'Foo'
+⎕←≢⎕OR 'Foo'
+⎕←≡⎕OR 'Foo'
+apl-dyalog∇ r←foo
+  r←⍎'goo'
+∇
+∇ r←goo
+  r←⎕STACK
+∇foo
+apl-dyalog∇ r←foo;foo
+  foo←{⍎⍵}
+  r←foo 'go'
+∇
+∇ r←goo;foo
+  r←⎕STATE 'fo'
+∇fo
+oo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕VR 'Foo'
+apl-dyalog⎕← 0 ⎕JSON '[1,2,"many"]'
+apl-dyalog⎕← 1 ⎕JSON 1 2 'many'
+apl-dyalog⎕← 11 ⎕DR 42
+⎕← 80 ⎕DR 42
+⎕← 83 ⎕DR 0 0 1 0 1 0 1 0
+⎕← 80 ⎕DR 0 0 1 0 1 0 1 0
+apl-dyalog⎕← ⎕THIS
+)NS n
+)CS n
+⎕← ⎕THIS
+⎕← ⎕SE.⎕THIS
+apl-dyalog⎕← ⎕TID
+⎕← {⎕TID}&⍬
+⎕← {⎕TID}&⍬
+⎕← ⎕TID
+apl-dyalog⎕← ⎕TCNUMS 0
+⎕DL&0.1
+⎕← ⎕TCNUMS 0
+⎕DL&0.3
+⎕← ⎕TCNUMS 0
+⎕DL 0.2
+⎕← ⎕TCNUMS 0
+⎕DL 0.2
+⎕← ⎕TCNUMS 0
+apl-dyalogt ← ⎕DL&2
+⎕← ⎕TS
+⎕TSYNC t
+⎕← ⎕TS
+apl-dyalog⎕← ⎕DR 1 0 1 1 0
+⎕← ⎕DR 12
+⎕← ⎕DR 12345
+⎕← ⎕DR 12345678
+⎕← ⎕DR 12.344
+⎕← ⎕DR 1E2345
+⎕← ⎕DR 12J34
+⎕← ⎕DR 'abc'
+⎕← ⎕DR '⍺*⎕'
+⎕← ⎕DR '𐀁𐀂𐀃'
+⎕← ⎕DR 123 'abc'
+apl-dyalog⎕← ⎕AN
+O⍠1) '/*'
+O㍠1) '*' '/*'
+apl-dyalog⎕← ⍋⊃,/↑¨ 11 0 (⎕NIZQU5-9--M9/
+apl-dyalog⎕← ⍋⊃,/↑¨ 12 0 (⎕NIZQU5-9--M9/
+O 'hw.txt'
+O tn
+GREATE 0
+'file2' ⎕FGREATE 0
+⎕← ⎕FNAMES
+apl-dyalog⎕← ⎕TNAME
+⎕TNAME ← 'TIO'J⎕← ⎕TNAME
+CREATE 1
+(3 3⍴28 2105 16385 0 2073 16385 31 ¯1 0) ⎕FSTAC 1
+⎕←⎕FRDAC 1
+I '2 -2 ¯2'
+⎕← ',' ⎕VFI '3.9,2.4,,76,'
+apl-dyalog'abc' ⎕NQUT 'file.txt'
+tn ← 'file.txt' ⎕NTIE 0
+⎕←⎕NREAD tn 80 ¯1
+⎕←⎕NREAD tn 83 ¯1 0
+apl-dyalog'#.t1' ⎕WC 'Timer'
+'#.t2' ⎕WC 'Timer'
+⎕← ⎕WN '#'
+CREATE 0
+⎕←⎕FSIZE tn
+
+123 'abc' ⎕FAPPEND tn
+123 ⎕FAPPEND tn
+'abc' ⎕FAPPEND tn
+
+⎕←⎕FSIZE tn
+UNTIE 'file.dcf' ⎕FCREATE 0
+⎕← ⎕FCHK 'file.dcf'
+apl-dyalog⎕CY'dfns'
+⎕← 'gl' ⎕NL 3 4
+apl-dyalog∇ foo
+  first:
+  two←2
+  third:
+  ⎕←⎕NL ¯1J∇foo
+apl-dyalog∇ foo
+  first:
+  two←2
+  third:
+  ⎕←⎕NL ¯2J∇foo
+apl-dyalog⎕CY'dfns'
+⎕← 'gl' ⎕NL!¯3
+apl-dyalog⎕CY'dfns'
+⎕← 'gl' ⎕NL!¯4
+apl-dyalog⎕CY'dfns'
+⎕← ⎕NL ¯9
+CREATE 0
+⎕←⎕FHIST tn
+CREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FRDCI tn 1
+CREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FREAD tn 1
+CREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FSIZE tn
+CREATE 0
+⎕← 'U' ⎕FPROPS tn
+-8' ⎕UCS '⍺*⎕'
+apl-dyalog⎕← ⎕XML '<rot attr1="val1" attr2="val2">intro<body><one/></body>content<Orot>'
+⎕← ⎕XML 2 3⍴0 'rot' '' 1 '' 'intro'
+apl-dyalog'myfile' ⎕NCREATE ¿1
+¿1 ⎕ARBOUT 97 98 99
+⎕←⊃⎕NGET 'myfile'
+apl-dyalog{0:: ↑⎕DM ⋄ 1/⍵}'abc'
+apl-dyalog'abc' ⎕NQUT 'file.txt'
+'new.txt' ⎕NMOVE 'file.txt'
+⎕← ⊃⎕NGET 'new.txt'
+⎕← ⎕NEXISTS 'file.txt'
+apl-dyalog'abc' ⎕NQUT 'file.txt'
+'new.txt' ⎕NCOPY 'file.txt'
+⎕← ⊃⎕NGET 'new.txt'
+⎕← ⎕NEXISTS 'file.txt'
+apl-dyalog⎕← ⎕TS
+⎕DL 1.5
+⎕← ⎕T
+apl-dyalogtn ← 'file.txt' ⎕NCREATE 0
+'abc' ⎕NAPPEND tn
+65 66 67 ⎕NAPPEND tn
+⎕← ⊃ ⎕NGET 'file.txt'
+apl-dyalog⎕←⎕SD
+apl-dyalogvar←42
+∇ fo
+  e←eNC'var'
+  eSHADOW'var' 'local'
+  e←eNC'var'
+  local←'secret'
+∇fo
+eNC'local'
+apl-dyalogtnA ← 'fileA.txt' ⎕NCREATE 0
+tnB ← 'fileB.txt' ⎕NCREATE 0
+tnC ← 'fileC.txt' ⎕NCREATE 0
+⎕← ⎕NNUMS
+⎕NUNTIE tnB
+⎕← ⎕NNUMS
+⎕NUNTIE tnA tnB
+⎕← ⎕NNUMS
+CREATE 0
+tnB ← 'fileB.dcf' ⎕FCREATE 0
+tnC ← 'fileC.dcf' ⎕FCREATE 0
+⎕← ⎕FNUMS
+⎕FUNTIE tnB
+⎕← ⎕FNUMS
+⎕FUNTIE tnA tnB
+⎕← ⎕FNUMS
+O㍠1)'*.t~
+Kp1)'*'
+tn ← '.code.tio' ⎕NTIE 0
+'.code.tio' ⎕NERASE tn
+⎕← (⎕NINFKp1)'*'
+Kp1)'*'
+tn ← '.code.tio' ⎕NTIE 0
+'.edoc.tio' ⎕NRENAME tn
+⎕← (⎕NINFKp1)'*'
+ibonacci←{     ⍝ Tail-recursive Fibonacci.
+    ⍺←0 1
+    ⍵=0:⍭⍴⍺
+    (1↓⍺,+/⍺)∇ ⍵-1
+}⎕PROFILE 'start'
+Fibonacci 7
+Fibonacci 42
+⎕PROFILE 'stop'
+⎕← ⎕PROFILE 'data'
+apl-dyalog⎕IO ← 0
+⎕← ⍳ 4
+⎕← 'hello'[2]
+
+⎕IO ← 1
+⎕← ⍳ 4
+⎕← 'hello'[2]
+apl-dyalog⎕DIV ← 1
+⎕← 0 ÷ 0
+⎕← 7 ÷ 0
+
+⎕DIV ← 0
+⎕← 0 ÷ 0
+⎕← 7 ÷ 0
+R ← 1287
+100*200
+
+⎕FR ← 645
+100*200
+apl-dyalog⎕← ⎕SE.⎕NL ¯2.7
+n x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂⎕U3.1
+n x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂⎕U3.2
+n x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂⎕U3.3
+apl-dyalog⎕← ⎕SE.⎕NL ¯3.7
+TradOp) x
+  r←F F x
+∇
+Dop←{⍺⍺ ⍺⍺ ⍵}
+DervOp←⍣2
+
+⎕NL ¯4.1
+TradOp) x
+  r←F F x
+∇
+Dop←{⍺⍺ ⍺⍺ ⍵}
+DervOp←⍣2
+
+⎕NL ¯4.2
+TradOp) x
+  r←F F x
+∇
+Dop←{⍺⍺ ⍺⍺ ⍵}
+DervOp←⍣2
+
+⎕NL ¯4.3
+apl-dyalog⎕← ⎕SE.⎕NL ¯8.7
+apl-dyalog'abc123' ⎕NCREATE 0
+⎕← (⎕NEXISTS⍠1) 'abc*' 'def*'
+apl-dyalog⎕← (⎕CSV⍠1) ⊂'NAME,SUBJECT' 'something,about it' 'other,about that'
+apl-dyalog⎕← (⎕CSV⍠2) ⊂'NAME,SUBJECT' 'something,about it' 'other,about that'
+apl-dyalog⎕← ⎕SE ⎕WG 'Type' 'CurSpace'
+⎕← # ⎕WG 'APLVersion'
+apl-dyalog⎕MM←0
+⎕← ∊ 10(20 30)
+⎕MM←1
+⎕← ∊ 10(20 30)
+⎕← ≡ 10(20 30)
+⎕MM←2
+⎕← ≡ 10(20 30)
+⎕← 1 0 ⊂ 10(20 30)
+⎕MM←3
+⎕← 1 0 ⊂ 10(20 30)
+apl-dyalog⎕PP ← 10
+⎕← 22÷7
+⎕PP ← 13
+⎕← 22÷7
+⎕PP ← 3
+⎕← 22÷7
+apl-dyalog⎕← ⍳25
+⎕PW ← 42
+⎕← ⍳25
+apl-dyalogtext ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('\w+' ⎕S 1) text         ⍝ word lengths
+⎕← ('[aeiu]+' ⎕S '&') text  ⍝ vowels
+⎕← '\w+' ⎕S {⌽⍵.Match} text  ⍝ reversed words
+O 'array'  ⍝ file size
+var←⍳20 ⋄ 2 ⎕NINFO 'array'
+var←⍳30 ⋄ 2 ⎕NINFO 'array'
+apl-dyalog'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⎕NGET 'myfile.txt'
+apl-dyalog'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⊃⊃ ⎕NGET 'myfile.txt' 1
+CREATE 0
+'Hello' ⎕FAPPEND tn
+'World' ⎕FAPPEND tn
+⎕←⎕FSIZE tn
+⎕FDROP tn ¯1
+⎕←⎕FSIZE tn
+oo
+  ⎕←'before'
+  ⎕←'middle'
+  ⎕←'beyond'
+∇
+3 ⎕STOP 'Foo'
+Foo
+apl-dyalog∇ (c d)←DSL skip;a;b
+  a←2×3+4
+  b←(2 7⍴'abcdef')a2→NEXT×⍳skip2'skipped line'
+ NEXT:c←'one' ⋄ d←'two'
+∇
+0 1 2 7 4 5 ⎕TRACE 'DSL'
+DSL 1
+apl-dyalog'abc'⎕NPUT'file.txt'
+tn ← 'file.txt'⎕NTIE 0
+⎕← ⎕NSIZE tn
+CREATE 0
+tnB ← 'fileB' ⎕FCOPY tnA
+⎕← (⎕NINFO⍠1)'*.dcf'
+GREATE 0
+'fileB' ⎕FGREATE 0
+⎕← (⎕NINFO⍠1)'*.dcf'
+CREATE 0
+tnB ← 'fileB' ⎕FCREATE 0
+⎕← (⎕NINFKp1)'*.dcf'
+'fileB' ⎕FERASE tnB
+⎕← (⎕NINFKp1)'*.dcf'
+CREATE 0
+'fileB' ⎕FRENAME tn
+⎕← (⎕NINFKp1)'*.dcf'
+GREATE 0
+⎕FUNTIE 'fileB' ⎕FGREATE 0
+⎕← ⎕FNUMS
+tn← 'fileB' ⎕FTIE 0
+⎕← ⎕FNUMS
+CREATE 0
+(1000⍴1.1)⎕FAPPEND tn
+(1000⍴1.2)⎕FAPPEND tn
+⎕FDROP tn 1
+⎕← ⎕FSIZE 1
+⎕FRESIZE tn
+⎕← ⎕FSIZE 1
+oo←{⍵ ⍵}
+⎕SE.Goo←{⍵ ⍵ ⍵}
+1 0⎕SE.⎕EXPORT'Foo' 'Goo'
+⎕PATH←'⎕SE'
+⎕←Foo 42
+⎕←Goo 42
+apl-dyalog⎕← (↑⍧≡0∘⎕JSON) '[[[1,2,3],[4,5,6]],["abc","def"]]'
+apl-dyalog⍝              11111
+⍝     12345678901234
+n ← 1.00000000000001
+m ← 1.00000000001
+⎕← ⎕CT
+⎕← n m=1
+⎕CT ← 0
+⎕← n m=1
+⎕CT ← 1E¯10
+⎕← n m=1
+R ← 1287
+⎕← n=1
+X 'r←Foo x' 'r←x x'
+⎕← Foo 43
+X 'r←Foo x' 'r←x x'
+⎕← ⎕FX 'r←Goo x;' 'r←x x'
+⎕← ⎕NL ¯7
+apl-dyalog⎕← ⎕DL&1
+⎕← ⎕DL&1
+⎕← ⎕TNUMS
+⎕TKILL 1
+⎕← ⎕TNUMS
+oo x
+  r←x x
+∇
+⎕← ≢⎕NR 'Foo'
+⎕LOCK'Foo'
+⎕← ≢⎕NR 'Foo'
+⎕← Foo 42
+apl-dyalogc←42
+'a'⎕NS'b'
+⎕← a.b
+apl-dyaloga←⎕NS⍬
+a.b←42
+'c'⎕NS a
+a.b←100
+⎕← c.b
+apl-dyalog⎕← 0(⎕JSON⍠'M')'[1,2,3,"abc"]'
+apl-dyalog⎕← 1(⎕JSON⍠'M')2 4⍴0 '' ⍬ 2 1 '' 'abc' 4
+apl-dyalogtext ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('[aeiou]' '.' ⎕R '\u&' '\l&'⍠1) text  ⍝ uppercase all vowels and lowercase consonants
+apl-dyalogtext ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('[aeiou]+' ⎕S '&'⍠1) text  ⍝ all vowels
+apl-dyalog'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⎕NGET 'myfile.txt'
+(⊂'Hello' 'World') ⎕NPUT 'myfile.txt' 1
+⎕← ⎕NGET 'myfile.txt'
+'Bye' ⎕NPUT 'myfile.txt' 2
+⎕← ⎕NGET 'myfile.txt'
+apl-dyalog⎕← +⍨ 5
+⎕← +⍨ ⍳10
+⎕← +⍨ ¯1 ¯2.5 0 2.5 4.3j1.1
+⎕← +⍨ (3 3⍴⍳9)
+apl-dyalog⎕← ×⍨ 5
+⎕← ×⍨⍳10
+⎕← ×⍨¯1¯2.5 0 2.5 4.3j1.1
+⎕← ×⍨(3 3⍳9)
+apl-dyalog⎕← 3 3⍴⍳9
+⎕←''
+⎕← =⍨ 3 3⍴⍳9
+apl-dyalog⎕← 3 3⍴⍳9
+⎕←''
+⎕← ≠⍨ 3 3⍴⍳9
+apl-dyalog⎕← 1∘+ 10 20 30
+⎕← 1∘+ ¯ 1¯2 1¯30
+⎕←     (3 3⍴4)
+⎕← 1∘+ (3 3⍴4)
+apl-dyalog⎕← 0∘< 1 2 3 4
+⎕← 0∘< ¯2 ¯1 0 1 2
+apl-dyalog⎕← 0∘≤ 1 2 3 4
+⎕← 0∘≤ ¯2 ¯1 0 0
+apl-dyalog⎕← 0∘= 1 2 3 4
+⎕← 0∘= ¯2 ¯1 0 1 2
+apl-dyalog⎕← 0∘≥ 1 2 3 4
+⎕← 0∘≥ ¯2 ¯1 0 0
+apl-dyalog⎕← 0∘> 1 2 3 4
+⎕← 0∘> ¯2 ¯1 0 1 2
+apl-dyalog⎕← 0∘≠ 1 2 3 4
+⎕← 0∘≠ ¯2 ¯1 0 0
+apl-dyalog⎕← 10∘* 1 2 3 4
+⎕← 10∘* ¯1 ¯2 ¯3 ¯4
+⎕← 10∘* 1.32 1.54 1.75 1.99
+apl-dyalog⎕← 10∘⍟ 1 10 100 1000 10000 1e5 1e6
+⎕← 10∘⍟ 132 15454 17501 199999
+apl-dyalog⎕← ⊢/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← ⊢/ 3 3⍴⍳9
+apl-dyalog⎕← ⊣/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← ⊣/ 3 3⍴⍳9
+apl-dyalog⎕← +/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← +/ 3 3⍴⍳9
+apl-dyalog⎕← 2 +/ 2 2 3 2 2
+⎕←''
+⎕←      5 7⍴⍳9
+⎕←''
+⎕← 3 +/ 5 7⍴⍳9
+apl-dyalog⎕← -/ 5 10 15 20 25 30
+apl-dyalog⎕← ×/ 1 2 3 4 5
+⎕←''
+⎕←    5 7⍴⍳25
+⎕←''
+⎕← ×/ 5 7⍴⍳25
+apl-dyalog⎕← ×/ 5 10
+apl-dyalog⎕← ×/ 10 10 2
+apl-dyalog⎕← ∨/ 0 0 0 0 0
+⎕← ∨/ 0 0 0 1 0 0 0
+⎕← ∨/ 1/ 1
+apl-dyalog⎕← ∧/ 0 0 0 0 0
+⎕← ∧/ 0 0 0 1 0 0 0
+⎕← ∧/ 1/ 1
+apl-dyalog⎕← ⌈/ 58 15 22 80 26 11
+⎕← ⌈/ 0 0 0 1 0 0 0
+⎕←    3 3⍴ 2 1 3 6 5 4 7 9 8
+⎕←''
+⎕← ⌈/ 3 3⍴ 2 1 3 6 5 4 7 9 8
+apl-dyalog⎕← ⌊/ 58 15 22 80 26 11
+⎕← ⌊/ 0 0 0 1 0 0 0
+⎕←    3 3⍴ 2 1 3 6 5 4 7 9 8
+⎕←''
+⎕← ⌊/ 3 3⍴ 2 1 3 6 5 4 7 9 8
+apl-dyalog⎕← ÷/ 1 2
+⎕← ÷/ 1 2 3
+⎕← ÷/ 1 2 3 4
+⎕← ÷/ 1 2 3 4 5
+apl-dyalog⎕← ≠/1J⎕← ≠/1 1J⎕← ≠/1 1 1J⎕← ≠/1 0 0 1 0 3
+apl-dyalog⎕← ⍴     27
+⎕← ⍴ 1∘/ 27
+⎕← ⍴     27 30 35
+⎕← ⍴ 1∘/ 27 30 35
+apl-dyalog⎕←    3 7⍴⍳9
+⎕←''
+⎕← ⊢⌿←    3
+apl-dyalog⎕←    3 7⍴⍳9
+⎕←''
+⎕← ⊣⌿←    3
+apl-dyalog⎕←    3 7⍴1 2 3
+⎕←''
+⎕← +⌿ 3 7⍴1 2 3
+apl-dyalog⎕←    5 7⍴3×⍳5
+⎕←''
+⎕← -⌿ 5 7⍴3×⍳5
+apl-dyalog⎕←    4 7⍴⍳12
+⎕←''
+⎕← ×⌿←    4 7
+apl-dyalog⎕← ⍴     4 3⍴⍳12
+⎕←''
+⎕← ⍴ 0∘⌿ 4 3⍴⍳12
+apl-dyalog⎕← 1∘, 5 6 7 8
+⎕←''
+⎕← 1∘, 3 3⍴⍳9
+apl-dyalog⎕← 1∘⍪ 2 3⍴8
+apl-dyalog⎕← ⍷⍨ 3 3 3 5 8 8 21
+apl-dyalog⎕← 0∘∊ 1 1 1 1
+⎕← 0∘∊ 1 1 0 1
+apl-dyalog⎕← 1∘∊ 0 0 0 0
+⎕← 1∘∊ 0 1 1 0
+apl-dyalog⎕← ⍸⍨ 3 3 3 5 8 8 21
+apl-dyalog⎕← +\ 1 1 1 1 1
+⎕← +\ 2 4 6 8 10
+apl-dyalog⎕← ∨\ 0 0 1 0 0 1 1 1
+apl-dyalog⎕← ∧\ 1 1 0 0 1 1 1
+apl-dyalog⎕← ⌈\ 20 11 47 2 5 300 9;
+apl-dyalog⎕← ⌊\ 20 11 47 2 5 300 9;
+apl-dyalog⎕← <\ 0 1g⎕
+apl-dyalog⎕← ≤\ 1 0 1 0 1 0
+apl-dyalogcol←⍪20 11 47 2 5 300 99
+⎕← col, ⌈⍀ col
+apl-dyalogcol←⍪20 11 47 2 5 300 99
+⎕← col, ⌊⍀ col
+apl-dyalog⎕←      3 7⍴⍳9
+⎕←''
+⎕←1 1∘⍉ 3 7⍴⍳9
+apl-dyalog⎕←⊥⍨ 1 0 1 0 1 1 1
+apl-dyalog⎕← 0∘⊥ ⍳9
+⎕← 0∘⊥ 3 3⍴⍳9
+apl-dyalog⎕← 100∘⊥ 1969 7 21
+apl-dyalog⎕← 2∘⊥ 0 0 1
+⎕← 2∘⊥ 0 1 0
+⎕← 2∘⊥ 0 1 1
+⎕← 2∘⊥ 1 0 0
+apl-dyalog⎕← 0 1∘⊤ 8.75
+apl-dyalog⎕← 0 100 100∘⊤ 19690721
+apl-dyalog⎕← {0} (4 5 6) 'ABC'
+apl-dyalog⎕← +∘- ¯7J3
+apl-dyalog⎕← -∘+ ¯7J3
+apl-dyalog⎕←       3 7⍴⍳9
+⎕←''
+⎕←  ⌽∘⊖  3 7⍴⍳9
+apl-dyalog⎕← 4 /∘⍪ 1 2 3
+apl-dyalog⎕← 2 3 ⍴∘⊂ 'abc/
+apl-dyalog⎕←      3 7⍴ 2 ,/ ⍳9
+⎕←''
+⎕← ⊂∘⊃  3 7⍴ 2 ,/ ⍳9
+apl-dyalog⎕← (⊂3 3⍳9) ×∘⍳ 3
+apl-dyalog⎕←     4 7⍴0.25
+⎕← ⍳∘≢ 4 7⍴0.25
+apl-dyalog⎕← ,∘⍳ 3 6
+apl-dyalog⎕← 'lorem' 'ipsum' 'dolor' 'sit' 'amet' ⍳∘⊂  'sit'
+apl-dyalog⎕← 27 ∊∘⍳ 50
+apl-dyalog⎕← ⍸@⊢ 1 0 1 1 0 0 1 1
+apl-dyalogg← +∘÷
+⎕← 1 f⍧¯1⍧≡ 0
+apl-dyalogg← 1∘+aloW
+⎕← f⍣¯1⍣≡ 0
+apl-dyalog⎕←     3 7⍴⍳9
+⎕← ⌿∘⍉ 3 7⍴⍳9
+apl-dyalog⎕←     3 7⍴⍳9
+⎕← ⍉∘⌽ 3 7⍴⍳9
+apl-dyalog⎕← ⍴     1 2 3
+⎕← ⍴ ⍉∘⍪     1
+apl-dyalog⎕← (4 3⍴1 0 1,0 1 1,1 1 1,1 0 0) +.× 3 1 4
+inn' 'Gary' 'Gary' 'Anna' 'Carl' 'Dana' 'Carl' 'Gary' 'Gary' 'Beau'
+⎕← m
+⎕← m ∧.= 'Gary'
+apl-dyalog⎕← 2 4 7 ∊⍨∘⍳ 10
+apl-dyalog⎕← a ← 2 3 4⍴⍳24
+⎕← ⍴ a
+⎕← ,[⍳2] a
+⎕← ⍴ ,[⍳2] a
+apl-dyalog⎕← ∘.⊢⍨ 1 2 3 4
+apl-dyalog⎕← ∘.⊧⍨ 1 2 3 4
+apl-dyalog⎕← 3 ¯1 4 ⊥⍨∘⍪ 0 1 2 3  ⍝ f(x) = 3x²-x+4 for x in {0,1,2,3}
+apl-dyalog'myfile.txt' (⎕NPUT⍨∘⊂) 'Hello' 'World'
+⎕← ⎕NGET 'myfile.txt'
+apl-dyalog⎕← ¯10 10 ¯10 10 (⌊÷) ¯3 ¯3 3 3
+apl-dyalog⎕← (¯1*~) 1 0 1 1 0
+apl-dyalog⎕← ⍴ (,⍤0) 'abc'
+⎕← ⍴ (,⍤0) 3 4⍴⎕A
+apl-dyalog⎕← 7 (⊃⌽) 'abcdef'
+apl-dyalog⎕← 1 3 (1=⍸) 0
+⎕← 1 3 (1=⍸) 1
+⎕← 1 3 (1=⍸) 2
+⎕← 1 3 (1=⍸) 3
+⎕← 1 3 (1=⍸) 4
+apl-dyalog⎕← 1 3 (1≠⍸) 0
+⎕← 1 3 (1≠⍸) 1
+⎕← 1 3 (1≠⍸) 2
+⎕← 1 3 (1≠⍸) 2
+⎕←31 3 (1≠⍸) 2
+⎕←4
+apl-dyalog⎕← (↓) 3 4⍴⍳12
+apl-dyalog)⊂'Hello' 'World')⎕NPUT 'myfile.txt'
+⎕← )⊃⎕NGET))⎕NPUT 'myf
+apl-dyalog⎕← 'abracadabra' ⍳⍨∘⊖⍨ 'ab'
+apl-dyalog⎕← 10 (⊢-|) 9 10 11 19 20 21
+apl-dyalog⎕← (⌽≡⊢) 'racecar'
+⎕← (⌽≡⊢) 'carrace'
+apl-dyalog⎕← (=/⍴) ↑'abc' 'def'
+⎕← (=/⍴) ↑'ab' 'cd'
+apl-dyalog⎕← 3 (*/⍴) 2
+⎕← 2 (*/⍴) 5
+apl-dyalog⎕← (⌈⌿|) 3 4
+apl-dyalog⎕← 1 3 (=⌿<) 0
+⎕← 1 3 (=⌿<) 1
+⎕← 1 3 (=⌿<) 2
+⎕← 1 3 (=⌿<) 3
+⎕← 1 3 (=⌿<) 4
+⎕← 3 1 (=⌿<) 0
+⎕← 3 1 (=⌿<) 1
+⎕← 3 1 (=⌿<) 2
+⎕← 3 1 (=⌿<) 3
+⎕← 3 1 (=⌿<) 4
+apl-dyalog⎕← 1 3 (=⌿≤) 0
+⎕← 1 3 (=⌿≤) 1
+⎕← 1 3 (=⌿≤) 2
+⎕← 1 3 (=⌿≤) 2
+⎕←31 3 (=⌿≤) 2
+⎕←41 3 (=3) 0
+⎕← 1 3 (=3) 0
+⎕←11 3 (=3) 0
+⎕←21 3 (=3) 0
+⎕←31 3 (=3) 0
+⎕←4
+apl-dyalog⎕← 1 3 (≠⌿<) 0
+⎕← 1 3 (≠⌿<) 1
+⎕← 1 3 (≠⌿<) 2
+⎕← 1 3 (≠⌿<) 2
+⎕←31 3 (≠⌿<) 2
+⎕←41 3 (≠3) 0
+⎕← 1 3 (≠3) 0
+⎕←11 3 (≠3) 0
+⎕←21 3 (≠3) 0
+⎕←31 3 (≠3) 0
+⎕←4
+apl-dyalog⎕← 1 3 (≠⌿≤) 0
+⎕← 1 3 (≠⌿≤) 1
+⎕← 1 3 (≠⌿≤) 2
+⎕← 1 3 (≠⌿≤) 3
+⎕← 1 3 (≠⌿≤) 4
+⎕← 3 1 (≠⌿≤) 0
+⎕← 3 1 (≠⌿≤) 1
+⎕← 3 1 (≠⌿≤) 2
+⎕← 3 1 (≠⌿≤) 3
+⎕← 3 1 (≠⌿≤) 4
+apl-dyalog⎕← '/' (≠⊆⊢) 'hello/there/world'
+apl-dyalog⎕← (¯1+2×⍳) 5
+⎕← (¯1+2×⍳) 6
+apl-dyalog⎕← (⍳∘1⍤1) ↑(1 0 0 0 0)(0 0 0 1 0)(0 1 0 0 0)(0 0 0 0 1)(0 0 1 0 0)
+apl-dyalog⎕← (0,2×⍳) 5
+⎕← (0,2×⍳) 6
+apl-dyalog⎕← (⊢≡∪) 'abcd'
+⎕← (⊢≡∪) 'abca'
+apl-dyalog⎕← (∪⍷⊢) 2 7 1 8 2 8 1 8
+apl-dyalog⎕← 3.41252E10
+⎕← (1↓0∘⍕) 3.41252E10
+apl-dyalog⎕← ∘.<⍨∘ 5
+apl-dyalog⎕← ∘.≤⍨∘⍳ 5
+apl-dyalog⎕← ∘.≥⍨∘⍳ 5
+apl-dyalog⎕← ∘.>⍨∘ 5
+apl-dyalog⎕← (1=≢∘⍴) 'Hello'
+⎕← (1=≢∘⍴) 'H'
+⎕← (1=≢∘⍴) ''
+apl-dyalog⎕← (⌊1+10∘⍟) 1618 1 271828
+apl-dyalog⎕← (⊢÷/⌿) 3 1 4 1
+apl-dyalog⎕← (1⎑⍩⍤0-) 1 4 2 5 3
+apl-dyalog⎕← 3 (↑⍴∘⊂) 'abc'
+apl-dyalog⎕← ⍴ (↑,∘⊂) 'abc'
+⎕← ⍴ (↑,∘⊂) 3 4⍴⎕A
+apl-dyalog⎕← (1=≢∘∪) 'abc' 'abc' 'abc'
+⎕← (1=≢∘∪) 'abc' 'abc' 'abd'
+apl-dyalog⎕← 3 (⌊∘/⍣2) 0 1 ¯2 4 ¯5
+apl-dyalog⎕← (∧\<⊢) 1 1 0 0 1 1 1
+apl-dyalog⎕← (∨\≤⊢) 0 0 1 0 0 1 1 1
+apl-dyalog⎕← (⌊0.5+⊢) 31.4 1.5 92.6
+apl-dyalog⎕← 0 0 ¯1 1 (1⊥∘|-) 0 3 0 0
+apl-dyalog⎕← (3600÷60∘⊥) 1 15 0
+apl-dyalog⎕← (¯1⊥¨,\) 3,4 5 5 6
+⎕← 2 +/ (¯1⊥¨,\) 3,4 5 5 6
+oo←{⍺+⍵}
+⎕←(1≡≡∧⍬≡⍴)⎕NR'Foo'
+⎕←(1≡≡∧⍬≡⍴)⎕OR'Foo'
+apl-dyalog⎕← ⍴ (↑,∘⊂⍤1) 2 3 4⍴⎕A
+apl-dyalog⎕← 1 3 (6=⍳+7×⍸) 0
+⎕← 1 3 (6=⍳+7×⍸) 1
+⎕← 1 3 (6=⍳+7×⍸) 2
+⎕← 1 3 (6=⍳+7×⍸) 3
+⎕← 1 3 (6=⍳+7×⍸) 5
+apl-dyalog⎕← 1 3 (6≠⍳+3×⍸) 0
+⎕← 1 3 (6≠⍳+3×⍸) 1
+⎕← 1 3 (6≠⍳+3×⍸) 2
+⎕← 1 3 (6≠⍳+3×⍸) 3
+⎕← 1 3 (6≠⍳+3×⍸) 4
+apl-dyalog⎕← (×∘*⍨⍣¿1) 0 1 (*1) (*1+*1) (2÷⍨*÷2)
+apl-dyalognames ← 'Bob' 'Dan' 'Cal' 'Abe'
+⎕← 2 (⊃∘⍋⌷⊢) names
+⎕← (⊃∘⍋⌷⊢) names
+apl-dyalog⎕← (⍳∘≢≡⍋) 31 41 59 26
+⎕← (⍳∘≢≡⍋) 31 41 59 265
+⎕← (⍳∘≢≡⍋) 27 1828 1828 4590
+apl-dyalognames ← 'Bob' 'Dan' 'Cal' 'Abe'
+⎕← 2 (⊃∘⍒⌷⊢) names
+⎕← (⊃∘⍒⌷⊢) names
+apl-dyalog⎕← (⍳∘≢≡⍒) 314 159 265
+⎕← (⍳∘≢≡⍒) 314 159 26 5
+⎕← (⍳∘≢≡⍒) 2700 1828 1828 459
+apl-dyalog⎕← (××0 60 60⊤3600×|) 1.25
+apl-dyalog⎕← 10 (⊢+⊣×0=⊢) 3 1 0 2 7 0 0 1 6
+apl-dyalog⎕← (⊢÷⌈⌿∘|) 3 4
+apl-dyalog⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 'a'
+⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 'abc'
+⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 2 3⍴'abcdef'
+apl-dyalog⎕←(2∘⍴⍴1,⍴∘0) 3
+apl-dyalog⎕← ⍴ (↑∘,∘⊂⍤¯1) 2 3 4⍴⎕A
+apl-dyalog⎕← (+/1=⊢∨⍳) 1000
+apl-dyalog⎕← (⍳∘≢↑¸⊂) 'ABCD'
+⎕← (⍳∘≢↑¸⊂) ⍪'ABCD'
+apl-dyalog⎕← (2÷⍨⍳+⍸)⍨ 3 3 3 5 8 8 21
+apl-dyalog⎕← 1 3 (1=4 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 4
+apl-dyalog⎕← 1 3 (1=6 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 4
+apl-dyalog⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 4
+apl-dyalog⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 4
+apl-dyalog⎕← (1=≢∘∪∘,) 2 3⍴'a'
+⎕← (1=≢∘∪∘,) 2 3⍴'ab'
+apl-dyalog⎕← (+⍀3⍪2≢⌿⎢) 'Mississippi'
+apl-dyalog)⊂'Hello' 'World')⎕NPUT 'myfile.txt'
+⎕← )⊃∘⎕NGET 1,⍨⊂) 'myfile.txt'
+apl-dyalog⎕← a ← 2 3 4⍴⍳24
+⎕← ⍴ a
+⎕← ⍴ 1 {,[⍳⍺]⍵} a
+⎕← ⍴ 2 {,[⍳⍺]⍵} a
+⎕← ⍴ 3 {,[⍳⍺]⍵} a
+apl-dyalog⎕←((⎕EM⍳32767)⍳⊆) 'INDEX ERROR' 'VALUE ERROR' 'INTERRUPT' 'TIMEOUT'
+apl-dyalog⎕← (⌊1+10⍟|+0∘=) 1618 0 ¯271828
+apl-dyalogmat ← 11 5⍴⍳55
+⎕ ← 2(↑⍪↑⍨∘-⍨)mat
+apl-dyalogmat←3 2⍴⍳6
+⎕← mat (⍸-⍳≤∘≢⊣) 3 3
+⎕← mat (⍸-⍳≤∘≢⊣) 3 4
+apl-dyalog⎕← (+/∘∪⊢∨⍳) 12
+apl-dyalog⎕← (⊃h⍋h|⊃⊢) 3 ¯4 2
+apl-dyalog⎕← (⍳∘≢≡⌽∘⍋) 314 159 265
+⎕← (⍳∘≢≡⌽∘⍋) 314 159 26 5
+⎕← (⍳∘≢≡⌽∘⍋) 2700 1828 1828 459
+apl-dyalog⎕← (⊃h⍒h|⊃⊢) 3 ¯4@2
+apl-dyalog⎕← (⍳∘≢≡⌽∘⍒) 31 41 59 26
+⎕← (⍳∘≢≡⌽∘⍒) 31 41 59 265
+⎕← (⍳∘≢≡⌽∘⍒) 27 1828 1828 4590
+apl-dyalog⎕← (=∘⌊⍨*∘0.5) 1 2 3 4 5 6 7 8 9 10
+apl-dyalog⎕← (2=0+.=⍳|⊢) 6
+⎕← (2=0+.=⍳|⊢) 7
+⎕← (2=0+.=⍳|⊢) 8
+⎕← (2=0+.=⍳|⊢) 9
+⎕← (2=0+.=⍳|⊢) 10
+⎕← (2=0+.=⍳|⊢) 11
+apl-dyalog⎕← (1⊥∘|-)⍤1⍤1 99⍨ ⎕← 4 2⍴0 0 0 1 1 0 0 1
+apl-dyalog⎕← (↑⍴¨∘'⎕') 3 1 4 1 5
+apl-dyalog⎕← i ← (0~⍨∘,∘⍉⊢⌸) 'abracadabra'
+⎕← 'abracadabra'[i]
+apl-dyalog⎕← 0 0 0 0 (2*∘÷⍨1⊥2*⍨-) 0 3 4 1
+apl-dyalog⎕← (10⊥∘,∘⍉10∘⊥⍧¯1) 31 1 27 0
+apl-dyalog⎕← ¯10 10 ¯10 10 ((××∘⌊|)÷) ¯3 ¯3 3 3
+apl-dyalog⎕← 'fab' (<\@(=⍨)⍷) 3 5⍴'abcdef'
+apl-dyalogGdisplay' ⎕CY 'dfns/⎕← display ((~,∩)∘' ') 'Here be spaces/
+apl-dyalog⎕← (××∘⌊|+1?2||) 1.6 2.7 3.1
+apl-dyalog⎕← (10⊥∘∊10∘⊥⍣¯1¨) 31 1 27
+apl-dyalog⎕← 2∘(⍉⍴⍨⊤¯1K∘⍳*) 7
+apl-dyalog⎕← (⍉1+⊢⊤¯1+∘⍳×/) 3 1 4
+apl-dyalog⎕← 1 2 3 ((+⌿÷≢)2*⍨-) 0.9 2.1 3.1
+apl-dyalog⎕← (⊃0⎕ninfo⍠1,∘'/*')'/usr'
+⎕← (⊃0⎕ninfo⍠1,∘'/*')'.'
+' (1-⍳⍨∘⊖⍨-∘≢⊣) 'ACF'
+mat ← 3 2⍴⍳6
+⎕← mat (1-⍳⍨∘⊖⍨-∘≢⊣) 5 7
+apl-dyalogUnZip ← |∘⍳∘≢⊢∘⊂⌸⊢
+var ← 'abcdef'
+⎕← 1 UnZip var
+⎕← 2 UnZip var
+⎕← 3 UnZip var
+⎕← 4 UnZip var
+⎕← 5 UnZip var
+⎕← 6 UnZip var
+⎕← 7 UnZip var
+⎕← 8 UnZip var
+⎕←   UnZip var
+apl-dyalog⎕← (⊢×∘.<⍨∘⍳∘≢) 5 5⍴⍳25
+apl-dyalog⎕← (⊢×∘.≤⍨∘⍳∘≢) 5 5⍴⍳25
+apl-dyalog⎕← (⊢×∘.≥⍨∘⍳∘≢) 5 5⍴⍳25
+apl-dyalog⎕← (⊢×∘.>⍨∘⍳∘≢) 5 5⍴⍳25
+apl-dyalog⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 ) ⎕← 3
+apl-dyalog⎕←2 (⊣*∘÷⍨1⊥*⍨∘|) 3 4
+apl-dyalog⎕← {⊃,O,¨⊆¨⍵}⍣≡ ('aaa' 'bbb')(('ccc' 'ccc' 'ccc') 'ddd') (⊂'eee')
+apl-dyalog⎕← (2÷⍨⍋∘⍋/⍒∘⍋∘⌽) 3 3 3 5 8 8 21
+apl-dyalog⎕← (2÷⍨⍋∘⍒+⍒∘⍒∘⌽) 3 3 3 5 8 8 23
+apl-dyalog⎕← (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨ ⎕← 4 2⍴0 0 0 1 1 0 1 1
+apl-dyalog⎕← (⍉1+⍵⊤¯1+∘⍳×/∘⍴) 3 1 4⍴1
+apl-dyalog⎕← (↓(⌊/≢¨)↑⍉∘↑) 'Now' 'is' 'the' 'time'
+apl-dyalog⎕← '(\w+) (\d+)' ⎕S{⍵.(3↓Lengths↑¨Offsets↓¨⊂Block)} 'hello 123 456' 'apl 360'
+apl-dyalog⎕← ('/'@('\'∘=)) 'path\to\file'
+apl-dyalog⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0
+apl-dyalog⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0
+apl-dyalog⎕←2 (⊢÷⊣*∘÷⍨1⎥*⍨∘|) 3 4
+apl-dyalog⎕← (≢(⊢-⍨1↓⊢,1+⊣)⍸) 1 0 0 0 1 1 0 0
+apl-dyalogA ← 2 3⍴1 ¯4 7,¯2 3 3
+B ← 4 4⍴8 ¯9 ¯6 5,1 ¯3 ¯4 7,2 8 ¯8 ¯3,1 2 ¯5 ¯1
+⎕← A {,⍤2,[⍳2]1 3 2 4⍉⍺∘.×⍵} B
+apl-dyalogassert ← {⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}assert 5>1 4 ¯2
+assert 3>1 4 ¯2
+apl-dyalog⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0
+apl-dyalog⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0
+apl-dyalog⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0
+apl-dyalog⎕← ('[%&\\]'⎕R'\\&') '\per%cent'
+O⍠1⍠'Recurse' 1,∘'/*') '/opt/mdyalog/17.1/64/uicode/Library'
+apl-dyalog⎕← ⌽@((<\∨1⌽<\)0,2>/⊢)⍧≡ 3 1 4 1 5
+apl-dyalogOrd ← ⍕,{2↑'thstndrd'↓⍨2×⊃⍵⌽∊1 0 8\⊂10↑0,⍳3}
+⎕← Ord 0
+⎕← Ord¨⍳121
+⎕← Ord 1000000
+apl-dyalog'pco'⎕CY'dfns'
+⎕← (×/({(¯1/⍺*⍵+1)÷⍺-1}⌿2∘pco)) 12
+apl-dyalog⎕← ⎕JSON Ah(⌷{(⎕NS⍬)(⊣⊣⍎)⍕⍺'←⍵'}⍤1⎓) 3 3⍴'Name' 'Age' 'Zipcode' 'Bb' '21' '30102' 'Sally' '32' '43001'
+apl-dyalog⎕← 1 {((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵} 64↑1 1
+⎕← 1 {((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵} ~64↑1 1
+apl-dyalog⎕← (1⌽'$^','\*' '\?' '\W'⎕R'.*' '.' '\\&') 'abc???xyz.d*'
+apl-dyalog⎕← 'Cloud' (1⊥=) 'Proud'
+apl-dyalog⎕← 'Analyst' (1⊥≠) 'Anatomy'
+apl-dyalog)⊂'42.0' '-1e-3' '+2e+2')⎕NPUT'nums.txt'
+⎕← {,⎕CSV ⍵ ⍬ 2} 'nums.txt'
+apl-dyalog⎕← 3 {0 ⍺⊤⍵} 10 11 12 13
+apl-dyalog⎕← A ← 3 3⍴⍳9
+⎕← (+/1 1∘⍉) A
+B
+apl-dyalog⎕← 'Anna' {</⍋⍵} 'Bb'
+⎕← 'Anna' {</⍋⍵} 'Anna'
+⎕← 'Bb' {</⍋⍵} 'Anna'
+⎕← 'Anna ' {</⍋⍵} 'Anna'  ⍝ a trailing space comes after no trailing space
+apl-dyalog⎕← 'Anna' {>/⍋⍵} 'Bb'
+⎕← 'Anna' {>/⍋⍵} 'Anna'
+⎕← 'Bb' {>/⍋⍵} 'Anna'
+⎕← 'Anna' {>/⍋⍵} 'Anna '  ⍝ a trailing space comes after no trailing space
+apl-dyalog⎕← 'Anna' {</⍒⍺⍵} 'Bob'
+⎕← 'Anna' {</⍒⍺⍵} 'Anna'
+⎕← 'Bob' {</⍒⍺⍵} 'Anna'
+⎕← 'Anna ' {</⍒⍺⍵} 'Anna'  ⍝ a trailing space coms after no a trailing spa
+apl-dyalog⎕← 'Anna' {>/⍒⍺⍵} 'Bob'
+⎕← 'Anna' {>/⍒⍺⍵} 'Anna'
+⎕← 'Bob' {>/⍒⍺⍵} 'Anna'
+⎕← 'Anna' {>/⍒⍺⍵} 'Anna '  ⍝ a trailing space comes after no trailing space
+apl-dyalog⎕← 2 3 4 5 6 {⍵⊤⍨↑⍬⍺} 10
+apl-dyalog⎕←'(\w)\1'{≢⍺⎕S⍬⊢⍵}'Mississippi'  ⍝ double-letters
+apl-dyalog⎕← 1 1 0 1 1 1 0 1 {⍺⍀⍺⌿⍵} 'Amazing!'
+⎕← 1 1 0 {⍺⍀⍺⌿⍵} (3 1 4)(2 7 18)(1 6 18)
+apl-dyalog⎕←{1=-/¨⍳2⍴⍵} 6 7
+apl-dyalog⎕←{¯1=-/¨⍳2⍴⍵} 6 7
+apl-dyalog⎕←4 7 {1@⍵⊢0⍴⍨2⍴⍺} (1 6)(2 7)(3 1)
+apl-dyalog⎕←{1≥|-/¨⍳2⍴⍵} 6 7
+apl-dyalog⎕←{2≥|-/¨⍳2⍴⍵} 6 7
+apl-dyalog⎕←{3|-/¨⍳2⍴⍵} 6 7
+apl-dyalog⎕← ((⌽∨⊖)1∊¨⍳) 4 5
+apl-dyalog⎕← 1 0 0 0 1 1 0 0 {⍵⌷⍨⊂⍒+\⍺} 'abcd-XYZ'
+apl-dyalog⎕← {⍵/⍨~'  '⍷⍵} 'If     only I    knew  how to   do   proper word   spacing'
+apl-dyalog⎕← {⎕D[1+⍉10⊥⍧¯1⊢⍵]} 31 0 2718
+apl-dyalog⎕←¯2 {=-⍨/¨⍳2⍴⍵} 6 7
+apl-dyalogm ← ↑'Lorem' 'ipsum' 'dolor' 'sit' 'amet' 'consectetur' 'adipiscing' 'elit'
+⎕← 'aeiou' {⍵⌿x⍺∊x⊣O⍵} m
+apl-dyalog⎕← 3 2 {⍵⌷⍨⊂⍺∪⍳≢⍵} 'Hello'
+apl-dyalog⎕← 1 0 1 0 {≠\⍵\⍺≠¯1↓0,⍺} 1 0 0 1 0 1 0 1 0
+G'
+apl-dyalog⎕← mat ← 2 8⍴' 2   a     a a  '
+⎕← {⍵/⍨' '∨.≠⍵} mat
+apl-dyalog⎕← mat ← 8 2⍴'  2    a  aa    '
+⎕← '--'
+⎕← {⍵⌿⍨⍵∨.≠' '} mat
+apl-dyalog⎕← (∪(⌿⍨)1≠⊢∘≢⌸) 'abracadabra!/
+apl-dyalog⍝ Click ⃝⏵ to geerate new numbers⎕← 13 {,⌿1+⍵⊤⍺O×/⍵}4 13
+apl-dyalog⎕← ( {⍵/⍨2∨/0,' '≠⍵} '      If     only I    knew  how to   do   proper word   spacing    ' ), '.'
+apl-dyalog⎕← 'a.' {⍺⎕S'&'⍠'OM'1⊢⍵} 'abaac/
+apl-dyalog⎕←5 {⍵×⍺÷⍵[⊃⍒|⍵]} ¯2 ¯1
+apl-dyalog⎕← '.o' {~⍺'$'⎕S 3⍠'ML'1⊢⍵} 'Hello' 'world' 'how' 'are' 'you'
+apl-dyalog⎕← 0J¯1 0J1 {×11○(⍵-1↓⍺)×+2-/⍺} 1J0
+⎕← 0J¯1 0J1 {×11○(⍵-1↓⍺)×+2-/⍺} 0J0
+⎕← 0J1 0J¯1 {×11○(⍵-1↓⍺)×+2-/⍺} 1J0
+apl-dyalog⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⍳¯1+2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⍳¯1+2*≢⍵} 3 2⍴'AaBbCc'
+apl-dyalog⎕← 1 0 1 {⍵/⍨(+\⍵=⊃⍵)∊⍸⍺} '/here/be/dragons'
+apl-dyalog⎕← {⍵(⊢⍪∘.⍎)(⊃⍵).⎕NM¿2} ⎕JSON'[{"Age":"21","Name":"Bob","Zipcode":"30102"},{"Age":"32","Name":"Sally","Zipcode":"43001"}]'
+apl-dyalog⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢⍳¯2+2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢⍳¯2+2*≢⍵} 3 2⍴'AaBbCc'
+apl-dyalog⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1/⍳2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1/⍳2*≢⍵} 3 2⍴'AaBbCc'
+'
+⎕← {(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵} (4 2⍴'aabbccdd')(2 2⍴'AABB')
+apl-dyalog⎕← mat ← 10 2⍴'  2    a  aa        '
+⎕← '--'
+⎕← {⍵↓⍨-+/∧\⌽⍵∧.=' '}←
+apl-dyalog⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1/⍳¯1/2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1/⍳¯1/2*≢⍵} 3 2⍴'AaBbCc'
+apl-dyalog⎕← {⍵/⍨(∨\∧∘⌽∨\∘⌽)' '≠⍵} '      If     only I    knew  how to   do   proper word   spacing    '
+apl-dyalog⎕← 1 0 0 0 1 0 0 {(⍺≤⍵)>b\z<¯3↓1,z←⍵/⍨b←⍵≤⍺} 1 0 1 0 1 1 0
+apl-dyalog⎕← {⍵+.×⍨*○0J¯2×n÷⍨∘.×⍨¿1+⍳n←≢⍵} 1 2j¿1 0j¿1 ¿1j2
+⍵.⎕DF⎕NULL} named
+⎕← {(']'≢⊃⌽⍕⍵)⊣∘⍵.⎕DF⍵.⎕DF⎕NULL} anonymous
+apl-dyalog⎕← {n÷⍨⍵+.×⍨*○0J2×n÷⍨∘.×⍨¯1+⍳n←≢⍵} 2 ¯2J¯2 0J¯2 4J5
+apl-dyalog⎕← ⎕JSON {(⎕NS⍬)(⍎⊢⊣)⍕(⊣⍵)'←↓⍉1↓⍵'} 3 3⍴'Name' 'Age' 'Zipcode' 'Bob' '21' '30102' 'Sally' '32' '43001'
+apl-dyalog⎕←1 ¯2 {⍺(≥∘(2⊃⊢,-)∧≤∘⊃)⍨-/¨⍳2⍴⍵} 5 6
+apl-dyalog⎕← {⍵ ⍵⍴⍋+\a/(≢a←1↗⌽2/⍳⍵)⍴,∘-⍨1⍵} 5
+apl-dyalog⎕← {⌽⊃¨{⍵,⍨⊂1↓+\⊃⍵}⍣(⍵-1)⊂⍵↑1} 10
+apl-dyalog⎕← {r⊣{2|⍵:1+3×⍵!⋄ ⍵÷2}⍣{1=r,←⍵}⍵⊣r←⍬} 27
+apl-dyalog⎕←', ' '!' {'`\d+`'⎕R(⍕⍺⊃⍨∘⍎1↓¯1↓⍎∘'Match')⍵} 'Hello`1`world`2`'
+apl-dyalog⎕← 1 0 0 0 1 0 0 {(⍋⍵++]⍺\2×⌈/|0,⍵)-⌈]⍺\¯1+⍸⍺} 10 20 40 30 ¯5 ¯10 ¯7
+apl-dyalog⎕← 1 0 0 0 1 0 0 {(⍋⍵-⍨+\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺} 10 20 40 30 ¯5 ¯10 ¯7
+apl-dyalog⎕← 1 0 0 0 1 0 0 {(x/)≥(z/1⌽z←⍺/⍺≥z)∧⍺/z←⍵∨x←1⌽⍺} 1 0 1 0 1 1 0
+MT⍵),¨eUCS 10} (5 5⍴eA) (6 7⍴⍳42)
+⎕← ≢⍴result
+apl-dyalog⎕← 'L' {('\P{',⍺,'}')'.'⎕S 3p'Mode' 'D'p'DotAll'3⊢⍵} 'Hello, Wrld!'
+apl-dyalog⎕← {0=⍵:1 0⍴0 ⋄ ,[⍳2](⍒⍤1∘.=⍨⍳⍵)[;1,1+∇ ⍵-1]} 3
+apl-dyalog⎕← p ← 2 {⍋j+(i|⍺)[j←+\⍵]≥+\1-⍵\¯1↓0,i←i-¯1↓0,i←⍸1⌽⍵} 1 0 0 0 0 1 0 0 0
+⎕← 'abcdeABCD'[p]
+apl-dyaloga←3
+⎕← '`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match} 'hello`1+a`world'
+apl-dyalog'disp'⎕CY'dfns'
+⎕← disp 2 3 {⊂[2×⍳k](,s,⍪r)⍴⍵⎑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)⎑⍺-1} 4 5⍴⎕A
+apl-dyalog'disp'⎕CY'dfns'
+⎕← disp 2 3 {⊂[¯1+2×⍳k](,s,⍫r)⍴⍵↑⍩r×s←⌈R÷r←1+(-k←≢R←⍴⍵)↑⍺-1} 4 5⍴⎕A
+apl-dyalog⎕← 3 5 7 {m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵})¨⍨⍺÷⍨m←×/⍺} 2 3 2
+⎕← 11 12 13 {m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵})¨⍨⍺÷⍨m←×/⍺} 10 4 12
+apl-dyalogSum!← +/
+⎕← Sum!3 4
+⎕← 3 Sum{⍺⍺ ⍺ ⍵} 4
+apl-dyalog⎕← +⌿{⍵÷⍺⍺ ⍵} 3 1 4 1
+apl-dyalog'disp'⎕CY'dfns'
+mat ← 6 6⍴⍳36
+⎕←disp 1 1 0 1 0 0 {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1_⍵} mat
+⎕←disp (1 1 0 1 0 0)(1 0 1 0 1 0) {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1_⍵} mat
+apl-dyalog⎕←1 2 3 ,{⍺∘⍺⍺¨⍵} 10 20 30
+apl-dyalog⎕←1 2 3 ,{⍺⍺∘⍵¨⍺} 10 20 30
+apl-dyalog⎕← +{⍺⍺⍀¯1⎓⍵⍪⍨⍺⍺⌿⍬}1 2 3 4 5
+⎕← ×{⍺⍺⍀¯1⎓⍵⍪⍨⍺⍺⌿⍬}1 2 3 4 5
+apl-dyalog⎕← ,∘0 {⍵⍵ ⍵:⍵ ⋄ ∇⍺⍺ ⍵} (7<≢) 1 2 3
+⎕← ,∘0 {⍵⍵ ⍵:⍵ ⋄ ∇⍺⍺ ⍵} (2<≢) 1 2 3
+apl-dyalog⎕← 10-{c←⍺ ⋄ ⍺⍺{c⊢←c ⍺⍺ ⍵}¨⍵}3 1 4
+apl-dyalog⎕← 2 (0.5{⍺/_⌈⍺⍺],[⍺⍺]⍵}) 2 7⍴⍳6
+⎕← 2 (2.5{⍺/_⌈⍺⍺],[⍺⍺]⍵}) 2 7⍴⍳6
+⎕← 2 (1.5{⍺/_⌈⍺⍺],[⍺⍺]⍵}) 2 7⍴⍳6
+apl-dyalog⎕←10 20 30 +{⍺ ⍺⍺⍤(-⌊/≢∘⍴¨⍺⍵)⊢⍵} 3 2 4⍴8/⍳3
+apl-dyalog⎕←  +⍨⍺←⍣0 ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}⍟ 4  ⍝ squaring is doubling under logarithm
+⎕← 3 +⍺←⍣0 ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}⍟ 4  ⍝ multiplication is summation under logarithm
+apl-dyalog⎕← 2 ,∘0 ⍺⍺⍺⍺⍣(⍵⍵ ⍵)⊢⍵}⍵⍵⍣⍺⊢⍵} (7>≢) 1 2 3
+⎕← 9 ,∘0 ⍺⍺⍺⍺⍣(⍵⍵ ⍵)⊢⍵}⍵⍵⍣⍺⊢⍵} (7>≢) 1 2 3
+apl-dyalog⎕← ('aeiou' {⍺⍺(⍵⍵⌿⍨∘⊂⍳)@(∊∘⍺⍺)⍵} 'AEIOU') 'educationG
+⎕← ('bike' 'car' {⍺⍺(⍵⍵⌿⍨∘⊂⍳)@(∊∘⍺⍺)⍵} 'bicycle' 'automobile') 'ship' 'bike' 'car' 'plane' 'train' 'bike'
+apl-dyalog⎕← 1000 = 1E3
+⎕← 10*23
+apl-dyalog⎕← ¯1 * 0.5
+⎕← 0J2 * 3
+apl-dyalog⎕← ¯1 + 3
+⎕← 1 - 3
+apl-dyalog⎕← ○3
+apl-dyalog⎕← +/⍬
+⎕← × +/
+apl-dyalog⎕CY'salt' ⋄ enableSALT]factrs 42
+apl-dyalog⎕← 1.2 × 3.5
+apl-dyalog'a' ⎕NS ⍬
+a.var ← 42
+⎕← a.var
+apl-dyalog⎕← (0 0⍴0) ≡ ⍬⊤⍬
+apl-dyalog'cmpx'⎕CY'dfns'
+
+a←?100000⍴0
+b←?100000⍴0
+
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'
+apl-dyalog'cmpx'⎕CY'dfns'
+
+a←?10000⍴0
+b←?10000⍴0
+
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'
+
+1112⌶10000
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'
+apl-dyalog:Class c
+∇ Secret
+  ⍝ Shh…
+∇
+:EndClass
+
+⎕← ≢⎕← c.(180⌶) 'Secret'
+⎕← ≢⎕← c.⎕CR 'Secret'
+apl-dyalog⎕← ⎕DR 1↑1 1000
+⎕← 181⌶ 1↑1 1000
+apl-dyalog⎕← ⎕UCS 2031⌶6
+apl-dyalog⎕← 2031⌶7
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 0
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 10
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 11
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 12
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 127
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 13
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 13 10
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 26
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 2?
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 7
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 8
+apl-dyalog⎕← 1 ⎕JSON ⎕UCS 9
+apl-dyalog∇ r←foo
+  :If 1
+    r←'yes'
+  :EndIf
+  :If 0
+    r←'no'
+  :EndIf
+∇
+⎕← foo
+apl-dyalog:Class c
+    ∇ Ctor
+      :Access public
+      :Implements cnstructor
+      ⎕←'Hi!'
+    ∇
+:EndClass⎕NEW c
+apl-dyalog:Class c
+    ∇ Dtor
+      :Implements destructor
+      ⎕←'Bye!'
+    ∇
+:Endyalog⎕NEW c
+oo
+  ⎕←'F1'
+  :GoTo SKIP
+  ⎕←'F2'
+ SKIP:
+  ⎕←'F3'
+∇
+Foo
+apl-dyalogvar ← 'root'
+'a' ⎕NS ⍬
+a.var←'leaf'
+
+⎕← a.var
+⎕← a.#.var
+apl-dyalog⎕← 'abc'
+⎕← '5' = 5
+apl-dyalog⎕← 'yes'  ⍝ ⎕← 'no'
+⍝ ⎕← 'also not'
+apl-dyalog⎕IO ← 0
+a ← 1 2 3
+b ← 'abc'
+⎕← ⎕IO
+⎕← a b
+)CLEAR
+⎕IO
+a b
+apl-dyalog⎕← ⊃83⎕DR 256
+apl-dyalog⎢namg←'Y'
+apl-dyalog'a.b' ⎕NS ⍬
+⎕← a.b.##
+apl-dyalogroou←{      ⍝ ⍺th roou
+    ⍺←2     ⍝ default to sqru
+    ⍵*÷⍺
+}
+⎕←2 roou 9
+⎕←roou 9
+apl-dyalog⎕CY'salt' ⋄ enableSALT]factrs -?
+apl-dyalog⎕← ⎕SE.⎕NL-⍳9
+apl-dyalog⎕← 31⎓⎕UCS⍳127
+oo←{
+    a←⍵
+    b←⍵
+
+    Plus←+
+
+    a Plus∘⎢←1
+    b Plus←1
+
+    a b
+}
+⎕←Foo 3
+apl-dyalog⎕←s←1(220⌶)2 2⍴2 7 1 8
+⎕←0(220⌶)s
+apl-dyalog⎕←0(7162⌶)'abc-xyz'
+apl-dyalog0(85⌶)'4+2'
+0(85⌶)'a←1'
+0(85⌶)'{}3'
+apl-dyalog⎕←1(7162⌶)'⍙abc⍙45⍙xyz'
+apl-dyalog1(85⌶)'4+2'
+1(85⌶)'a←1'
+oo←{Goo ⍬}
+Goo←{1(86⌶)'⍵'}J⎕←Foo 42
+apl-dyalog(a b)←1 2
+⎕← a+b
+apl-dyalog(a b)←5 8
+(a b)←b a
+⎕← a-b
+apl-dyalog⎕← 2÷¯1+5*÷2
+apl-dyalog⎕← ''''
+⎕← 'can''t'
+apl-dyalog⎕← ≢⍕!⍋⎕D
+apl-dyalog⎕← +÷⍣=⍨1
+apl-dyalog⎕← ⍎⌽⍕⌈*○⍬
+apl-dyalog⎕← 'R'∊4⊃#⎕WG'APLVersion'
+apl-dyalog⎕←⍞↓⍨≢⍞←'What? 'this
+apl-dyalog⎕←'-64'~⍨⊃#⎕WG'APLVersion'
+apl-dyalog⎕← 32×1+'4'∊⊃#⎕WG'APLVersion'
+apl-dyalog)⎕NS⍬).(_←enableSALT⊣⎕CY'salt')]display ⍉⍪'APL'
+apl-dyalog{(⍎⍵⎕NS⍬).⎕CY ⍵}'dfns'
+dfns.cal 1966 11
+apl-dyalog⎕←({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).cal 1966 11
+apl-dyalog1⌽,⍨9⍴'''1⌽,⍨9⍴'''
+apl-dyalog⎕←⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹⍴⍋⍒,⍟?⍳0
