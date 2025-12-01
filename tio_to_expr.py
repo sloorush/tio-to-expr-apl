@@ -1,164 +1,187 @@
-import requests
-import re
-import base64
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Extract APL expressions from tio.run links in the APLcart TSV table.
+"""
+
 import csv
 import zlib
+import base64
+import urllib.request
+import sys
+import os
 
-def fix_base64_padding(s):
-    """Fix base64 padding issues."""
-    # Remove any trailing characters that aren't base64
-    s = re.sub(r'[^A-Za-z0-9+/=]', '', s)
-    # Add padding if needed
-    missing_padding = len(s) % 4
-    if missing_padding:
-        s += '=' * (4 - missing_padding)
-    return s
+# Set UTF-8 encoding for console output (Windows compatibility)
+if sys.platform == 'win32':
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-def is_valid_apl_code(text):
-    """Check if text looks like valid APL code."""
-    # Must contain APL symbols
-    apl_symbols = r'[⍝⍺⍵⌈⌊⍴⌹←→↑↓∇∆⍎⍕⊂⊃∪∩⊥⊤∈⍳⍸≤≥≠∧∨⍱⍲⌿⍀¨⍨⊆⊇○⌽⍉⊖⍟⍱⍲⌷≡≢⊢⊣⍤⍥⍠⍞⍬⎕]'
-    if not re.search(apl_symbols, text):
-        return False
-    
-    # Should not have too many non-printable characters
-    printable_chars = sum(1 for c in text if c.isprintable() or c in '\n\r\t')
-    if len(text) > 0 and printable_chars / len(text) < 0.8:
-        return False
-    
-    # Should not have random binary garbage patterns
-    # Check for excessive non-ASCII printable characters that aren't APL
-    non_apl_weird = sum(1 for c in text if ord(c) > 127 and c not in '⍝⍺⍵⌈⌊⍴⌹←→↑↓∇∆⍎⍕⊂⊃∪∩⊥⊤∈⍳⍸≤≥≠∧∨⍱⍲⌿⍀¨⍨⊆⊇○⌽⍉⊖⍟⍱⍲⌷≡≢⊢⊣⍤⍥⍠⍞⍬⎕÷×≢¯')
-    if len(text) > 0 and non_apl_weird / len(text) > 0.3:
-        return False
-    
-    return True
 
-def extract_from_tio_url(url):
-    """Extract APL expression from a tio.run URL."""
+def decode_tio_link(tio_url):
+    """
+    Decode a tio.run URL to extract the code/expression.
+
+    TIO.run links encode the code as base64-encoded zlib-compressed data.
+    Format: https://tio.run/##<base64_encoded_compressed_data>
+
+    The decompressed format uses 0xFF bytes as separators:
+    [language_name, 0xFF, 0xFF, code, 0xFF, ...]
+    """
+    if not tio_url or not tio_url.startswith('https://tio.run/##'):
+        return None
+
     try:
-        # TIO.run URLs encode the program after ##
-        match = re.search(r'##(.+?)(?:#|$)', url)
-        if not match:
-            return None
-        
-        encoded = match.group(1)
-        
-        # Fix padding issues
-        encoded = fix_base64_padding(encoded)
-        
-        # Decode base64
+        # Extract the base64 part after ##
+        encoded_data = tio_url.split('##')[1]
+
+        # Add padding if needed (base64 requires length to be multiple of 4)
+        padding = len(encoded_data) % 4
+        if padding:
+            encoded_data += '=' * (4 - padding)
+
+        # Decode base64 (try both standard and URL-safe variants)
+        # Some TIO links use @ and $ instead of + and /
         try:
-            decoded_bytes = base64.b64decode(encoded)
-        except Exception:
-            return None
-        
-        # TIO.run uses deflate compression
-        try:
-            decompressed = zlib.decompress(decoded_bytes, -zlib.MAX_WBITS)
+            compressed_data = base64.b64decode(encoded_data)
         except:
-            # If decompression fails, use raw bytes
-            decompressed = decoded_bytes
-        
-        # Convert to string
-        text = decompressed.decode('utf-8', errors='ignore')
-        
-        # TIO format uses various byte separators
-        separators = ['\xff', '\x00', '\n']
-        
-        candidates = []
-        
-        for sep in separators:
-            if sep in text:
-                sections = text.split(sep)
-                
-                for section in sections:
-                    section = section.strip()
-                    if not section or len(section) < 3:
-                        continue
-                    
-                    # Skip language identifiers
-                    if section.startswith('Vlang') or section.startswith('apl-'):
-                        continue
-                    
-                    # Get first line if multi-line
-                    lines = section.split('\n')
-                    for line in lines:
-                        line = line.strip()
-                        if line and is_valid_apl_code(line):
-                            candidates.append(line)
-        
-        # Return the first valid candidate
-        if candidates:
-            return candidates[0]
-        
+            # Try URL-safe base64
+            try:
+                compressed_data = base64.urlsafe_b64decode(encoded_data)
+            except:
+                # Try replacing @ and $ with + and /
+                encoded_data_fixed = encoded_data.replace('@', '+').replace('$', '/')
+                compressed_data = base64.b64decode(encoded_data_fixed)
+
+        # Decompress using zlib (raw deflate format)
+        decompressed_data = zlib.decompress(compressed_data, -zlib.MAX_WBITS)
+
+        # Split by 0xFF separator bytes
+        parts = decompressed_data.split(b'\xff')
+
+        # The APL code is typically in part 2 (after language name and separator)
+        if len(parts) > 2 and parts[2]:
+            code = parts[2].decode('utf-8', errors='ignore').strip()
+            if code:
+                return code
+
         return None
-    except Exception:
+    except Exception as e:
+        # Silently skip failed decodings (some links might be malformed)
         return None
 
-def fetch_and_extract():
-    """Fetch the TSV file and extract all expressions from tio.run links."""
+
+def fetch_and_parse_tsv():
+    """Fetch the APLcart TSV and extract expressions from TIO links."""
     url = 'https://raw.githubusercontent.com/abrudz/aplcart/refs/heads/master/table.tsv'
-    
-    print("Fetching TSV file...")
-    response = requests.get(url)
-    response.raise_for_status()
-    
-    text = response.text
-    lines = text.split('\n')
-    
-    print(f"Processing {len(lines)} lines...")
-    
+
+    print("Fetching APLcart table...")
+    with urllib.request.urlopen(url) as response:
+        content = response.read().decode('utf-8')
+
+    # Parse TSV
+    reader = csv.reader(content.splitlines(), delimiter='\t')
+    next(reader)  # Skip header row
+
     results = []
-    tio_pattern = re.compile(r'https?://tio\.run/##[^\s\t]+')
-    
-    for i, line in enumerate(lines, 1):
-        line = line.strip()
-        if not line:
-            continue
-        
-        # Find all tio.run URLs in this line
-        tio_urls = tio_pattern.findall(line)
-        
-        for tio_url in tio_urls:
-            expression = extract_from_tio_url(tio_url)
-            if expression:
-                results.append({
-                    'line': i,
-                    'url': tio_url,
-                    'expression': expression
-                })
-        
-        if i % 100 == 0:
-            print(f"Processed {i}/{len(lines)} lines...")
-    
-    print(f"\nComplete! Found {len(results)} expressions from tio.run links.")
+    total_rows = 0
+    tio_links_found = 0
+    expressions_extracted = 0
+
+    for row in reader:
+        total_rows += 1
+        if len(row) >= 8:  # Ensure we have enough columns
+            syntax = row[0]
+            description = row[1]
+            tio_link = row[7]
+
+            if tio_link and tio_link.startswith('https://tio.run/'):
+                tio_links_found += 1
+                expression = decode_tio_link(tio_link)
+
+                if expression:
+                    expressions_extracted += 1
+                    results.append({
+                        'syntax': syntax,
+                        'description': description,
+                        'tio_link': tio_link,
+                        'expression': expression
+                    })
+
+    print(f"\nStats:")
+    print(f"  Total rows: {total_rows}")
+    print(f"  TIO links found: {tio_links_found}")
+    print(f"  Expressions extracted: {expressions_extracted}")
+
     return results
 
-def save_to_csv(results, filename='tio_expressions.csv'):
-    """Save results to a CSV file."""
-    with open(filename, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=['line', 'expression', 'url'])
+
+def save_to_csv(results, filename='apl_expressions.csv'):
+    """Save results to CSV file."""
+    os.makedirs('out', exist_ok=True)
+    filepath = os.path.join('out', filename)
+    with open(filepath, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=['syntax', 'description', 'expression', 'tio_link'],
+                                quoting=csv.QUOTE_ALL)  # Quote all fields to handle newlines and special chars
         writer.writeheader()
         writer.writerows(results)
-    print(f"Results saved to {filename}")
+    print(f"Saved {len(results)} expressions to {filepath}")
+
+
+def save_to_txt(results, filename='apl_expressions.txt'):
+    """Save results to text file."""
+    os.makedirs('out', exist_ok=True)
+    filepath = os.path.join('out', filename)
+    with open(filepath, 'w', encoding='utf-8') as f:
+        for item in results:
+            f.write(f"Syntax: {item['syntax']}\n")
+            f.write(f"Description: {item['description']}\n")
+            f.write(f"Expression: {item['expression']}\n")
+            f.write(f"Link: {item['tio_link']}\n")
+            f.write("-" * 80 + "\n")
+    print(f"Saved {len(results)} expressions to {filepath}")
+
+
+def save_expressions_only(results, filename='expressions_only.txt'):
+    """Save only the raw APL expressions (one per line)."""
+    os.makedirs('out', exist_ok=True)
+    filepath = os.path.join('out', filename)
+    with open(filepath, 'w', encoding='utf-8') as f:
+        for item in results:
+            f.write(f"{item['expression']}\n")
+    print(f"Saved {len(results)} expressions to {filepath}")
+
 
 def main():
-    results = fetch_and_extract()
-    
-    # Display first 10 results
-    print("\nFirst 10 expressions:")
-    print("-" * 80)
-    for i, result in enumerate(results[:10], 1):
-        print(f"{i}. Line {result['line']}: {result['expression']}")
-    
-    if len(results) > 10:
-        print(f"\n... and {len(results) - 10} more")
-    
-    # Save to CSV
-    save_to_csv(results)
-    
-    return results
+    results = fetch_and_parse_tsv()
+
+    print(f"\n=== Sample Expressions ===")
+    for i, item in enumerate(results[:10]):  # Show first 10
+        print(f"\n{i+1}. {item['syntax']} - {item['description']}")
+        print(f"   Expression: {item['expression']}")
+        print(f"   Link: {item['tio_link']}")
+
+    # Optionally save to file
+    print("\nExport options:")
+    print("  1. CSV format")
+    print("  2. Text format")
+    print("  3. Expressions only (one per line)")
+    print("  4. All formats")
+    print("  5. Skip")
+    choice = input("Choose option (1-5): ").strip()
+
+    if choice == '1':
+        save_to_csv(results)
+    elif choice == '2':
+        save_to_txt(results)
+    elif choice == '3':
+        save_expressions_only(results)
+    elif choice == '4':
+        save_to_csv(results)
+        save_to_txt(results)
+        save_expressions_only(results)
+    else:
+        print("Skipping save.")
+
 
 if __name__ == '__main__':
-    results = main()
+    main()

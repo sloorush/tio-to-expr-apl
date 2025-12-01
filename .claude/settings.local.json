@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python tio_to_expr.py:*)",
+      "Bash(python analyze_missing.py:*)",
+      "Bash(python test_decode.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
