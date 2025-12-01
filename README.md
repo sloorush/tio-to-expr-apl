@@ -101,4 +101,4 @@ APLcart is created and maintained by Adám Brudzewsky.
 ---
 ---
 
-Wrote with claude code
+Written with claude code
