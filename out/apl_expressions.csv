@@ -1,0 +1,1824 @@
+"syntax","description","expression","tio_link"
+"⍬","Empty Numeric Vector","⎕← ⍬ ≡ 0⍴0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9a5ReNS5UMHgUe8Wg///AQ"
+"⊢Y","Same (I-combinator): Y","⎕← ⊢  1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS1SUDBUMFIw/v8fAA"
+"X DOP Y⊢Z","Separate right operand of dyadic operator (DOP) from its right argument (same as (X DOP Y)Z )","⎕← ⌽⍣3 ⊢ 'Yyy'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex91LvYWOFR1yIF9cjKSvX//wE"
+"X⊢Y","Right (K-combinator): Y","⎕← 'L' ⊢ 'R'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVHnUtUlAPUv//HwA"
+"X⊢Y","Church Boolean false (X if false, else Y)","⎕← 'true' ⊢ 'false'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtUlBPS8wpTlX//x8A"
+"⊣Y","Same (I-combinator): Y","⎕← ⊣  1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS1WUDBUMFIw/v8fAA"
+"X⊣Y","Left (KI-combinator): X","⎕← 'L' ⊣ 'R'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUfdQVHnUtVlAPUv//HwA"
+"X⊣Y","Church Boolean true (X if true, else Y)","⎕← 'true' ⊣ 'false'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtVlBPS8wpTlX//x8A"
+"+Y","Conjugate ('Identity' if Y not complex)","⎕← + 1.2 0j4 ¯5j¯6 'abc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0FQz1jBQMskwUDq03zTq03kxBPTEpWf3/fwA"
+"+N","Mirror complex N across x-axis","⎕←+1J2 ¯1J¯2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE7QNvYwUDq039Dq03uj/fwA"
+"M+N","Adding N to M","⎕← 1 2 3 4 + 10
+⎕← 1 2 3 + 2 ¯4 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBVMFLQVDA24UMS0geSh9SYKhv//AwA"
+"-N","Negate: 0-N","⎕← - 3.2 ¯7 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0FYz1jBQOrTdXMPj/HwA"
+"M-N","Subtracting N from M","⎕← 3 7 9 - 5
+⎕← 5 1 4 - 2 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFcwVLBV0FUy5oAKmCoYKJkABI6CUyf//AA"
+"×N","Direction ('Signum' if N is real)","⎕← × 3.1 ¯2 0 3j4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT1cw1jNUOLTeSMFAwTjL5P9/AA"
+"M×N","Multiplying M and N","⎕← 2 ¯3 4.5 × ¯3 ¯4 2
+⎕← 3 1 4 × 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFA6tN1Yw0TNVODwdzDy03kTBiAsqa6xgqGACkjE0@P8fAA"
+"M×N","Probabilistic AND","⎕← 1 0.5 0.25 0 × 0.5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQz0TIHYCEgoHJ4O4v3/DwA"
+"Mm×Nm","Hadamard product of Mm and Nm","A ← 2 3⍴10 20,30 40,50 60
+B ← 2 3⍴1 2,3 4,5 6
+⎕← A × B","https://tio.run/##SyzI0U2pTMzJT///31HhUdsEBSMF40e9WwwNFIwMdIwNFEwMdEwNFMwMuJyQZRWMdIwVTHRMFcy4HvVNBUk4KhyeruD0/z8A"
+"A×N","Selecting elements satisfying condition A, others to 0","⎕← 1 1 0 1 0 × 3 1 4 1 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgdAAjA9PVzAGMkyA2PT/fwA"
+"M∨N","Greatest Common Divisor of M and N","⎕← 15 1 2 7 ∨ 35 1 4 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMTRUMFYwUzBUedaxQMAZxTBQM/v8HAA"
+"A∨B","Logical OR","⎕← 0 1 0 1 ∨ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHHCiANYhn@/w8A"
+"M∧N","Lowest Common Multiple of M and N","⎕← 15 1 2 7 ∧ 35 1 4 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMTRUMFYwUzBUedSxXMAZxTBQM/v8HAA"
+"A∧B","Logical AND","⎕← 0 1 0 1 ∧ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHHciANYhn@/w8A"
+"⌈N","Rounding up to integer","⎕← ⌈ 3.4 ¯3.4 3 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XQoGOuZKBxaDyKNFQz@/wcA"
+"M⌈N","Maximum of M and N","⎕← 1.1 ¯2 ⌈ 8.1 ¯3.4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9QwVDq03UnjU06FgAWYb65n8/w8A"
+"⌊N","Rounding down to integer","⎕← ⌊ 3.4 ¯3.4 3 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XQpGOuZKBxaDyKNFQz@/wcA"
+"M⌊N","Minimum of M and N","⎕← 1.1 ¯2 ⌊ 8.1 ¯3.4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9QwVDq03UnjU06VgAWYb65n8/w8A"
+"⌽Y","Reverse last axis of Y","⎕← ⌽ 'trams'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9exVUC8pSswtVv//HwA"
+"⌽Ym","Reflect vertically","mat ← 3 4⍴⍳12
+⎕← ⌽ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGevAlD6/38A"
+"I⌽Y","Rotate vectors along last axis of Y","⎕← 3 ⌽ 'HatStand'
+⎕← ¯2 ⌽ 1 2 3 4 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR717FVQ90gsCS5JzEtR54KKH1pvBJYxVDACqjFRMFUw@/8fAA"
+"⊖Y","Reverse leading axis of Y","mat ← 2 3 4⍴⍳24
+⎕← ⊖mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwVjBZNHvVse9W42MuF61DcVJPioaxpQ/v9/AA"
+"⊖Ym","Reflect horizontally","mat ← 3 4⍴⍳12
+⎕← ⊖mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGsaUPb/fwA"
+"I⊖Y","Rotate vectors along leading axis of Y","mat ← 3 4⍴⍳12
+⎕← 0 1 2 ¯1 ⊖ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkoGCoYKRwaL2hwqOuaQpAhf//AwA"
+"÷N","Reciprocal: 1÷N","⎕← ÷ 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOb1cwVDBSMP7/HwA"
+"M÷N","Dividing M by N","⎕← 1 2 3 ÷ 4 5 7
+⎕← 10 ÷ ¯2 0.5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUOb1cwUTBVMOeCiRqAhA6tN1Iw0DP9/x8A"
+"|N","Magnitude (absolute value)","⎕← | 2.3 ¯4 0 3j4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRqFIz0jBUOrTdRMFAwzjL5/x8A"
+"M|N","Residue after dividing N by M","⎕← 2 10 ¯2.5 | 7 ¯13 8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFAwNFA6tN9IzVahRMAeyDI0VLP7/BwA"
+"!N","Factorial (Gamma function of N+1)","⎕← ! 3 9 ¯0.11","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQUFYwVLBUOrTfQMzT8/x8A"
+"M!N","Number of selections of size M from N (using Beta function): C(N,M)","⎕← 2 1 3 ! 3 10 ¯0.11","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFAwVjBUUgdjQQOHQegM9Q8P//wE"
+"A!N","Selecting elements satisfying condition A, others to 1","⎕← 1 1 0 1 0 ! 3 1 4 1 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgdAAjBUVjIG0CQj//w8A"
+"?J","Random number selected from ⍳J","⎕← ? 6 6 6 6 6","https://tio.run/##SyzI0U2pTMzJT///qHeugnNOZnK2wqPmuY/6tyqU5Cukp@alFiWWpCrkpZYr5JXmJqUWFf9/1Df1UdsEBXsFMxj8/x8A"
+"?B","Random real number between (0,1) if B=0 or ⎕IO if B=1","⎕← ? 0 0","https://tio.run/##SyzI0U2pTMzJT///qHeugnNOZnK2wqPmuY/6tyqU5Cukp@alFiWWpCrkpZYr5JXmJqUWFf9/1Df1UdsEBXsFAwWD//8B"
+"Is?Js","Deal: Is random numbers between 1 and Js (without replacement)","⎕← 13 ? 52","https://tio.run/##SyzI0U2pTMzJT///qHeugnNOZnK2wqPmuY/6tyqU5Cukp@alFiWWpCrkpZYr5JXmJqUWFf9/1Df1UdsEBUNjBXsFU6P//wE"
+"M<N","Less Than","⎕← 1 2 3 < 4 2 ¯1
+⎕← 1 2 3 < 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBVsFEyA9KH1hlxowkb//wMA"
+"A<B","Logical converse nonimplication","⎕← 0 1 0 1 < 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB2AZIgmjD//8B"
+"M≤N","Less Than Or Equal To","⎕← 1 2 3 ≤ 4 2 ¯1
+⎕← 1 2 3 ≤ 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUedS5RMAGyDq035MKQMPr/HwA"
+"A≤B","Logical implication","⎕← 0 1 0 1 ≤ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHnEiANYhn@/w8A"
+"X=Y","Equal To","⎕← 1 2 3 = 4 2 ¯1
+⎕← 'Banana' = 'a'
+⎕← 7 = '7'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBVsFUyA9KH1hlxQYXWnxDwgVAfKqCeqw0TNQVxz9f//AQ"
+"A=B","Logical XNOR","⎕← 0 1 0 1 = 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB2BZIgmjD//8B"
+"M≥N","Greater Than Or Equal To","⎕← 1 2 3 ≥ 4 2 ¯1
+⎕← 1 2 3 ≥ 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUedS5VMAGyDq035MKQMPr/HwA"
+"A≥B","Logical converse implication","⎕← 0 1 0 1 ≥ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHnUiANYhn@/w8A"
+"M>N","Greater Than","⎕← 1 2 3 > 4 2 ¯1
+⎕← 1 2 3 > 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBXsFEyA9KH1hlxowkb//wMA"
+"A>B","Logical nonimplication","⎕← 0 1 0 1 > 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB2A5IgmjD//8B"
+"X≠Y","Not Equal To","⎕← 1 2 3 ≠ 4 2 ¯1
+⎕← 'Banana' ≠ 'a'
+⎕← 7 ≠ '7'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUedS5QMAGyDq035IJKqDsl5gGhOlhOPVEdJm4OETBX//8fAA"
+"A≠B","Logical XOR","⎕← 0 1 0 1 ≠ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHnAiANYhn@/w8A"
+"≡Y","Depth: Maximum level of nesting in Y (negative if uneven)","⎕← ≡ 7
+⎕← ≡ 'abc'
+⎕← ≡ (1 2)(3 4)
+⎕← ≡ (1 2)(3 4)5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS5UMOdC4qgnJiWrIwtoGCoYaWoYK5hoYhc1/f8fAA"
+"X≡Y","Match: 1 if X is identical to Y, else 0","⎕← 'b' 'e' 'x' ≡ 'bex'
+⎕← 1 ≡ 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUk9QV1FOBuEJd4VHnQiA/tUKdCyppCBYyVDD8/x8A"
+"≢Xm","Number of rows in matrix Xm","mat ← 2 3⍴⍳6
+⎕← ≢ mat
+⎕← ⍴ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJPKoc5ECUBbO7d0C4v7/DwA"
+"≢Y","Tally: Number of items in leading axis","⎕← ≢ 'a'
+⎕← ≢ 7 4 2
+⎕← ≢ 5 4 3⍴0
+⎕← ≢ (1 2)(3 4)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS5SUE9U50LimiuYKBghC5gCBYwf9W4xQBbUMFQw0tQwVjDR/P8fAA"
+"X≢Y","Not Match: ~X≡Y","⎕← 'bex' ≢ 'b','e','x'
+⎕← 1 ≢ 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUk1Ir1BUedS4CstR11FOBuEKdCyppCJYwVDD8/x8A"
+"↓Y","Split: Nest sub-arrays (from last axis)","mat ← 2 3 4⍴⍳24
+⎕← ↓ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwVjBZNHvVse9W42MuF61DcVJPiobbICUMH//wA"
+"↓Ym","Matrix to vector of row vectors","mat ← 3 4⍴⍳12
+⎕← ↓ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qG2yAlD6/38A"
+"Is↓Ym","Drop Is rows from matrix Ym","mat ← 3 4⍴⍳24
+⎕← 1 ↓ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjLhetQ3FSRkCJSYrABU8P8/AA"
+"Iv↓Y","Drop Iv items along leading axes of Y","mat ← 3 4⍴⍳24
+⎕← 1 ¯2 ↓ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjLhetQ3FSRkqHBovRFQcrICUNH//wA"
+"↑Y","Mix: Remove nesting (adding trailing axes)","⎕← ↑ (6 4) 5 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU1U0DBTMNFUMFUw/v8fAA"
+"↑Yv","Vector of row vectors to matrix","⎕← ↑ 'Hip' 'Hop'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU1UUPfILFAHkvkF6v//AwA"
+"Is↑Yv","Padding Yv on the right to width Is","⎕← 5 ↑ 3 1 4
+⎕← ¯5 ↑ 3 1 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMFR61TVQwVjBUMOGCCh1ajyT4/z8A"
+"Is↑Ym","Take Is rows from matrix Ym","mat ← 3 4⍴⍳12
+⎕← ¯2 ↑ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSR0aL0RUGqiAlDJ//8A"
+"Iv↑Y","Take Iv items along leading axes of Y","mat ← 3 4⍴⍳12
+⎕← 2 ¯3 ↑ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkpHBovTFQcqICUNH//wA"
+"Iv↑Ys","Padding Ys to shape Iv","⎕← ¯2 3 ↑ 7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTdSMFZ41DZRwfz/fwA"
+"⍴Y","Shape: Length of each axis of Y","mat ← 3 4⍴⍳12
+⎕← ⍴ mat
+⎕← ⍴⍴ mat
+⎕← ⍴ 'your boat'
+⎕← ⍴ 7
+⎕← ⍴⍴ 7","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSQE5CsApZG4mCIK6pX5pUUKSfmJJerIwuZousz//wcA"
+"Iv⍴Y","Reshape Y to have shape Iv","⎕← 2 3 4 ⍴ 1 2 3 4 5 6 7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFIwVTBQe9W5RMISyTRXMFMz//wcA"
+"*N","e raised to the power N","⎕← * 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0FAwUDBWM/v8HAA"
+"M*N","M raised to the power N","⎕← 49 5 ¯4 * 0.5 2 0.5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMLBVMFQ6tN1HQUjDQM1UwApH//wMA"
+"⍟N","Natural logarithm of N","⎕← ⍟ 1 2 3 2.7182818285","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9c5XMFQwUjBWMNIzN7QwsgBh0///AQ"
+"M⍟N","Base-M logarithm of N","⎕← 2 10 ⍟ 32 1000","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFAwNFB71zlcwBrEMDP7/BwA"
+"○N","pi times N","⎕← ○ 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQeTe9WMFAwVDD6/x8A"
+"I○N","Circular functions","⎕← 1 ○ 0 1.5707963 3.1415927
+⎕← 2 ○ 0 1.5707963 3.1415927
+⎕← 3 ○ 0 1.5707963 3.1415927","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFR5N71YwUDDUMzU3MLc0M1Yw1jM0MTS1NDLngioxIqzEGLeS//8B"
+"~B","Logical inverse (NOT): 0=B","⎕← ~ 0 1 0 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTqFAwUDEH4/38A"
+"Xv~Y","Without: (~Xv∊Y)/Xv","⎕← 3 1 4 1 5 ~ 5 1
+⎕← 'aa' 'bb' 'cc' 'bb'  ~ 'bb' 'xx'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQwVTIDYVKEOiA25oMLqiYnqCupJSUAiORnKAqqAiFRUqP//DwA"
+"X f⍨Y","Commute (C-combinator): same as Y f X","⎕← 2 ⍴ 3
+⎕← 2 ⍴⍨ 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFB71blEw5kLmPupdoWD8/z8A"
+"X f⍨Y","Church Boolean Logical Inverse","⎕← 'true' ⊣ 'false'
+⎕← 'true' ⊣⍨ 'false'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUS4pKU9UVHnUtVlBPS8wpTlXnwpB51LsCJvn/PwA"
+"f⍨Y","Commute (W-combinator): same as Y f Y","⎕← ⍴⍨ 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W551LtCwfj/fwA"
+"X f∘g Y","Beside (D-combinator): X∘f on the result of g on Y, that is, X f g Y","⎕← ¯1 ⌽∘⍳¨ 3 4 5","https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgwq8xIOKMveKImOKNs8KoIDMgNCA1//8"
+"X∘g Y","Curry: g between X and Y, that is, XgY","next ← 1∘+
+⎕← next 23","https://tio.run/##SyzI0U2pTMzJT///Py@1okThUdsEBcNHHTO0uR71TQVxwKJGxv//AwA"
+"f∘g Y","Beside: f on the result of g on Y, that is, f g Y","⎕← ⌽∘⍳¨ 3 4 5","https://tio.run/##ASYA2f9hcGwtZHlhbG9n///ijpXihpAg4oy94oiY4o2zwqggMyA0IDX//w"
+"X f¨Y","Each: f between items of X and Y","⎕← 3 ↑¨ 1 2 (3 4) 'V'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR61TTy0QsFQwUhBw1jBRFNBPUz9/38A"
+"f¨Y","Each: f on items of Y","⎕← ⊃¨ 1 2 3 'ABC' (9 8 7)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTUfWqFgqGCkYKyg7ujkrK6gYalgoWCu@f8/AA"
+"Is f/Y","N-wise Reduce: f between all items of Y in groups of Is on last axis","⎕← 2 +/ 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFLT1FQyBlLGCiYLp//8A"
+"Iv/Y","Replicate along last axis of Y","⎕← 3 1 ¯2 2 / 6 7 8 9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQwVDq03UjBS0FcwUzBXsFCw/P8fAA"
+"Av/Y","Filtering columns of Y according to mask Av","⎕← 1 0 1 0 1 / 'Heart'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQygWF9B3SM1sahE/f9/AA"
+"f/Y","Reduce: f between all items of Y on last axis","⎕← +/ 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09RUMFYwUjBVMFEz//wcA"
+"Is f⌿Y","N-wise Reduce First: f between all items of Y in groups of Is on first axis","mat ← 3 4⍴⍳12
+⎕← +⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSSk/ahnvwJQ/v9/AA"
+"Iv⌿Y","Replicate along leading axis of Y","mat ← 3 4⍴⍳12
+⎕← 1 0 2 ⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkqGCgYKTwqGe/AlDR//8A"
+"Av⌿Y","Filtering major cells of Y according to mask Av","mat ← 3 4⍴⍳12
+⎕← 1 0 1 ⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkqGAAxI969isAFf3/DwA"
+"f⌿Y","Reduce First: f between all items of Y on first axis","mat ← 3 4⍴⍳12
+⎕← +⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSSk/ahnvwJQ/v9/AA"
+"A⍱B","Logical NOR","⎕← 0 1 0 1 ⍱ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHvRiANYhn@/w8A"
+"A⍲B","Logical NAND","⎕← 0 1 0 1 ⍲ 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FHvJiANYhn@/w8A"
+",Y","Ravel: Reshape into a vector","cube ← 2 2 2⍴⍳8
+⎕← , cube","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWI6CiDp//8B"
+"X,Y","Catenate: Join along last axis","⎕← 1 2 3 , 4 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBV0FEwUTBXM/v8HAA"
+"Xm,Ys","Append scalar to each row of matrix","cube ← 2 2⍴⍳4
+⎕← cube , 99","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMFo0e9Wx71bjbhetQ3FSQCltJRsLT8/x8A"
+"Xm,Yv","Append elements of vector to respective rows of matrix","cube ← 2 2⍴⍳4
+⎕← cube , 0 99","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMFo0e9Wx71bjbhetQ3FSQCltJRMFCwtPz/HwA"
+"⍪Y","Table: Reshape into 2-dimensional array","hypercube ← 2 2 2 2⍴⍳16
+⎕← ⍪ hypercube","https://tio.run/##SyzI0U2pTMzJT///P6OyILUouTQpVeFR2wQFIwh81LvlUe9mQzOuR31TQcKPelcpwBX@/w8A"
+"⍪Y","Ravel planes of rank 3 array Y to form rows of a matrix","cube ← 2 2 2⍴⍳8
+⎕← ⍪ cube","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWKPelcpgBT8/w8A"
+"⍪Yv","Reshaping vector Yv into a one-column matrix","⎕← ⍪ 2 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9a5SMFIwVjD5/x8A"
+"X⍪Y","Catenate First: Join along leading axis","mat ← 2 3⍴⍳6
+⎕← mat ⍪ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V0Fov//BwA"
+"Xm⍪Ys","Append scalar to each column of matrix","mat ← 2 3⍴⍳6
+⎕← mat ⍪ 0","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V2lYPD/PwA"
+"Xm⍪Yv","Append elements of vector to respective columns of matrix","mat ← 2 3⍴⍳6
+⎕← mat ⍪ 7 8 9","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwXjR71bHvVuNuN61DcVJAKW6V2lYK5goWD5/z8A"
+"⊃Y","First item of Y","⎕← ⊃ 'Word'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTUrqIfnF6Wo//8PAA"
+"Iv⊃Y","Reach into Y along path given by Iv","⎕← 3 ⊃ 'Word'
+⎕← 2 ⊃ (1 2)(3 4 5)
+⎕← 2 1 ⊃ (1 2)(3 4 5)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR51NSuoh@cXpahzQcWMwGIahgpGmhrGCiYKppoIGUMMuf//AQ"
+"⊂Y","Enclose: Scalar containing Y","⎕← 1(2 3)
+⎕← ⊂ 1(2 3)
+⎕← ⊂⊂ 1(2 3)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMNYwUjDW5oLxHXU2YIgjB//8B"
+"Av⊂Y","Partitioned enclose of Y according to Av (along last axis) beginning enclosures on 1s","⎕← 0 1 0 1 ⊂ 1 2 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAzB@FFXE5A0UjBWMPn/HwA"
+"⊆Y","Nest: Y if already nested, else scalar containing Y","⎕← 'this'
+⎕← ⊆ 'this'
+⎕← 'this' 'that'
+⎕← ⊆ 'this' 'that'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUSzIyi9W5oLxHXW1oIhAeiEoswaIMKvH/PwA"
+"Mv⊆Y","Partition Y according to Mv (along last axis) beginning partitions on increases","⎕← 1 0 0 1 1 ⊆ 1 2 3 4 5
+⎕← 1 1 2 2 2 ⊆ ⍳5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQyA0BAIH3W1AUkjBWMFEwVTLrg0SAgEQdKPejeb/v8PAA"
+"⌷Y","Materialise items of Y in workspace",":Class Person
+    :Property default fullName
+    :Access public shared
+        ∇ text←Get
+          text←'My Clan'
+        ∇
+    :EndProperty
+:EndClass
+⎕FIX⎕SRC Person
+
+⎕← Person
+⎕← ⌷ Person","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCEgtag4P49LAQisAoryC1KLSioVUlLTEktzShTSSnNy/BJzUyHSjsnJqUAdBaVJOZnJCsUZiUWpKWAZEHjU0a5QklpR8qhtgntqCVxYASao7lupALQxTx1ZB8Rc17wUmM1cIA7YYVyP@qa6eUYAyeAgZ5grQYJAs2BcKO9Rz3aoyP//AA"
+"Iv⌷Y","Index Y using indices Iv","mat ← 3 4⍴⍳12
+⎕← 2 3 ⌷ mat
+⎕← 2 ⌷ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkBBR81LNdAagEIQQV@P8fAA"
+"⍳Js","Integers from 1 to Js","⎕← ⍳ 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMDT4/x8A"
+"⍳Jv","Indices of all items of array of shape Jv","⎕← ⍳ 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5WMFIw/v8fAA"
+"X⍳Y","Index of: First indices in X of major cells Y","⎕← 'ABCDABCDEF' ⍳ 'ACF'
+mat ← 3 2⍴⍳6
+⎕← mat ⍳ 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZ2cXUDY1U1d4VHvZqCAs5s6V25iiQJI2ljB6FHvFqC4GRdUA1gGqM5Uwez/fwA"
+"Xv⍳Y","Index of keys Y in key vector Xv","⎕← 'Abe' 'Bob' 'Carl' ⍳ 'Bob' 'Abe'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHZNS1RXUnfKTgKRzYlGOusKj3s0wAZDk//8A"
+"∊Y","Enlist: Simple vector from elements of Y","mat← 2 3⍴⍳6
+⎕←∊ 0 mat (7 8) 9
+⎕←∊ 2 3⍴1 'abc'","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBAUjBeNHvVse9W4243rUNxUo8qijS8FAASiroGGuYKGpYIkkDlFsqKCemJSs/v8/AA"
+"⍸B","Indices of all 1s in B","⎕← ⍸ 1 0 0 1 1
+bmat← 2 3⍴0 1 0 1 0 1
+⎕← ⍸ bmat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5QMFQwAEJDBUOupNzEEpCokYLxo94tBmAZMOZCUg5S9P8/AA"
+"⍸Bm","List of arcs from adjacency matrix Bm","amat ← 3 3⍴0 1 0 0 0 1 1 1 0
+⎕← ⍸ amat","https://tio.run/##SyzI0U2pTMzJT///PzE3sUThUdsEBWMF40e9WwwUDBUMwNAQDA24HvVNBUk/6t2hAFL7/z8A"
+"X⍸Y","Indices of major cells of Y in left-inclusive intervals with cut-offs X","⎕← 'AEIOU' ⍸ 'DYALOG'
+⎕← 2 4 6 ⍸ 1 2 3 4 5 6 7
+mat←3 2⍴⍳6
+⎕← mat ⍸ 3 3
+⎕← mat ⍸ 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHV09/UPVFR717lBQd4l09PF3V@eCyhkpmCiYgWUMgWxjIM8UyDfnyk0sAUobKxg96t3yqHezGUw9UBys2ljBGFPI5P9/AA"
+"∪Y","Unique: Distinct major cells of Y","⎕← ∪ 'ab' 'ba' 'ab' 1 1 2
+mat←2 3⍴'flyshyfly'
+⎕← ∪ mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedaxSUE9MUldQT0pUh7AMgdCIKzexBChvpGD8qHeLelpOZXFGJZBU50LSB1Ty/z8A"
+"Xv∪Yv","Union: Xv,Yv~Xv","⎕← 'ab' 'cde' 'fg' ∪ 'a' 'ab'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5PUFdSTU1KBZFq6usKjjlVAMXWw@P//AA"
+"Xv∩Yv","Intersection: (Xv∊Yv)/Xv","⎕← 22 'ab' 'fg' ∩ 'a' 'ab' 22","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMjBTUE5PUFdTT0tUVHnWsBPLUISJGRv//AwA"
+"X f⍣g Y","Power: iterating X∘f on Y until condition (f Y) g Y is true","⎕← 1 +∘÷⍣= 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFbQfdcw4vP1R72JbBcP//wE"
+"f⍣g Y","Power: iterating f on Y until condition (f Y) g Y is true","⎕← 1∘+∘÷⍣= 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0Abiw9sf9S62VTD8/x8A"
+"⍋Jv","Invert permutation","⎕← ⍋ 2 5 1 3 4
+⎕← ⍋⍋ 2 5 1 3 4  ⍝ invert back again","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XYrGCmYKhgqGCuYcCEEUcQVgCJzFTLzylKLShSSEpOzFRLTEzPz/v8HAA"
+"C⍋D","Ascending grade using collation sequence C","⎕← ⍋ 'Banana'
+⎕← 'Banana'[⍋ 'Banana']
+⎕← 'an' ⍋ 'Banana'
+⎕← 'Banana'['an' ⍋ 'Banana']","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XYrqDsl5gGhOhdUDMaPRpaMhcsm5qnj14ahIvb/fwA"
+"⍒Y","Descending grade: Indices to reorder Y into descending order","⎕← ⍒ 33 11 44 66 22
+names ← 'Joe' 'Sue' 'Sam'
+ages ← 34 22 25
+⎕← names[⍒ages]
+⎕← ⍒ 'ABC' ⎕NULL ⍬ ¯3j4 'A'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9U5SMDZWMDRUMDFRMDNTMDLiykvMTS1WAEmqe@WnqiuoB5eCycRcda7EdKiUsQlQqYKRKRfUHLCmaKBpIBWxXEimqzs6OasrAAX8Qn18gCJrFA6tN84yAYqr//8PAA"
+"C⍒D","Descending grade using collation sequence C","⎕← ⍒ 'Banana'
+⎕← 'Banana'[⍒ 'Banana']
+⎕← 'an' ⍒ 'Banana'
+⎕← 'Banana'['an' ⍒ 'Banana']","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9U5SUHdKzANCdS6oGIwfjSwZC5dNzFPHrw1DRez//wA"
+"Iv\Y","Expand last axis of Y","⎕← 3 ¯2 4 \ 7 8
+⎕← 1 0 1 0 1 \ 'Hat'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1IwUYhRMFew4IIKGioYQHGMgrpHYon6//8A"
+"f\Y","Scan: f between items of Y in progressively longer vectors along last axis","⎕← +\ 1 2 3 4 5
+mat← 3 4⍴1 3 6 10 5 11 18 26 9 19 30 42
+⎕← +\ mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0YxQMFYwUjBVMFEy5chNLQGJAzqPeLYZA2kzB0EDBVMHQUMHQQsHITMFSwdBSwdhAwcSIC6EfqOv/fwA"
+"Iv⍀Y","Expand leading axis of Y","mat←3 4⍴⍳12
+⎕← 1 0 2 1 ⍀ mat","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUoomCoYKBgBCQf9TYoABX9/w8A"
+"f⍀Y","Scan First: f between items of Y in progressively longer vectors along first axis","mat←3 4⍴⍳12
+⎕← +⍀ mat","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUooqD9qLdBASj7/z8A"
+"⍉Y","Transpose: Reverse order of axes of Y","mat←2 3 4⍴⍳24
+⎕← ⍉ mat","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBCMFYwWTR71bHvVuNjLhetQ3FSim8Ki3UwEo/f8/AA"
+"⍉Ym","Reflect diagonally","mat←2 3⍴⍳6
+⎕← ⍉ mat","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBCMF40e9Wx71bjbjetQ3FSig8Ki3UwEo9/8/AA"
+"Iv⍉Y","Reorder the axes of Y","mat ← 2 3 4⍴⍳24
+⎕← 1 3 2 ⍉ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwVjBZNHvVse9W42MuF61DcVJGgIFDRSeNTbqQBU9v8/AA"
+"X f⌸Y","Key: f between unique X values and their corresponding items of Y","⎕← 'Banana' {⍺ ⍵}⌸ 3 1 4 1 5 9
+⎕← ---
+⎕← 'Banana' {⍺,+/⍵}⌸ 3 1 4 1 5 9
+⎕← ---
+⎕← 'Banana' {⍺ ⍵}⌸ 1 2 3 4 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnRLzgFBdofpR7y6FR71bax/17FAwVjBUMAFiUwVLLqhCXV1dLmx6dLT1ydAFt8lQwQiozwSox@z/fwA"
+"f⌸Y","Key: f between unique Y values and their first-axis indices","⎕← {⍺ ⍵}⌸ 'Banana'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/XuUnjUu7X2Uc8OBXWnxDwgVP//HwA"
+"X⍷Y","Boolean indication of top left corner of occurrences of entire array X within Y","⎕← 'ana' ⍷ 'Banana'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE/MS1RUe9W5XUHcCMoGc//8B"
+"X f.g Y","Inner Product: f / g between trailing vectors of X and leading vectors of Y","⎕← 1 2 3 +.× 4 5 6
+⎕← 3 ∧.= 3 3 3 3
+mat ← 2 2⍴⍳4
+⎕← mat +.× mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBW09Q5PVzBRMFUw44KKGys86liuZwukwZArN7FEASRupGD0qHfLo97NJjCVIBmwfiDj/38A"
+"M⊥N","Decode: Evaluate N in number system M","⎕← 2 ⊥ 1 1 0 1         ⍝ binary decode
+⎕← 24 60 60 ⊥ 2 46 40  ⍝ mixed radix: conversion of hours, minutes and seconds to seconds","https://tio.run/##NYxBCsIwEEX3nuIfQCGW0IW3iZ1RA3VGklbaC7gQFDcuXXqxXCSmSP6fD3/x5rtLv6HZ9XrMOT3f6fZCg3T/YltsSqrS44O9FxdmEHdKvKq4RWuWW74a2BbW/PGzn5gQHPlph07lyiF6FegBJx1DXBdCxoEjnBBiWRWKGLTWnH8"
+"Ns⊥N","Value of polynomial with descending coefficients N at point Ns","⎕← 3 ⊥ 1 0 6  ⍝ f(3) for f(x) = 1x² + 0x¹ + 6x⁰ = x² + 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFR51LVUwVDBQMFNQeNQ7VyFNw1hTIS2/CMio0FSwVTCsOLRJQVvBoOLQTiBlVvGocQNQFCJo9v8/AA"
+"M⊤N","Encoding value N in number system M","⎕← 2 2 2 2 ⊤ 5 7 12  ⍝ binary encode
+⎕← 24 60 60 ⊤ 10000  ⍝ mixed radix: encode of 10000 seconds to hours, minutes and seconds","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMoPBR1xIFUwVzBUMjBYVHvXMVkjLzEosqFVLzkvNTUrlgik0UzAxACKTa0AAIIIpzMytSUxSKElMyK6ygWhTy06AqilOT8/NSihVK8hUy8kuLinWAyvNKS1KLFRLzUmCy//8DAA"
+"⌹Nm","Matrix inverse of Nm (square Nm)","mat ← 2 2⍴⍳4
+⎕← ⌹ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwWjR71bHvVuNuF61DcVJPKoZ6cCUPb/fwA"
+"⌹Nm","Matrix pseudo-inverse of Nm (over-determined Nm)","mat ← 3 2⍴1 2 0 1 2 4
+⎕← ⌹ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bDBWMFAwUQKQJ16O@qSCJRz07FYCK/v8HAA"
+"Mv⌹Nm","Solve equation system with variable coefficients Nm and values Mv","mat ← 2 2⍴⍳4
+⎕← 5 6 ⌹ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwWjR71bHvVuNuF61DcVJGKqYKbwqGenAlDF//8A"
+"Mm⌹Nm","Multiplying Mm with inversed Nm","mat ← 2 2⍴⍳4
+⎕← mat ⌹ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFIwWjR71bHvVuNuF61DcVJAKW6dkJov//BwA"
+"⍎Dv","Execute: Result of expression Dv","⎕← ⍎ '1+1'
+V ← 1 2 3
+⎕← ⍎ 'V'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9fYpqBtqG6pzhSmA@IYKRgrGXMiSYer//wMA"
+"X⍎Dv","Execute Dv within namespace X (name or reference)","'ns' ⎕NS ⍬
+ns.a ← 2
+ns.b ← 3
+⎕← 'ns' ⍎ 'a+b'","https://tio.run/##SyzI0U2pTMzJT///Xz2vWF3hUd9Uv2CFR71ruPKK9RIVHrVNUDACMZPATGMuoDyIAVHb26egnqidpP7/PwA"
+"⍕Y","Format: Character representation of Y","⎕← ⌽ 12 34
+⎕← ⌽ ⍕ 12 34","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9exVMDRSMDbhQhJ41DsVIvj/PwA"
+"Iv⍕Y","Format Y using ({width}, decimals) pairs Iv (negative decimals for scaled notation)","⎕← 2 ⍕ 3.125 0.002
+⎕← 6 2 ⍕ 3.125 0.002
+⎕← 6 2 ⍕ 1234         ⍝ (field not wide enough)
+⎕← ¯2 ⍕ 3.125 0.002","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFB71TlUw1jM0MlUw0DMwMOKCSpgRljI0MjZRgIFHvXMVNNIyU3NSFPLySxTKM1NSFVLz8kvTMzRh@g6txzDy/38A"
+"Ns⌶Y","I-beam: Call experimental system-related monadic function Ns","⎕← 739⌶ 0  ⍝ ""Temporary Directory""","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTMjS0f9WxTMFBQeNQ7V0EpJDW3IL8osahSwSWzKDW5JL@oUun/fwA"
+"name f←Y","Modified Assignment (tradfns/tradops only)","var←40
+var+←2
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMDLiBDG8gy4nrUNxVIA7n//wMA"
+"name←Y","Assignment","var←42
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkd9U4EMIPf/fwA"
+"∇","Dfn Self","Fact←{             ⍝ Factorial ⍵.
+    ⍵≤1: 1         ⍝ small ⍵: finished
+    ⍵×∇ ⍵-1        ⍝ otherwise: recurse
+}
+⎕←Fact 5","https://tio.run/##SyzI0U2pTMzJT///3y0xueRR24RqBWTwqHeuAkgivygzMQfI26rHBRHe@qhziaGVgiGKyuLcxBywKiuFtMy8zOKM1BSY8sPTH3W0gxi6hsg68ksyUovKM4tTrRSKUpNLi4pTuWq5HvVNBToEZK2C6f//AA"
+"⍵","Dfn/dop Right Argument","⎕←2 {⍵+1} 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUqh/1btU2rFUw/f8fAA"
+"⍺","Dfn/dop Left Argument","⎕←2 {⍺+1} 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUqh/17tI2rFUw/f8fAA"
+"Z f⍨X,Y","Avoiding parentheses by swapping arguments in (X,Y) f Z","⎕←3 -⍨ 10×2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVdB/1rlAwNDg83ej/fwA"
+"X∘.g Y","Outer Product: g between each item of X and every item of Y","⎕← 1 2 3 ∘.× 4 5 6 7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBUedczQOzxdwUTBVMFMwfz/fwA"
+"expr⊣name←Y","Combining two lines into one","⎕← var×⍳4 ⊣ var←10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTKEosOT3/Uu9lE4VHXYhAPKGho8P8/AA"
+"∇∇","Dop Self","_Pow←{               ⍝ power operator: apply ⍵⍵ times
+    ⍵⍵=0:⍵           ⍝ ⍵⍵ is 0: finished
+    ⍺⍺ ∇∇(⍵⍵-1)⍺⍺ ⍵  ⍝ otherwise: recurse
+}
+⎕← ({1+⍵} _Pow 3) 5","https://tio.run/##SyzI0U2pTMzJT///Pz4gv/xR24RqBVTwqHeuQkF@eWqRQn5BalFiSX6RlUJiQUFOJVBmKxAplGTmphZzQZSCBGwNrEDCqCZA1WYWKxhYKaRl5mUWZ6SmQDXtAiKFRx3tQKQBUadrqAkTBpkEMiC/JCO1qDyzONVKoSg1ubSoOJWrlutR31SgixU0qg21gQprFUBeUDDWVDD9/x8A"
+"↑Xv Yv …","N-row matrix from N vectors","⎕← ↑ 'Tic' 'Tac' 'Toe'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU1UUA/JTFYHkolgMj9V/f9/AA"
+"⍵⍵","Dop Right Operand","⎕←3 +{⍺ ⍵⍵ ⍵}× 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVtKsf9e5SeNS7FYhAVO3h6Qom//8DAA"
+"⍺⍺","Dop Left Operand","⎕←3 +{⍺ ⍺⍺ ⍵} 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wVtKsf9e5SAGIItbVWweT/fwA"
+"⌽[ax]Y","Reverse axis ax of Y","mat ← 3 4⍴⍳12
+⎕← ⌽[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qGdvtGGsAlDF//8A"
+"I⌽[ax]Y","Rotate vectors along axis ax of Y","mat ← 3 4⍴⍳12
+⎕← 0 1 2 ¯1 ⌽[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkoGCoYKRwaL2hwqOevdGGsQpAtf//AwA"
+"↓[ax]Y","Split: Nest sub-arrays (from axis ax)","mat ← 3 4⍴⍳12
+⎕← ↓[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FST0qG1ytGGsAlDF//8A"
+"Iv↓[ax]Y","Drop Iv items along axes ax of Y","mat ← 3 4⍴⍳12
+⎕← 1 ↓[2] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkCJSYHG0UqwBU8/8/AA"
+"↑[ax]Y","Mix: Remove nesting (adding axes between ⌊ax and ⌈ax)","⎕← ↑[0.5] 'Hip' 'Hop'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQetU2MNtAzjVVQ98gsUAeS@QXq//8DAA"
+"Iv↑[ax]Y","Take Iv items along axes ax of Y","mat ← 3 4⍴⍳12
+⎕← 1 ↑[2] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkCJSYGG0UqwBU8/8/AA"
+"Is f/[ax]Y","N-wise Reduce: f between all items of Y in groups of Is on axis ax","mat ← 3 4⍴⍳12
+⎕← +⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSSk/ahnvwJQ/v9/AA"
+"Iv/[ax]Y","Replicate along axis ax","mat ← 3 4⍴⍳12
+⎕← 2 0 1 /[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkpGCgYKigH20YqwBU9f8/AA"
+"f/[ax]Y","Reduce: f between all items of Y on axis ax","mat ← 3 4⍴⍳12
+⎕← +/[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSSkrR9tGKsAVPD/PwA"
+",[ax]Y","Ravel with Axis: insert new axis between ⌊ax and ⌈ax","⎕← ,[1.5] 'Foo'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0og31TGMV1N3y89X//wcA"
+",[ax]Y","Ravel with Axes: combine axes","cube ← 2 2 2⍴⍳8
+⎕← ,[2 3] cube","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWI60UYKxrEKIDX//wMA"
+"X,[ax]Y","Laminate: Join along new axis","⎕← 1 2 3 ,[0.5] 4 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwUjBV0og30TGMVTBRMFcz@/wcA"
+"⊂[ax]Y","Enclose: Contain axes ax inside scalars","cube ← 2 2 2⍴⍳8
+⎕← ⊂[2 3] cube","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMQfNS75VHvZguuR31TQWKPupqijRSMYxVAqv7/BwA"
+"Av⊂[ax]Y","Partitioned enclose of Y according to Av (along axis ax)","mat ← 3 2⍴⍳6
+⎕← 1 0 1 ⊂[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKoYADEj7qaog1jFYDK/v8HAA"
+"Mv⊆[ax]Y","Partition Y according to Mv (along axis ax)","mat ← 3 2⍴⍳6
+⎕← 1 1 2 ⊆[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGIIhEYKj7raog1jFYDK/v8HAA"
+"Iv⌷[ax]Y","Index Y using indices Iv along axes ax","mat ← 3 2⍴⍳6
+⎕← 2 ⌷[2] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKk8Khne7RRrAJQyf//AA"
+"Iv\[ax]Y","Expand axis ax of Y","mat ← 3 2⍴⍳6
+⎕← 1 0 1 1 \[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJGKoYADEhgox0YaxCkBl//8DAA"
+"f\[ax]Y","Scan: f between items of Y in progressively longer vectors along axis ax","mat ← 3 2⍴⍳6
+⎕← +\[1] mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJKIdE20YqwCU//8fAA"
+"name[I]←Y","Indexed Assignment","var←42
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkd9U4EMIPf/fwA"
+"name[I]f←Y","Modified Indexed Assignment (tradfns/tradops only)","var←20 30 40
+var[1 1 3]+←2
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBCMDBWMDBRMDLiA32lDBUME4VhskzPWobyqQBor@/w8A"
+"(f∘Y)Z","Curry: f between Z and Y, that is, Z f Y","prev ← -∘1
+⎕← prev 23
+sqrt ← *∘0.5
+⎕← sqrt sqrt 16 81","https://tio.run/##SyzI0U2pTMzJT///v6AotUzhUdsEBd1HHTMMuR71TQVxwKJGxlzFhUUlYFktoKyBnilMHiwOJgzNFCwM//8HAA"
+"X(f⍤Is Js)Y","Rank: f between every trailing rank-Is subarray of X and every trailing rank-Js subarray of Y","nmat ← 3 4⍴⍳12            ⍝ numeric matrix
+⎕← 10 20 30 (+⍤0 1) nmat  ⍝ scalars plus vectors","https://tio.run/##SyzI0U2pTMzJT///Py83sUThUdsEBWMFk0e9Wx71bjY0UkACj3rnKuSV5qYWZSYrAJUWZVZwPeqbCtJgaKBgZKBgbKCgof2od4mBgqGmAtgwsJbi5MScxKJihYKc0mKFstTkkvyi4v//AQ"
+"(f⍤Js)Y","Rank: f on every trailing rank-Js subarray of Y","cube ← 2 2 3⍴⍳12
+⎕← (,⍤2) cube
+cmat ← 2 3⍴'abczxy'  ⍝ character matrix
+⎕← (⍋⍤1) cmat        ⍝ grade-up by row","https://tio.run/##SyzI0U2pTMzJT///P7k0KVXhUdsEBSMgNH7Uu@VR72ZDI65HfVNBgho6j3qXGGkqgFRxJecmlkCVghSqJyYlV1VUqisoPOqdq5CckViUmFySWqQAVFWUWQE34VFvN9AMQ6AZIO1QANKRXpSYkqpbWqCQVKlQlF/@/z8A"
+"X@{B}Y","Unpack a vector X into an array based on mask B","⎕←'XYZ'@{0 1 1 0 0 1} 'abcdef'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QjIqPUHaoNFAyB0AAIDWsV1BOTklNS09T//wcA"
+"X(f@N)Y","At: apply X∘f to modify positions N in Y","⎕← 10 (×@2 4) 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0Dk93MFIw0VQwVDBSMFYwUTD9/x8A"
+"X(f@g)Y","At: apply X∘f to modify positions identified by Boolean mask (g Y) in Y","⎕← 10 (×@(≤∘3)) 3 1 4 1 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0Dk930HjUueRRxwxjTU0FYwVDBRMgNv3/HwA"
+"(X@N)Y","At: use values in X to replace positions N in Y","⎕← (0@2 4) 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DByMFEw0FQwVjBSMFUwUTP//BwA"
+"(X@g)Y","At: use values in X to replace positions identified by Boolean mask (g Y) in Y","⎕← '*'@(2∘|) 1 2 3 4 5  ⍝ Boolean selection 1 0 1 0 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUtdQdNIwedcyo0VQwVDBSMFYwUTBVUHjUO1fBKT8/JzUxT6E4NSc1uSQzPw@owACC//8HAA"
+"(Xv@Js)Ym","Amend row Js of matrix Ym","mat ← 3 2⍴⍳6
+⎕← (8 9@2) mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWjR71bHvVuNuN61DcVJKJhoWDpYKSpAFTx/z8A"
+"(f@N)Y","At: apply f to modify positions N in Y","⎕← (÷@2 4) 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dm93MFIw0VQwVDBSMFYwUTD9/x8A"
+"(f@g)Y","At: apply f to modify positions identified by Boolean mask (g Y) in Y","⎕← ⌽@(2∘|) 1 2 3 4 5  ⍝ Reversal of sub-array 1 3 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10DB61DGjRlPBUMFIwVjBRMFUQeFR71yFoNSy1KLixByF/DSF4tIk3cSiosRKoCJjBdP//wE"
+"X(f⍣Js)Y","Power: apply X∘f on Y Js times","⎕← 1 (+⍣3) 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFTS0H/UuNtZUMP3/HwA"
+"(f⍣Js)Y","Power: apply f on Y Js times","⎕← (1∘+⍣3) 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB91zNB@1LvYWFPB9P9/AA"
+"(f⌺Jm)Y","Stencil: f on padding-size and (possibly overlapping) rectangles of Y of size and (optionally step) Jm","'disp'⎕CY'dfns'
+mat ← 4 4⍴⍳16
+⎕← disp ({⊂⍵}⌺3 3) mat
+⎕← ({+/,⍵}⌺3 3) mat","https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUTBRMHvVuedS72dCMCygPEgKpVdCoftTV9Kh3a@2jnl3GCsaaCkANMAUa1dr6Omhy//8DAA"
+"X(Ns⌶)Y","I-beam: Call experimental system-related dyadic function Ns","⎕←'APL'(16 27 31) (8⌶) 'PA'(27 16)  ⍝ ""Inverted Table Index Of""","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9QdA3zUNQzNFIzMFYwNNRU0LB71bNNUUA9wVNcAChmaaSooPOqdq6DkmVeWWlSSmqIQkpiUk6rgmZeSWqHgn6b0/z8A"
+"X(f⍠Zv)Y","Variant: f qualified by Zv between X and Y","⎕← 1 ⎕JSON 1 2 (3 4)
+⎕← 1 (⎕JSON ⍠'Compact'0) 1 2 (3 4)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PyDLSEHDWMFEkwsupQGTe9S7QN05P7cgMblE3UATofT/fwA"
+"(f⍠Zv)Y","Variant: f qualified by Zv on Y","⎕← ('a' ⎕R 'x' ⍠ 'IC' 1) 'ABC'  ⍝ 'a' replaced with 'x' Ignoring Case","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01BPVFYDsIAX1CiCjd4GCuqezuoKhpoK6oxOQARSaqwBSU5RakJOYnJqiUJ5ZkgFW7Jmel1@UmZeu4JxYnPr/PwA"
+"(exp name)←Y","Selective Assignment: exp is an expression that selects elements of ""name""","var←42
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkd9U4EMIPf/fwA"
+"(exp name)f←Y","Modified Selective Assignment: exp is an expression that selects elements of ""name"" (tradfns/tradops only)","var←20 30 40
+(2 0 1/var)+←2
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBCMDBWMDBRMDLg0jBQMFQ32gqKY2SJzrUd9UIA3k//8PAA"
+"name[I]f∘⊢←Y","Modified Indexed Assignment (also dfns/dops)","var←20 30 40
+plus←+
+{var[1 1 3]plus∘⊢←2}⍬
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBCMDBWMDBRMDroKc0mIgX5urGigRbahgqGAcCxbrmPGoaxFIZe2j3jVcj/qmAtlAJf//AwA"
+"(exp name)f∘⊢←Y","Modified Selective Assignment: exp is an expression that selects elements of ""name"" (also dfns/dops)","var←20 30 40
+plus←+
+{(2 0 1/var)plus∘⊢←2}⍬
+⎕←var","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBCMDBWMDBRMDroKc0mIgX5urWsNIwUDBUB8orwkW7JjxqGsRSGnto941XI/6pgLZQMn//wE"
+"⎕NULL","The null item","⎕← ⎕CMD 'dir /'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlLOvi4J6SmaRgr76//8A"
+"⎕A","The letters from A to Z","⎕← ⎕A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlOP//wA"
+"⎕D","The digits from 0 to 9","∇ r←Foo
+  :Trap 0
+      ÷0
+  :EndTrap
+  r←⎕EN
+∇
+⎕← Foo","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJbvn5XAoKViFFiQUKBkAWCBzeDmJZuealgISBTJDCR31TXf24gNq4gCwgXwGo8/9/AA"
+"⎕LOAD file","Load saved workspace","'fileA' ⎕FCREATE 0
+'fileB' ⎕FCREATE 0
+⎕← ⎕FLIB '.'","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUV3hUd9UN@cgV8cQVwUDLrCgE5ogkPOobQJYzMfTSUFdT/3/fwA"
+"⎕SE","Session object","∇ r←foo
+  r←goo
+∇
+∇ r←goo
+  r←⎕SI
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XApgVjqQBRTlgsmkw2Ue9U0N9gSJ//8PVA4A"
+"⎕LX←expression","Expression to be executed when workspace is loaded","var←42
+∇ r←Foo
+  r←var
+∇
+Sum←+⌿
+Swap←{⍵ ⍺⍺ ⍺}
+
+⎕← ⎕NC '42' 'nothing' 'var' 'Foo' 'Sum' 'Swap'","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkcd7Qogplt@PpcCmAWUAolyBZfmAnnaj3r2cwWXJxYA2dWPercqPOrdBUQgqpaL61HfVKC4ApDyc1ZQNzFSV1DPyy/JyMxLB7KABgFJoMFAEmgYiASao/7/PwA"
+"⎕PATH ←nss","Set search path (blank-separated list of namespace names) for functions and operators","∇ r←foo
+ ⍝ next line is line 2
+  r←goo
+∇
+∇ r←goo
+  r←⎕LC  ⍝ this is line 1
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAqPeucq5KVWlCjkZOalKmQWQ2gjLgWwknSgEqByLpgWEB8i86hvqo@zAlh7SQZQG0ynIUjt//9AswE"
+"⎕RL←⍬ 1","Seed and Random Number Generator used by Roll/Deal","⎕RL←314
+⎕←?10 10 10
+⎕RL←314
+⎕←?10 10 10
+⎕RL←⍬ 1
+⎕←?10 10 10
+⎕RL←⍬ 1
+⎕←?10 10 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1CCfR20TjA1NuIBsIMve0EABjLiIkXvUu0bBkDTZ//8B"
+"⎕USING ←ns_specs","Set search path for .NET Namespace(s)","Foo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕NR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApPyCFNSBWtT//wcA"
+"file←⎕NNAMES","Names of tied files in same order as ⎕NNUMS","Foo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕CR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApJyDFNSBWtT//wcA"
+"script←⎕SRC ref","The source code of an object","⎕← ⎕CSV ⊂'here,42,there' 'this,1966,that'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlHNwmMKjrib1jNSiVB0TI50SEENdQb0kI7NYx9DSzAwoklii/v8/AA"
+"space_names←⎕NSI","Names of spaces from which functions on stack were called",":Namespace yy
+     ∇ r←foo
+       r←zz.goo
+     ∇
+:EndNamespace
+:Namespace zz
+     'display'⎕CY'dfns'
+     ∇ r←goo
+       r←display ⎕SI,[1.5]⎕NSI
+     ∇
+:EndNamespace","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVWhspJLAQQedbQrFD1qm5CWnw8RUABzq6r00mEiQCVcVq55KXDNXEjmVFVBFKmnZBYX5CRWqj/qm@ocqZ6SllesjmpDOqoNUPUKQPXBnjrRhnqmsUCmX7AnDkv//9f0C1aoqODSdAZTysp6lZV6QGcDAA"
+"space_references←⎕RSI","References to spaces from which functions on stack were called",":Namespace yy
+     ∇ r←foo
+       r←zz.goo
+     ∇
+:EndNamespace
+:Namespace zz
+     'display'⎕CY'dfns'
+     ∇ r←goo
+       r←display ⎕SI,[1.5]⎕RSI
+     ∇
+:EndNamespace","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVWhspJLAQQedbQrFD1qm5CWnw8RUABzq6r00mEiQCVcVq55KXDNXEjmVFVBFKmnZBYX5CRWqj/qm@ocqZ6SllesjmpDOqoNUPUKQPXBnjrRhnqmsUBmULAnDkv//9f0C1aoqODSdAZTysp6lZV6QGcDAA"
+"messages←⎕EM codes","Event messages corresponding to error/interrupt codes","⎕←⎕EM 3 6 1003 1006","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4Ckq6@CsYKZgqGBgTGIMPv/HwA"
+"bytes←⎕NSIZE tn","Current size of file tied with number tn","'abc' ⎕NPUT 'file.txt'
+tn ← 'file.txt' ⎕NTIE 0
+⎕← ⎕NSIZE tn","https://tio.run/##SyzI0U2pTMzJT///Xz0xKVld4VHfVL@A0BAF9bTMnFS9kooSda6SPIVHbROQRMCKQjxdFQy4gCyQHEgg2DPKVaEk7/9/AA"
+"bytes←⎕SIZE names","Space consumed by code/data attached to names","var1 ← 1 2 3 4 5 6 7 8
+var2 ← 1 2 3 4 5 6 7 8 9
+⎕← ⎕SIZE 'var1' 'var2'","https://tio.run/##SyzI0U2pTMzJT///vyyxyFDhUdsEBUMFIwVjBRMFUwUzBXMFCy6ghBE2CQVLrkd9U0ESQCrYM8pVQR1khjqYMlL//x8A"
+"bytes←⎕WA","Workspace available (unused)","⎕← ⎕WA
+var ← 1E7⍴'A'
+⎕← ⎕WA","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLgjV1likQKIZ@hq/qh3i7qjOhey9P//AA"
+"captured_output←⎕CMD cmd","Execute Microsoft Windows cmd (synonym of ⎕SH)","⎕← ⎕CMD 'dir /'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlLOvi4J6SmaRgr76//8A"
+"class_hierarchy←⎕CLASS ref","Class hierarchy for a class/instance",":Class Animal
+:EndClass
+ 
+:Class Bird: Animal
+:EndClass
+ 
+:Class Parrot: Bird
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WMExLzM3MYfLyjUvBSzApcAFlXHKLEqxwiMfkFhUlF9iBVaHkP//PyA/J6dS4VHbBIVHfVP9XMOhCrmAPKigs49jcLACWB0A"
+"errno←⎕EN","Error number for last reported APL error","∇ r←Foo
+  :Trap 0
+      ÷0
+  :EndTrap
+  r←⎕EN
+∇
+⎕← Foo","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJbvn5XAoKViFFiQUKBkAWCBzeDmJZuealgISBTJDCR31TXf24gNq4gCwgXwGo8/9/AA"
+"names←⎕XSI","Full names of functions on the stack",":Namespace yy
+     ∇ r←foo
+       r←zz.goo
+     ∇
+:EndNamespace
+:Namespace zz
+     ∇ r←goo
+       r←⎕XSI
+     ∇
+:EndNamespace","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVWhspJLAQQedbQrFD1qm5CWnw8RUABzq6r00mEiQCVcVq55KXDNXEjmVFWhmpOOas6jvqkRwZ44zPn/X9MvWKGigkvTGUwpK@tVVuoBXQIA"
+"names←⎕FLIB folder","List component files in the specified folder","'fileA' ⎕FCREATE 0
+'fileB' ⎕FCREATE 0
+⎕← ⎕FLIB '.'","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUV3hUd9UN@cgV8cQVwUDLrCgE5ogkPOobQJYzMfTSUFdT/3/fwA"
+"names←⎕REFS name","List the names referenced by a function","∇ Options;opts;inp
+ ⍝ requests and executes an option
+  opts ←'input' 'report' 'end'
+ IN:inp←Ask'option:'
+  →EX⍴⍨(⊂inp)∊opts
+  ⎕←'invalid option. select from',opts ⋄ →IN
+ EX:→EX+opts⍳⊂inp
+  input ⋄ →IN
+  report ⋄ →IN
+ END:
+∇
+⎕← ⎕REFS 'Options'","https://tio.run/##VZC9CsIwFIX3PMXdovjzAHUSrNClgi5dS3uVYm1ik4quIipKRQRHd3d9orxITRoH3W5yzvnu4YY87cSbMGWzqlLHA4y4TFgmeoxL0UsyTkCVD8hxWaCQAsIsBlxjVEg0D2C1nYAZBKj9lepMISnQHDnLzYBZTAl4vqMVbeiLObUpR3/ryM0NVPlW5bOhTlvtaarjydCMeLlb5CpMk/i7rAsCU4wkTHO2oG27@LwzJM8n4AZOzWwZQZUvC9WwutivE2zFv7A/cIg@A7GbTYGxO5wA/Z6FVtUH"
+"names←⎕SI","Vector of names of functions on the stack","∇ r←foo
+  r←goo
+∇
+∇ r←goo
+  r←⎕SI
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XApgVjqQBRTlgsmkw2Ue9U0N9gSJ//8PVA4A"
+"numvec←⎕NC names","Class of each name (fractional if names is nested)","var←42
+∇ r←Foo
+  r←var
+∇
+Sum←+⌿
+Swap←{⍵ ⍺⍺ ⍺}
+
+⎕← ⎕NC '42' 'nothing' 'var' 'Foo' 'Sum' 'Swap'","https://tio.run/##SyzI0U2pTMzJT///vyyx6FHbBBMjrkcd7Qogplt@PpcCmAWUAolyBZfmAnnaj3r2cwWXJxYA2dWPercqPOrdBUQgqpaL61HfVKC4ApDyc1ZQNzFSV1DPyy/JyMxLB7KABgFJoMFAEmgYiASao/7/PwA"
+"numvec←⎕LC","Lines at which each function on stack is suspended","∇ r←foo
+ ⍝ next line is line 2
+  r←goo
+∇
+∇ r←goo
+  r←⎕LC  ⍝ this is line 1
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAqPeucq5KVWlCjkZOalKmQWQ2gjLgWwknSgEqByLpgWEB8i86hvqo@zAlh7SQZQG0ynIUjt//9AswE"
+"numvec←⎕TS","Current time (y m d h m s ms)","⎕← ⎕TS","https://tio.run/##SyzI0U2pTMzJT///qHeugnNOZnK2wqPmuY/6tyqU5CsUpaYVpRZn/H/UN/VR2wQFIBUS/P8/AA"
+"r←⎕NEXISTS files","Return 1 if files exist, else 0","⎕← ⎕NEXISTS 'file.txt'
+'abc' ⎕NPUT 'file.txt'
+⎕← ⎕NEXISTS 'file.txt'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlJ9rhGdwSLCCelpmTqpeSUWJOpd6YlKyOlguIDQEWQKfrv//AQ"
+"r←⎕NR name","Source of function or operator as a nested vector","Foo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕NR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApPyCFNSBWtT//wcA"
+"r←⎕CR name","Source of function or operator as a character matrix","Foo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕CR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApJyDFNSBWtT//wcA"
+"r←⎕CSV data","Convert CSV data to APL matrix","⎕← ⎕CSV ⊂'here,42,there' 'this,1966,that'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlHNwmMKjrib1jNSiVB0TI50SEENdQb0kI7NYx9DSzAwoklii/v8/AA"
+"r←⎕FAVAIL","1 if file system is available, else 0","⎕← ⎕FAVAIL","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlJtjmKOnz///AA"
+"r←⎕OR name","Object representation (variable) of function, operator, or namespace","Foo←{
+  ⍺+⍵
+}
+⎕←⎕OR 'Foo'
+⎕←≢⎕OR 'Foo'
+⎕←≡⎕OR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBYVHvbu0H/Vu5arletQ3FSgGJP2DFNSBCtRhIp2LsAkuRBL8/x8A"
+"r←⎕STACK","Definition of each function on the stack","∇ r←foo
+  r←⍎'goo'
+∇
+∇ r←goo
+  r←⎕STACK
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XApg1qPePvX0/Hx1LqAUF0w6HSHdNzU4xNHZGyT1/z9QGwA"
+"r←⎕STATE name","Details of the usage of name at each level of the stack","∇ r←foo;foo
+  foo←{⍎⍵}
+  r←foo 'goo'
+∇
+∇ r←goo;foo
+  r←⎕STATE 'foo'
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn51kDMpaAAJIH86ke9fY96t9YCBaDSCurp@fnqXEANXDBN6XBNIN6jvqnBIY4hrgrqaVCF//8DWQA"
+"r←⎕VR name","Source of function or operator as a simple vector","Foo←{
+    ⍺←2
+    ⍵*÷⍺
+}
+
+⎕← ⎕VR 'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSB41LsLyDaCsrdqHd4OFOGq5eJ61DcVKKEApMKCFNSBWtT//wcA"
+"r←0 ⎕JSON data","Convert JSON text to APL array","⎕← 0 ⎕JSON '[1,2,""many""]'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFIAMr2B/PwX1aEMdIx2l3MS8SqVY9f//AQ"
+"r←1 ⎕JSON data","Convert APL array to JSON text","⎕← 1 ⎕JSON 1 2 'many'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PyDLSEE9NzGvUv3/fwA"
+"r←type ⎕DR x","Interpret internal representation as array of type 'type'","⎕← 11 ⎕DR 42
+⎕← 80 ⎕DR 42
+⎕← 83 ⎕DR 0 0 1 0 1 0 1 0
+⎕← 80 ⎕DR 0 0 1 0 1 0 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRWALJcgBRMjLqiQhQGmkDFUyAAIDREYQwua/P//AA"
+"refs←⎕INSTANCES class","Current instances of class",":Class Animal
+:EndClass
+ 
+:Class Bird: Animal
+:EndClass
+ 
+:Class Parrot: Bird
+:EndClass
+
+(Eeyore←⎕NEW Animal).⎕DF 'Eeyore'
+(Polly ← ⎕NEW Parrot).⎕DF 'Polly'
+
+⎕← ⎕INSTANCES Animal
+⎕← ⎕INSTANCES Bird","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WMExLzM3MYfLyjUvBSzApcAFlXHKLEqxwiMfkFhUlF9iBVaHJM@l4ZpamV@U@qhtwqO@qX6u4VAjNPWAXBc3BXWItDqXRkB@Tk6lAlCdAlQhxES4QrC8OhcXkAtV5OkXHOLo5@waDHMWNimQe/7/BwA"
+"tdno←⎕TID","The number of the current thread","⎕← ⎕TID
+⎕← {⎕TID}&⍬
+⎕← {⎕TID}&⍬
+⎕← ⎕TID","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVIinCxeUVw3h1qo96l2DTwwi9P8/AA"
+"tdno←⎕TCNUMS tdno","The child thread numbers of the given thread numbers","⎕← ⎕TCNUMS 0
+⎕DL&0.1
+⎕← ⎕TCNUMS 0
+⎕DL&0.3
+⎕← ⎕TCNUMS 0
+⎕DL 0.2
+⎕← ⎕TCNUMS 0
+⎕DL 0.2
+⎕← ⎕TCNUMS 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVIizX6hvsIIBF5Dt4qNmoGfIhUfSGKekgoGeEamS//8DAA"
+"tdres←⎕TSYNC tdno","Wait for threads tdno to terminate and return results","t ← ⎕DL&2
+⎕← ⎕TS
+⎕TSYNC t
+⎕← ⎕TS","https://tio.run/##SyzI0U2pTMzJT///v0ThUdsEhUd9U1181Iy4gDSUGxLMBSYj/ZwVSlDE//8HAA"
+"tktype←⎕TPOOL","Type of each token in the token pool","'hello' 'world' ⎕TPUT¨3 1
+⎕←⎕TPOOL
+⎕←⎕TGET 1
+⎕←⎕TPOOL","https://tio.run/##SyzI0U2pTMzJT///Xz0jNScnX11BvTy/KCdFXeFR39SQgNCQQyuMFQy5gJxHbRPAQv7@Pkhcd9cQDOn//wE"
+"tns←⎕FNUMS","Vector containing tie numbers of tied files","'file1.dcf' ⎕FCREATE 0
+'file2.dcf' ⎕NCOPY 'file1.dcf'
+'file2.dcf' ⎕FTIE 0
+⎕←⎕FNUMS","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUC8lOU1d4VHfVDfnIFfHEFcFAy6whBFcws/ZPyBSAUk1ugK3EE@QNiDrUdsEEN8v1Df4/38A"
+"type←⎕DR x","Return internal data type of x","⎕← ⎕DR 1 0 1 1 0
+⎕← ⎕DR 12
+⎕← ⎕DR 12345
+⎕← ⎕DR 12345678
+⎕← ⎕DR 12.344
+⎕← ⎕DR 1E2345
+⎕← ⎕DR 12J34
+⎕← ⎕DR 'abc'
+⎕← ⎕DR '⍺*⎕'
+⎕← ⎕DR '𐀁𐀂𐀃'
+⎕← ⎕DR 123 'abc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlEuQgqGCARADSS5UYSN0vrGJKRYhM3MLdFE9YxMTNDFXbLq9jNGUqScmJaujCT3q3aUFZKILf5jQ0AjETUDcrI7hLIhJ//8DAA"
+"user_name←⎕AN","User (login) name","⎕← ⎕AN","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlKPf//8A"
+"t←0 ⎕NINFO tns/files","Return names for tns/files","⎕← 0 (⎕NINFO⍠1) '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFDSALD9PPzf/R70LDDUV1PW11P//BwA"
+"t←1 ⎕NINFO tns/files","Return types (0:unknown, 1:directory, 2:file, 3:char-device, 4:sym-link, 5:block-dev, 6:FIFO. 7:socket) for tns/files","⎕← ⍉⊃,/↑¨ 1 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVDBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←11 ⎕NINFO tns/files","Return whether readable (1:yes, 0:no, ¯1:unknown) for tns/files","⎕← ⍉⊃,/↑¨ 11 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVDQwUDBQ2glJ@nn5v/o94FhpoK6lrqCur6Wur//wMA"
+"t←12 ⎕NINFO tns/files","Return whether writeable (1:yes, 0:no, ¯1:unknown) for tns/files","⎕← ⍉⊃,/↑¨ 12 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVDIwUDBQ2glJ@nn5v/o94FhpoK6lrqCur6Wur//wMA"
+"t←13 ⎕NINFO tns/files","Return last UTC modification time (DDN-style) for tns/files","⎕← ⍉⊃,/↑¨ 3 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVjBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←14 ⎕NINFO tns/files","Return last UTC access time (DDN-style) for tns/files","'hello world' ⎕NPUT 'hw.txt'
+⎕← 9 ⎕NINFO 'hw.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz0jNScnX6E8vygnRV3hUd9Uv4DQEAX1jHK9kooSdS6gwKO2CQqWYBlPPzd/uNT//wA"
+"t←2 ⎕NINFO tns/files","Return size (in bytes) for tns/files","⎕← ⍉⊃,/↑¨ 2 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgUjBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←3 ⎕NINFO tns/files","Return last local modification time (⎕TS-style) for tns/files","⎕← ⍉⊃,/↑¨ 3 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVjBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←4 ⎕NINFO tns/files","Return owner user ID for tns/files","⎕← ⍉⊃,/↑¨ 4 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgUTBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←5 ⎕NINFO tns/files","Return owner name for tns/files","⎕← ⍉⊃,/↑¨ 5 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgVTBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←6 ⎕NINFO tns/files","Return hidden attribute for tns/files","⎕← ⍉⊃,/↑¨ 6 0 (⎕NINFO⍠1) '*' '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@6mrW0X/UNvHQCgUzBQMFDaCMn6efm/@j3gWGmgrqWuoK6vpa6v//AwA"
+"t←8 ⎕NINFO tns/files","Return current file position for tns/files","'hello world' ⎕NPUT 'hw.txt'
+tn ← 'hw.txt' ⎕NTIE 0
+⎕← ⎕NREAD tn 80 5
+⎕← 8 ⎕NINFO tn","https://tio.run/##SyzI0U2pTMzJT///Xz0jNScnX6E8vygnRV3hUd9Uv4DQEAX1jHK9kooSda6SPIVHbRPgfLCCEE9XBQMuIAskAxIIcnV0UQCqtDBQMIWJW4BlPP3c/IEy//8DAA"
+"t←9 ⎕NINFO tns/files","Return last local access time (⎕TS-style) for tns/files","'hello world' ⎕NPUT 'hw.txt'
+⎕← 9 ⎕NINFO 'hw.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz0jNScnX6E8vygnRV3hUd9Uv4DQEAX1jHK9kooSdS6gwKO2CQqWYBlPPzd/uNT//wA"
+"⎕names←⎕FNAMES","Names of tied files in same order as ⎕FNUMS","'file1' ⎕FCREATE 0
+'file2' ⎕FCREATE 0
+⎕← ⎕FNAMES","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUF3hUd9UN@cgV8cQVwUDLrCgEZogkPOobQJYzM/R1zX4/38A"
+"⎕TNAME←{tdname}","Report/set the name (tdname) of the current thread","⎕← ⎕TNAME
+⎕TNAME ← 'TIO'
+⎕← ⎕TNAME","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVIifo68rF4yhABJVD/H0V@dCU/L/PwA"
+"ax_mx←⎕FRDAC tn {pn}","Read access matrix of file tied with number tn (pn is optional passnumber)","'sales.dcf' ⎕FCREATE 1
+(3 3⍴28 2105 16385 0 2073 16385 31 ¯1 0) ⎕FSTAC 1
+⎕←⎕FRDAC 1","https://tio.run/##SyzI0U2pTMzJT///X704MSe1WC8lOU1d4VHfVDfnIFfHEFcFQy4NYwXjR71bjCwUjAwNTBUMzYwtTBUMFIwMzI2hHGNDhUPrDRUMNMEag0McnYHagMxHbRNAAkEuIIH//wE"
+"valid nums←{seps} ⎕VFI text","Validate numeric input: returns Boolean validity mask and numeric vector of converted input","⎕← ⎕VFI '2 -2 ¯2'
+⎕← ',' ⎕VFI '3.9,2.4,,76,'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVJibp4K6kYKukcKh9UbqXFAJdR11uKSxnqWOkZ6Jjo65mY76//8A"
+"vec←⎕NREAD tn type n {offset}","Read n items of specified type from file tied with number tn","'abc' ⎕NPUT 'file.txt'
+tn ← 'file.txt' ⎕NTIE 0
+⎕←⎕NREAD tn 80 ¯1
+⎕←⎕NREAD tn 83 ¯1 0","https://tio.run/##SyzI0U2pTMzJT///Xz0xKVld4VHfVL@A0BAF9bTMnFS9kooSda6SPIVHbROQRMCKQjxdFQy4gCygHIgf5OroogBUamGgcGi9ITYJY5CEgsH//wA"
+"children←{class} ⎕WN parent","Child objects (of class) of parent","'#.t1' ⎕WC 'Timer'
+'#.t2' ⎕WC 'Timer'
+⎕← ⎕WN '#'","https://tio.run/##SyzI0U2pTMzJT///X11Zr8RQXeFR39RwZwX1kMzc1CJ1LpCgEbogkPeobQJY0E9BXVn9/38A"
+"cn←x ⎕FAPPEND tn {pn}","Append x to end of file tied with number tn (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+⎕←⎕FSIZE tn
+
+123 'abc' ⎕FAPPEND tn
+123 ⎕FAPPEND tn
+'abc' ⎕FAPPEND tn
+
+⎕←⎕FSIZE tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLiAHKA0SCjYM8pVoSSPi8vQyFhBPTEpGaLSMSDA1c8FJAESRxXBpgrTxP//AQ"
+"cns←{fchk_opts} ⎕FCHK file","Inspect and optionally repair file","⎕FUNTIE 'file.dcf' ⎕FCREATE 0
+⎕← ⎕FCHK 'file.dcf'","https://tio.run/##SyzI0U2pTMzJT////1HfVLdQvxBPVwX1tMycVL2U5DR1BZCgc5CrY4irggEXkPOobQJEzMMbSdn//wA"
+"instance←⎕NEW class {conargs}","Create an instance of class",":Class c
+    :Field public randomNumber
+    ∇Make
+      :Access public
+      :Implements constructor
+      ⎕←'Created at',⎕TS
+      ⎕RL ← ⍬
+      randomNumber ← ?42
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIrNwyU3NSFApKk3IykxWKEvNS8nP9SnOTUovA0o862n0Ts1PBbKBix@TkVKBWiGqYoGduQU5qbmpeCdDM/LzikqLS5JL8Iqjso76pj9omqDsXpSaWpKYoJJao6wCFQoIR0kE@CkAVCo9610DFkB0BlrI3MYI5hsvKNS8F7P7//zMNIRr7pvq5hgO9A2S4@CgYcmUaYYiDBTSAGjKNNPWQzQcA"
+"names←{init_chars} ⎕NL nums","List names of existing specified class(es), optionally filtered (negative for nested result)","⎕CY'dfns'
+⎕← 'gl' ⎕NL 3 4","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9ZS0vGJ1LiD7UdsEBfX0HHUFINvPR8FYweT/fwA"
+"names←{init_chars} ⎕NL ¯1","List names of existing line labels, optionally filtered","∇ foo
+  first:
+  two←2
+  third:
+  ⎕←⎕NL ¯1
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0Jafj6XgkJaZlFxiRWQUVKe/6htghGIlZFZlAISetQ3FSgEJP18FA6tN@QC6vr/H6gNAA"
+"names←{init_chars} ⎕NL ¯2","List names of existing arrays, optionally filtered","∇ foo
+  first:
+  two←2
+  third:
+  ⎕←⎕NL ¯2
+∇","https://tio.run/##SyzI0U2pTMzJT////1FHu0Jafj6XgkJaZlFxiRWQUVKe/6htghGIlZFZlAISetQ3FSgEJP18FA6tN@IC6vr/H6gNAA"
+"names←{init_chars} ⎕NL ¯3","List names of existing functions, optionally filtered","⎕CY'dfns'
+⎕← 'gl' ⎕NL ¯3","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9ZS0vGJ1LiD7UdsEBfX0HHUFINvPR@HQeuP//wE"
+"names←{init_chars} ⎕NL ¯4","List names of existing operators, optionally filtered","⎕CY'dfns'
+⎕← 'gl' ⎕NL ¯4","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9ZS0vGJ1LiD7UdsEBfX0HHUFINvPR@HQepP//wE"
+"names←{init_chars} ⎕NL ¯9","List names of existing objects, optionally filtered","⎕CY'dfns'
+⎕← ⎕NL ¯9","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9ZS0vGJ1LiD7UdsEBSDl56NwaL3l//8A"
+"r←⎕FHIST tn {pn}","Return history (user/time of last operations) of file tied with number tn (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+⎕←⎕FHIST tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLiAHKA0SMjDMzhEoSTv/38A"
+"r←⎕FRDCI tn cn {pn}","Size in bytes, user and timestamp of last update to component cn in file tied with number tn (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FRDCI tn 1","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gwyMXZEyikYPj/PwA"
+"r←⎕FREAD tn cn {pn}","The array stored in component(s) cn in file tied with number tn (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FREAD tn 1","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gQqAwkpGD4/z8A"
+"r←⎕FSIZE tn {pn}","First and next-free component number, used and max size in bytes of file tied with number tn","tn ← 'file.dcf' ⎕FCREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FSIZE tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gw2DPKFSj0/z8A"
+"r←data {header} ⎕CSV format_spec","Convert CSV data from APL matrix","⎕← ⎕CSV ('abc,def,42E0' '.1,-2.3,3.0') 'N' 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlHNwmIKGemJSsk5KapqOiZGrgbqCup6hjq6RnrGOsZ6BuqaCup@6gsn//wA"
+"r←nvpairs ⎕FPROPS tn {pn}","Set properties of file tied with number tn using name-value pairs (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+'⍤' ⎕FAPPEND tn
+'U' 0 ⎕FPROPS tn
+'⍸' ⎕FAPPEND tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUH/UugQg5BgS4@rkolORxqYeqKxiAxQKC/AOCwUKPenegKfv/HwA"
+"r←pnames ⎕FPROPS tn {pn}","Current values of the named properties of file tied with number tn (pn is optional passnumber)","tn ← 'file.dcf' ⎕FCREATE 0
+⎕← 'U' ⎕FPROPS tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLiAHLB0KEQ8IMg/IFihJO//fwA"
+"r←{flags} ⎕NPARTS files","Splits files into paths, base names and extensions (normalising files if flags=1)","⎕← ⎕NPARTS 'aplcart/table.tsv'
+⎕← 1 ⎕NPARTS 'aplcart/table.tsv'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlF@AY1BIsIJ6YkFOcmJRiX5JYlJOql5JcZk6F1SRIX5l//8DAA"
+"r←{format_spec} ⎕FMT x","Convert x into character matrix according to spec","⎕← 'I3,F5.2' ⎕FMT 2 4⍴⍳8
+⎕← 'K2G⊂DM Z.ZZZ.ZZ9,99⊃' ⎕FMT 1234567.89 1234.56","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUPY113Ez1jNQVgAJuviEKRgomj3q3POrdbMEFU@Jt5P6oq8nFVyFKLyoKhC11LC0fdTXD9RgaGZuYmpnrWViCmXqmZv//AwA"
+"r←{selectors} ⎕ATX names","Attributes of names","∇ {r}←NiladShh
+∇
+
+∇ x Dyad y
+∇
+
+∇ (f MopM)y
+∇
+
+∇ {x}(f MopA)y
+∇
+
+∇ (f DopM g)y
+∇
+
+
+⎕← (⊢,⎕AT)⎕NL ¯3 ¯4","https://tio.run/##SyzI0U2pTMzJT////1FHu0J1Ue2jtgl@mTmJKcEZGVxAIS4QoVCh4FKZmKJQiRDRSFPwzS/w1UQSqq6ohYg6aqIqdAEqVEiHCXI96psKtERB41HXIh0g2zFEE0j6@SgcWm8MxCb//wMA"
+"r←{selector} ⎕AT names","Syntactical attributes of named functions or operators","∇ {r}←NiladShh
+∇
+
+∇ x Dyad y
+∇
+
+∇ (f MopM)y
+∇
+
+∇ {x}(f MopA)y
+∇
+
+∇ (f DopM g)y
+∇
+
+
+⎕← (⊢,⎕AT)⎕NL ¯3 ¯4","https://tio.run/##SyzI0U2pTMzJT////1FHu0J1Ue2jtgl@mTmJKcEZGVxAIS4QoVCh4FKZmKJQiRDRSFPwzS/w1UQSqq6ohYg6aqIqdAEqVEiHCXI96psKtERB41HXIh0g2zFEE0j6@SgcWm8MxCb//wMA"
+"r←{encoding} ⎕UCS vec","Map characters to/from Unicode code points","⎕← ⎕UCS 'ABC'
+⎕← ⎕UCS 100 200 300
+⎕← 'UTF-8' ⎕UCS '⍺*⎕'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVKhzsIK6o5OzOheqmKGBgYIREBsbGMBk1END3HQt1OG6HvXu0gKy1f//BwA"
+"r←{xml_options} ⎕XML data","XML string to/from APL array","⎕← ⎕XML '<root attr1=""val1"" attr2=""val2"">intro<body><one/></body>content</root>'
+⎕← ⎕XML 2 3⍴0 'root' '' 1 '' 'intro'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVISvj4K6TVF@folCYklJkaGtUllijqESmGME5hgp2WXmlRTl2yTlp1Ta2eTnperb2eiDOcn5eSWpeSU2@iD9dupcqMYaKRg/6t1ioKAOklVXUFdXMAQR6mDT1P//BwA"
+"{⍬}←output ⎕ARBOUT codes","Transmit 8-bit codes to output device","'myfile' ⎕NCREATE ¯1
+¯1 ⎕ARBOUT 97 98 99
+⎕←⊃⎕NGET 'myfile'","https://tio.run/##SyzI0U2pTMzJT///Xz23Mi0zJ1Vd4VHfVD/nIFfHEFeFQ@sNuYAYJOQY5OQfGqJgaa5gaaFgackFFHrUNuFRVzNIubtriAJM////AA"
+"{counts}←destination ⎕NMOVE sources","Move files/directories from 'sources' to 'destination'","'abc' ⎕NPUT 'file.txt'
+'new.txt' ⎕NMOVE 'file.txt'
+⎕← ⊃⎕NGET 'new.txt'
+⎕← ⎕NEXISTS 'file.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz0xKVld4VHfVL@A0BAF9bTMnFS9kooSdS71vNRyMAss6esf5oosCxR71DZB4VFXM0jW3RWoFaYeLgeUcI3wDA4JRtL4/z8A"
+"{counts}←destination ⎕NCOPY sources","Copy files/directories from 'sources' to 'destination'","'abc' ⎕NPUT 'file.txt'
+'new.txt' ⎕NCOPY 'file.txt'
+⎕← ⊃⎕NGET 'new.txt'
+⎕← ⎕NEXISTS 'file.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz0xKVld4VHfVL@A0BAF9bTMnFS9kooSdS71vNRyMAss6ewfEIksCxR71DZB4VFXM0jW3RWoFaYeLgeUcI3wDA4JRtL4/z8A"
+"{names}←2 ⎕FIX source","Define objects from source (vector of vectors or file name starting with 'file://')","⎕FIX':Namespace foo' 'var←42' ':EndNamespace'
+⎕← foo.var","https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCHUrv8Tc1OKCxORUhbT8fHUF9bLEokdtE0yMgEwr17wUuLQ6F1AHUAakTA@o6P9/AA"
+"{num}←⎕DL num","Delay and return seconds actually delayed","⎕← ⎕TS
+⎕DL 1.5
+⎕← ⎕TS","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVEgwF5B08VEw1DPlQhb@/x8A"
+"{offset}←x ⎕NAPPEND tn type","Append x using internal representation type to file tied with number tn","tn ← 'file.txt' ⎕NCREATE 0
+'abc' ⎕NAPPEND tn
+65 66 67 ⎕NAPPEND tn
+⎕← ⊃ ⎕NGET 'file.txt'","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2SihJ1hUd9U/2cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcZqYKZmYKZuZowkAeyKRHXc1gCXfXECRT//8HAA"
+"{ref}←⎕FIX source","Define namespace, class, or interface from source (vector of vectors or file name starting with 'file://') with name as given in source","⎕FIX':Namespace foo' 'var←42' ':EndNamespace'
+⎕← foo.var","https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCHUrv8Tc1OKCxORUhbT8fHUF9bLEokdtE0yMgEwr17wUuLQ6F1AHUAakTA@o6P9/AA"
+"{ref}←0 ⎕FIX source","Define namespace, class, or interface from source (vector of vectors or file name starting with 'file://') that only exists as long as a reference is kept","⎕FIX':Namespace foo' 'var←42' ':EndNamespace'
+⎕← foo.var","https://tio.run/##SyzI0U2pTMzJT////1HfVDfPCHUrv8Tc1OKCxORUhbT8fHUF9bLEokdtE0yMgEwr17wUuLQ6F1AHUAakTA@o6P9/AA"
+"(rows columns)←⎕SD","Screen dimensions of terminal or ⎕SM window","⎕←⎕SD","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4BksMv//wA"
+"{tns}←⎕NUNTIE tns","Untie one or more files","tnA ← 'fileA.txt' ⎕NCREATE 0
+tnB ← 'fileB.txt' ⎕NCREATE 0
+tnC ← 'fileC.txt' ⎕NCREATE 0
+⎕← ⎕NNUMS
+⎕NUNTIE tnB
+⎕← ⎕NNUMS
+⎕NUNTIE tnA tnB
+⎕← ⎕NNUMS","https://tio.run/##SyzI0U2pTMzJT///vyTPUeFR2wQF9bTMnFRHvZKKEnWFR31T/ZyDXB1DXBUMuErynBAKnLAqcEYocMaiAMgByYPE/EJ9g0F8v1C/EE9XBaDZeGUdsan4/x8A"
+"{tns}←⎕FUNTIE tns","Untie one or more component files","tnA ← 'fileA.dcf' ⎕FCREATE 0
+tnB ← 'fileB.dcf' ⎕FCREATE 0
+tnC ← 'fileC.dcf' ⎕FCREATE 0
+⎕← ⎕FNUMS
+⎕FUNTIE tnB
+⎕← ⎕FNUMS
+⎕FUNTIE tnA tnB
+⎕← ⎕FNUMS","https://tio.run/##SyzI0U2pTMzJT///vyTPUeFR2wQF9bTMnFRHvZTkNHWFR31T3ZyDXB1DXBUMuErynBAKnLAqcEYocMaiAMgByYPE/EJ9g0F8t1C/EE9XBaDZeGUdsan4/x8A"
+"{tn}←file ⎕NCREATE tn","Create file tied with number tn (tn 0 to generate tn)","'fileA.txt' ⎕NCREATE 0
+'fileB.txt' ⎕NCREATE 0
+⎕← (⎕NINFO⍠1)'*.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUa@kokRd4VHfVD/nIFfHEFcFAy6whBMWCSDnUdsEBQ2QoKefm/@j3gWGmupaYJX//wMA"
+"{tn}←file ⎕NERASE tn","Erase tied file tied with number tn","⎕← (⎕NINFO⍠1)'*'
+tn ← '.code.tio' ⎕NTIE 0
+'.code.tio' ⎕NERASE tn
+⎕← (⎕NINFO⍠1)'*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0gLSfp5@b/6PeBYaa6lrqXCV5CiAJdb3k/JRUvZLMfHUFkJoQT1cFAy50Udcgx2BXhZI8LlzG/f8PAA"
+"{tn}←file ⎕NRENAME tn","Rename tied file to have name file","⎕← (⎕NINFO⍠1)'*'
+tn ← '.code.tio' ⎕NTIE 0
+'.edoc.tio' ⎕NRENAME tn
+⎕← (⎕NINFO⍠1)'*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0gLSfp5@b/6PeBYaa6lrqXCV5CiAJdb3k/JRUvZLMfHUFkJoQT1cFAy51vdSU/GSEaJCrn6Ovq0JJHhcu8/7/BwA"
+"state|data←{settings} ⎕PROFILE action","“Profile” CPU or elapsed time consumption of code","Fibonacci←{     ⍝ Tail-recursive Fibonacci.
+    ⍺←0 1
+    ⍵=0:⍬⍴⍺
+    (1↓⍺,+/⍺)∇ ⍵-1
+}","https://tio.run/##SyzI0U2pTMzJT///3y0zKT8vMTk581HbhGoFEHjUO1chJDEzR7coNbm0qDizLFUBrkiPC6JiF1C1gYIhlLfV1sDqUe@aR71bgDJgMQ3DR22TgRwdbX0gqfmoox2kTNeQq/b//0d9UwOC/N08fVwV1ItLEotK1Lng5iuYI7FNjLhQ1eYXqINEgHYrIEukJJYkqgMA"
+"t←{properties} ⎕NINFO tns/files","Return values of properties for tns/files","⎕← ⍉↑ 1 2 0 (⎕NINFO⍠1) '/*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XY@apuoYKhgpGCgoAEU9PP0c/N/1LvAUFNBXV9L/f9/AA"
+"⎕IO←(1,0)","Specifies whether array indices are counted from 0 or 1","⎕IO ← 0
+⎕← ⍳ 4
+⎕← 'hello'[2]
+
+⎕IO ← 1
+⎕← ⍳ 4
+⎕← 'hello'[2]","https://tio.run/##SyzI0U2pTMzJT////1HfVE9/hUdtExQMuIBsEONR72YFExhHPSM1JydfPdoolosLodaQgNr//wE"
+"names←{init_chars} ⎕NL ¯2.1","List names of existing variables, optionally filtered",":Class c
+    :Field f←'field'
+    v←'variable'
+    :Property p
+        ∇ r←Get x
+          r←'prop'
+        ∇
+    :EndProperty
+    ∇ r←NL x
+      :Access public
+      r←⎕NL x
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIrNwyU3NSFNIetU1QTwMx1cHCZSB@WWJRZmJSTipEyCqgKL8gtaikUqEAzAeBRx3tCkVApe6pJQoVcFEFsJh6AVC9OrJSiDGueSkwk7iQzfDzgRth5ZicnAp0YkFpUk5mMhfCzEd9U@HKQAaCDAP75v//TKi0azjQZ5l6QGWH1hvpGQIA"
+"names←{init_chars} ⎕NL ¯2.2","List names of existing fields, optionally filtered",":Class c
+    :Field f←'field'
+    v←'variable'
+    :Property p
+        ∇ r←Get x
+          r←'prop'
+        ∇
+    :EndProperty
+    ∇ r←NL x
+      :Access public
+      r←⎕NL x
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIrNwyU3NSFNIetU1QTwMx1cHCZSB@WWJRZmJSTipEyCqgKL8gtaikUqEAzAeBRx3tCkVApe6pJQoVcFEFsJh6AVC9OrJSiDGueSkwk7iQzfDzgRth5ZicnAp0YkFpUk5mMhfCzEd9U@HKQAaCDAP75v//TKi0azjQZ5l6QGWH1hvpGQEA"
+"names←{init_chars} ⎕NL ¯2.3","List names of existing properties, optionally filtered",":Class c
+    :Field f←'field'
+    v←'variable'
+    :Property p
+        ∇ r←Get x
+          r←'prop'
+        ∇
+    :EndProperty
+    ∇ r←NL x
+      :Access public
+      r←⎕NL x
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIrNwyU3NSFNIetU1QTwMx1cHCZSB@WWJRZmJSTipEyCqgKL8gtaikUqEAzAeBRx3tCkVApe6pJQoVcFEFsJh6AVC9OrJSiDGueSkwk7iQzfDzgRth5ZicnAp0YkFpUk5mMhfCzEd9U@HKQAaCDAP75v//TKi0azjQZ5l6QGWH1hvpGQMA"
+"names←{init_chars} ⎕NL ¯2.6","List names of existing external variables and properties, optionally filtered","⎕← ⎕SE.⎕NL ¯2.6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD081E4tN5Iz@z/fwA"
+"names←{init_chars} ⎕NL ¯3.1","List names of existing tradfns, optionally filtered","∇ (x x)←TradFn x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂","https://tio.run/##SyzI0U2pTMzJT////1FHu4JGhUKF5qO2CSFFiSlueQoVXEBBLpe0PKBQ9aPerQpAXMsFlMwEiTzqatIBYqDOvql@PgqH1hvrGQIA"
+"names←{init_chars} ⎕NL ¯3.2","List names of existing dfns, optionally filtered","∇ (x x)←TradFn x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂","https://tio.run/##SyzI0U2pTMzJT////1FHu4JGhUKF5qO2CSFFiSlueQoVXEBBLpe0PKBQ9aPerQpAXMsFlMwEiTzqatIBYqDOvql@PgqH1hvrGQEA"
+"names←{init_chars} ⎕NL ¯3.3","List names of existing derived and primitive functions and trains, optionally filtered","∇ (x x)←TradFn x
+∇
+Dfn←{⍵ ⍵}
+Train←⊂,⊂","https://tio.run/##SyzI0U2pTMzJT////1FHu4JGhUKF5qO2CSFFiSlueQoVXEBBLpe0PKBQ9aPerQpAXMsFlMwEiTzqatIBYqDOvql@PgqH1hvrGQMA"
+"names←{init_chars} ⎕NL ¯3.6","List names of existing methods and external functions, optionally filtered","⎕← ⎕SE.⎕NL ¯3.6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD081E4tN5Yz@z/fwA"
+"names←{init_chars} ⎕NL ¯8.6","List names of existing external events, optionally filtered","⎕← ⎕SE.⎕NL ¯8.6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD081E4tN5Cz@z/fwA"
+"names←{init_chars} ⎕NL ¯9.1","List names of existing namespaces, optionally filtered",":Namespace n
+:EndNamespace
+:Class c
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVUhj8vKNS8Fzueycs5JLC5WSAYLg9n//2c@apvwqG@qn2s4UBzE8FE4tN5SzxAA"
+"names←{init_chars} ⎕NL ¯9.2","List names of existing instances, optionally filtered",":Namespace n
+:EndNamespace
+:Class c
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVUhj8vKNS8Fzueycs5JLC5WSAYLg9n//2c@apvwqG@qn2s4UBzE8FE4tN5SzwgA"
+"names←{init_chars} ⎕NL ¯9.4","List names of existing classes, optionally filtered",":Namespace n
+:EndNamespace
+:Class c
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38ovMTe1uCAxOVUhj8vKNS8Fzueycs5JLC5WSAYLg9n//2c@apvwqG@qn2s4UBzE8FE4tN5SzwQA"
+"r←(⎕NEXISTS⍠1)files","Return 1 if files (with ? and * globbing) exist, else 0","'abc123' ⎕NCREATE 0
+⎕← (⎕NEXISTS⍠1) 'abc*' 'def*'","https://tio.run/##SyzI0U2pTMzJT///Xz0xKdnQyFhd4VHfVD/nIFfHEFcFAy4g51HbBAUNkKBrhGdwSPCj3gWGmgog1VrqCuopqWla6v//AwA"
+"r←(⎕CSV⍠1)data","Convert CSV data to APL inverted table (character data as matrices)","⎕← (⎕CSV⍠1) ⊂'NAME,SUBJECT' 'something,about it' 'other,about that'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0gLRzcNij3gWGmgqPuprU/Rx9XXWCQ528XJ1D1BXUi/NzU0syMvPSdRKT8ktLFDJLgIL5JRmpRVCBkozEEvX//wE"
+"r←(⎕CSV⍠2)data","Convert CSV data to APL inverted table (character data as vectors of vectors)","⎕← (⎕CSV⍠2) ⊂'NAME,SUBJECT' 'something,about it' 'other,about that'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0gLRzcNij3gVGmgqPuprU/Rx9XXWCQ528XJ1D1BXUi/NzU0syMvPSdRKT8ktLFDJLgIL5JRmpRVCBkozEEvX//wE"
+"r←{object} ⎕WG props…","The values of the properties of an object","⎕← ⎕SE ⎕WG 'Type' 'CurSpace'
+⎕← # ⎕WG 'APLVersion'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLAriAx3V1APqSxIVVdQdy4tCi5ITE5V54IqUoYpcAzwCUstKs7Mz1P//x8A"
+"⎕ML←(0≤1≤3)","Degree of compatibility with IBM APL2 (from 0=low to 3=high)","⎕ML←0
+⎕← ∊ 10(20 30)
+⎕ML←1
+⎕← ∊ 10(20 30)
+⎕← ≡ 10(20 30)
+⎕ML←2
+⎕← ≡ 10(20 30)
+⎕← 1 0 ⊂ 10(20 30)
+⎕ML←3
+⎕← 1 0 ⊂ 10(20 30)","https://tio.run/##SyzI0U2pTMzJT////1HfVF@fR20TDLiALCCt8KijS8HQQMPIQMHYQJMLJm2IUxos2LkQix4jnNIgQUMFA4VHXU1Y9BnjVPL/PwA"
+"⎕PP←(1≤10≤34)","Number of significant digits in the display of numeric output","⎕PP ← 10
+⎕← 22÷7
+⎕PP ← 13
+⎕← 22÷7
+⎕PP ← 3
+⎕← 22÷7","https://tio.run/##SyzI0U2pTMzJT////1Hf1IAAhUdtExQMDbiAHBDLyOjwdnMuJBljXDKoEv//AwA"
+"⎕PW←(42≤76≤32767)","Print width: Number of columns to print before wrapping to next line","⎕← ⍳25
+⎕PW ← 42
+⎕← ⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W42MuUCcgLCFUB8EyMuZJn//wE"
+"codes←terminate (input {output}) ⎕ARBIN codes","Read from input device, optionally after transmitting 8-bit codes to output device","⎕SH'mkfifo ./fifo'
+in←'./fifo'⎕NTIE 0
+out←'./fifo'⎕NTIE 0
+⎕←(10 (in out))⎕ARBIN ⎕UCS ⎕D
+⎕←(⍬ (in out))⎕ARBIN 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1GAP9dzstMy0fAU9fRClzpWZ96htgjqUB1ThF@LpqmDAlV9aglUcyAKKaxgaKGhk5ikAVWlqAoUcg5w8/RSAjFDnYBDlAlP3qHcNFoWGBv//AwA"
+"r←{tn} (regex ⎕S trans) text","Search text for PCRE regex returning trans (optional tn to spool output to native file tied with number tn)","text ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('\w+' ⎕S 1) text         ⍝ word lengths
+⎕← ('[aeiou]+' ⎕S '&') text  ⍝ vowels
+⎕← '\w+' ⎕S {⌽⍵.Match} text  ⍝ reversed words","https://tio.run/##SyzI0U2pTMzJT///vyS1okThUdsEBXUvzzBXF4W0/ArdvMrcggwF9yBHp2CFwtLM5GyF8sSckio9da5HfVNBajXUY8q11RWAvGAFQ00FsBkw8Kh3rkJ5flGKQk5qXnpJRjFCT3RiamZ@aSxMo7qaOkwrSE9ZfnlqDlw1kgXVj3r2PurdquebWJKcUYukoyi1LLWoODUFbF3x//8A"
+"(vector encoding newline)←{encoding} ⎕NGET file","Read Unicode text file simple content, encoding, and linebreaks","'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⎕NGET 'myfile.txt'","https://tio.run/##SyzI0U2pTMzJT///X90jNScnX13hUd9Uv4DQEAX13Mq0zJxUvZKKEnUuoOCjtglgOXdXVLn//wE"
+"(vector_of_vectors encoding newline)←{encoding} ⎕NGET file 1","Read Unicode text file nested content, encoding, and linebreaks","'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⊃⊃ ⎕NGET 'myfile.txt' 1","https://tio.run/##SyzI0U2pTMzJT///X90jNScnX13hUd9Uv4DQEAX13Mq0zJxUvZKKEnUuoOCjtgkKj7qagQisxN0VVYmC4f//AA"
+"{cn}←⎕FDROP tn n {pn}","Drop n components from start (n>0) or end (n<0) of file tied with number tn (pn is optional passnumber)","tn ← 'myfile' ⎕FCREATE 0
+'Hello' ⎕FAPPEND tn
+'World' ⎕FAPPEND tn
+⎕←⎕FSIZE tn
+⎕FDROP tn ¯1
+⎕←⎕FSIZE tn","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX13Mq0zJxUdYVHfVPdnINcHUNcFQy41D1Sc3LyIYKOAQGufi4KJXlc6uH5RTkp6KJAHtAgkFiwZ5QrVMTNJcg/AMhWOLTeEFPF//8A"
+"{linenos}←{linenos} ⎕MONITOR name","Set/report the current state of performance monitoring for a function","∇ r←Foo;a;b
+  a←?500 500⍴0
+  b←⌹a
+  r←⌊0.5+a+.×b
+∇
+1 2 3 ⎕MONITOR 'Foo'  ⍝ Set monitor
+Foo                     ⍝ Run function
+⎕←(⎕NR,'Line' 'Runs' 'CPU' 'Total' 'N/A'⍪⎕MONITOR) 'Foo'  ⍝ Monitor query","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJbvn51onWSVwKColAnr2pgYECED/q3WIAFEoCCj3q2ZkIZBaBmV0Geqbaidp6h6cncQFN4DJUMFIwVnjUN9XX388zxD9IQR1onrqCwqPeuQrBqSUKufl5mSX5RVxAUQVsAKQuqDRPIa00L7kkMz@PC2gU0CINIOUXpKPuk5mXqq6gDlRRDKScA0KBZEh@SWIOkPbTd1R/1LsKYbcmsuW@EIsVCktTiyr//wcA"
+"{linenos}←{linenos} ⎕TRACE name","Set/report the current state of tracing for a function","∇ (c d)←DSL skip;a;b
+  a←2×3+4
+  b←(2 3⍴'abcdef')a
+  →NEXT×⍳skip
+  'skipped line'
+ NEXT:c←'one' ⋄ d←'two'
+∇
+0 1 2 3 4 5 ⎕TRACE 'DSL'
+DSL 1","https://tio.run/##SyzI0U2pTMzJT////1FHu4JGskKK5qO2CS7BPgrF2ZkF1onWSVwKColAIaPD0421TYCcJCBHw0jB@FHvFvXEpOSU1DR1zUSg@KO2SX6uESGHpz/q3QzSCxRSB9EFqSkKOZl5qepcCiB5q2SgfvV8IF/hUXeLQgqIV1Ker84FtJ/LQMFQAWi0gomCqcKjvqkhQY7OrgrqQNeoc4GcZPj/PwA"
+"{tn}←file ⎕NTIE tn {file_mode}","Tie a file with number tn in the specified mode (tn 0 to generate tn)","'abc'⎕NPUT'file.txt'
+tn ← 'file.txt'⎕NTIE 0
+⎕← ⎕NSIZE tn","https://tio.run/##SyzI0U2pTMzJT///Xz0xKVn9Ud9Uv4DQEPW0zJxUvZKKEnWukjyFR20TFBAiICUhnq4KBlxAFkgKJBDsGeWqUJL3/z8A"
+"{tn}←file ⎕FCOPY tn {pn}","Create copy of named file tied to tn (pn is optional passnumber)","tnA ← 'fileA' ⎕FCREATE 0
+tnB ← 'fileB' ⎕FCOPY tnA
+⎕← (⎕NINFO⍠1)'*.dcf'","https://tio.run/##SyzI0U2pTMzJT///vyTPUeFR2wQF9bTMnFRHdYVHfVPdnINcHUNcFQy4SvKcEJJOUEn/gEgFoC4uIAckpwGk/Tz93Pwf9S4w1FTX0ktJTlP//x8A"
+"{tn}←file ⎕FCREATE tn {64}","Create new component in file tied with number tn","'fileA' ⎕FCREATE 0
+'fileB' ⎕FCREATE 0
+⎕← (⎕NINFO⍠1)'*.dcf'","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUV3hUd9UN@cgV8cQVwUDLrCgE5ogkPOobYKCBpD28/Rz83/Uu8BQU11LLyU5Tf3/fwA"
+"{tn}←file ⎕FERASE tn {pn}","Erase exclusively-tied file tied with number tn (pn is optional passnumber)","tnA ← 'fileA' ⎕FCREATE 0
+tnB ← 'fileB' ⎕FCREATE 0
+⎕← (⎕NINFO⍠1)'*.dcf'
+'fileB' ⎕FERASE tnB
+⎕← (⎕NINFO⍠1)'*.dcf'","https://tio.run/##SyzI0U2pTMzJT///vyTPUeFR2wQF9bTMnFRHdYVHfVPdnINcHUNcFQy4SvKcEJJOaJJADkhOA0j7efq5@T/qXWCoqa6ll5Kcps6FrMM1yDHYVQFoFl4t//8DAA"
+"{tn}←file ⎕FRENAME tn {pn}","Rename exclusively-tied file tied with number tn (pn is optional passnumber)","tn ← 'fileA' ⎕FCREATE 0
+'fileB' ⎕FRENAME tn
+⎕← (⎕NINFO⍠1)'*.dcf'","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVEd1hUd9U92cg1wdQ1wVDLjAgk4QwSBXP0dfV4WSPC4gD6RDA0j7efq5@T/qXWCoqa6ll5Kcpv7/PwA"
+"{tn}←file ⎕FTIE tn {pn}","Exclusively tie component file with number tn (tn 0 to generate tn, pn is optional passnumber)","'fileA' ⎕FCREATE 0
+⎕FUNTIE 'fileB' ⎕FCREATE 0
+⎕← ⎕FNUMS
+tn← 'fileB' ⎕FTIE 0
+⎕← ⎕FNUMS","https://tio.run/##SyzI0U2pTMzJT///Xz0tMyfVUV3hUd9UN@cgV8cQVwUDLhAn1C/E01UBLO2EKf2obQJYzC/UN5irJA/ERVYK0oqh7v9/AA"
+"{tn}←{bytes} ⎕NRESIZE tn","Resize file tied with number tn to have specified size","tn ← 'file' ⎕FCREATE 0
+(1000⍴1.1)⎕FAPPEND tn
+(1000⍴1.2)⎕FAPPEND tn
+⎕FDROP tn 1
+⎕← ⎕FSIZE 1
+⎕FRESIZE tn
+⎕← ⎕FSIZE 1","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVHWFR31T3ZyDXB1DXBUMuDQMDQwMHvVuMdQz1ARJOAYEuPq5KJTkIckYocmAeC5B/gFAtoIhiAcyHCQY7BnlChFxC3IFcyCqUeX//wcA"
+"(↑⍣≡0∘⎕JSON)Y","Convert JSON to high rank APL array","⎕← (↑⍣≡0∘⎕JSON) '[[[1,2,3],[4,5,6]],[""abc"",""def""]]'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS7@FHnQoNHHTOAgl7B/n6aCurR0dGGOkY6xrE60SY6pjpmsUCGUmJSspKOUkpqmlJsrPr//wA"
+"⎕CT←(0≤1E¯14≤2*¯32)","Max ratio between numbers considered equal when ⎕FR←645","⍝              11111
+⍝     12345678901234
+n ← 1.00000000000001
+m ← 1.00000000001
+⎕← ⎕CT
+⎕← n m=1
+⎕CT ← 0
+⎕← n m=1
+⎕CT ← 1E¯10
+⎕← n m=1","https://tio.run/##SyzI0U2pTMzJT////1HvXAUUYAgCXDBhQyNjE1MzcwtLAxCLK0/hUdsEBUM9A2RgyJWLIQw0oW8qSBBIOYfAOHkKubZgGecQsA4DXBKGrofWG6LK/v8PAA"
+"⎕DCT←(0≤1E¯28≤2*¯32)","Max ratio between numbers considered equal when ⎕FR←1287","⎕DCT ← 1E¯10
+n ← 1.00000000001
+⎕← n=1
+⎕FR ← 1287
+⎕← n=1","https://tio.run/##SyzI0U2pTMzJT////1HfVBfnEIVHbRMUDF0PrTc04MqDcPQM4MCQC6gKJJhnC2a6BUGUGFmYI8n8/w8A"
+"{r}←⎕FX cr/nr/vr/or","Name of fn or op defined from its matrix, nested, vector or object representation (or failing line no)","⎕FX 'r←Foo x' 'r←x x'
+⎕← Foo 42","https://tio.run/##SyzI0U2pTMzJT////1HfVLcIBfWiR20T3PLzFSrUIewKIIsLKAdkKoDETYz@/wcA"
+"{names}←'-' ⎕ED names","Create one or more character matrices (names) in the Editor","⎕← ⎕FX 'r←Foo x' 'r←x x'
+⎕← ⎕FX 'r←Goo x;' 'r←x x'
+⎕← ⎕NL ¯3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlFuEgnoRkO2Wn69QoQ5hVwBZXJhK3EFKrLGr8fNROLTe@P9/AA"
+"{tdno}←{0|1} ⎕TKILL tdno","Kill threads tdno and (default 1 is true) descendants","⎕← ⎕DL&1
+⎕← ⎕DL&1
+⎕← ⎕TNUMS
+⎕TKILL 1
+⎕← ⎕TNUMS","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlIuPmiEXTm6IX6hvMIgf4u3p46OAIfX/PwA"
+"{level}←{level} ⎕LOCK name/ref","Hide source and optionally disallow suspension","∇ r←Foo x
+  r←x x
+∇
+⎕← ≢⎕NR 'Foo'
+⎕LOCK'Foo'
+⎕← ≢⎕NR 'Foo'
+⎕← Foo 42","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJbvn5ChVcCmB2BZAFFOd61DcVyFN41LkIyPILUlAHKlIHifr4O3vDOdiVgERBZpoY/f8PAA"
+"{name/ref}←{name} ⎕NS names","Create (optionally named) namespace copying names into it","b←42
+'a'⎕NS'b'
+⎕← a.b","https://tio.run/##SyzI0U2pTMzJT///P@lR2wQTIy71RPVHfVP9gtWT1LmADKCgQqJe0v//AA"
+"{name/ref}←{name} ⎕NS ref","Create (optionally named) namespace copying contents of ref into it","a←⎕NS⍬
+a.b←42
+'c'⎕NS a
+a.b←100
+⎕← c.b","https://tio.run/##SyzI0U2pTMzJT///P/FR24RHfVP9gh/1ruFK1EsCck2MuNST1cGCColQMUMDAy6gCJClkKyX9P8/AA"
+"r←0(⎕JSON⍠'M')data","Convert JSON text to APL matrix","⎕← 0(⎕JSON⍠'M')'[1,2,3,""abc""]'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMNIAMr2B/v0e9C9R91TXVow11jHSMdZQSk5KVYtW5/v8HAA"
+"r←1(⎕JSON⍠'M')data","Convert APL matrix to JSON text","⎕← 1(⎕JSON⍠'M')2 4⍴0 '' ⍬ 2 1 '' 'abc' 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMNYAMr2B/v0e9C9R91TWNFEwe9W4xUFBXV3jUu0bBSMEQxFRPTEpWVzD5/x8A"
+"r←{tn} (regex ⎕R trans⍠1) text","Replace text selected by case-insensitive regex using trans (optional tn to spool output to native file tied with number tn)","text ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('[aeiou]' '.' ⎕R '\u&' '\l&'⍠1) text  ⍝ uppercase all vowels and lowercase consonants","https://tio.run/##SyzI0U2pTMzJT///vyS1okThUdsEBXUvzzBXF4W0/ArdvMrcggwF9yBHp2CFwtLM5GyF8sSckio9da5HfVNBajXUoxNTM/NLY9UV1PXUFYCiQQrqMaVqQG5Mjpr6o94FhpoKYJMVHvXOVSgtKEgtSk4sTlVIzMlRKMsvT80pVkjMS1HIATIhEsn5ecX5eYl5JcX//wMA"
+"r←{tn} (regex ⎕S trans⍠1) text","Search text for case-insensitive PCRE regex returning trans (optional tn to spool output to native file tied with number tn)","text ← 'JIVED fox-nymph GRABS quick waltz.'
+⎕← ('[aeiou]+' ⎕S '&'⍠1) text  ⍝ all vowels","https://tio.run/##SyzI0U2pTMzJT///vyS1okThUdsEBXUvzzBXF4W0/ArdvMrcggwF9yBHp2CFwtLM5GyF8sSckio9da5HfVNBajXUoxNTM/NLY7XVFYBCwQrqauqPehcYaiqAjVN41DtXITEnR6Esvzw1p/j/fwA"
+"{bytes}←text {encoding {newline}}⎕NPUT file {flags}","Write (overwrite if flags is 1, append if flags is 2) text (vector or vector of vectors) to Unicode file","'Hello' ⎕NPUT 'myfile.txt'
+⎕← ⎕NGET 'myfile.txt'
+(⊂'Hello' 'World') ⎕NPUT 'myfile.txt' 1
+⎕← ⎕NGET 'myfile.txt'
+'Bye' ⎕NPUT 'myfile.txt' 2
+⎕← ⎕NGET 'myfile.txt'","https://tio.run/##SyzI0U2pTMzJT///X90jNScnX13hUd9Uv4DQEAX13Mq0zJxUvZKKEnUuoOCjtglgOXdXNDmNR11NMM3q4flFOSnqmlhNUTDEa466U2UqdusVjPBp/P8fAA"
+"+⍨N","Double: 2×N","⎕← +⍨ 5
+⎕← +⍨ ⍳10
+⎕← +⍨ ¯1 ¯2.5 0 2.5 4.3j1.1
+⎕← +⍨ (3 3⍴⍳9)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H/WuUDDlQuY96t1saIAicmi9IRAb6ZkqGCiASBM94yxDPUMUNRrGCsaPercANVtq/v8PAA"
+"×⍨N","Square: N*2","⎕← ×⍨ 5
+⎕← ×⍨ ⍳10
+⎕← ×⍨ ¯1 ¯2.5 0 2.5 4.3j1.1
+⎕← ×⍨ (3 3⍴⍳9)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT3/Uu0LBlAuF@6h3s6EBqtCh9YZAbKRnqmCgACJN9IyzDPUMURVpGCsYP@rdAtRuqfn/PwA"
+"=⍨Y","Ones, same shape and structure","⎕← 3 3⍴⍳9
+⎕←''
+⎕← =⍨ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwf9W551LvZkgsioq4OZSjYPupdgST//z8A"
+"≠⍨Y","Zeros, same shape and structure","⎕← 3 3⍴⍳9
+⎕←''
+⎕← ≠⍨ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwf9W551LvZkgsioq4OZSg86lzwqHcFkor//wE"
+"1∘+N","Increment: N+1","⎕← 1∘+ 10 20 30
+⎕← 1∘+ ¯10 ¯20 ¯30
+⎕←     (3 3⍴4)
+⎕← 1∘+ (3 3⍴4)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0FYwNFAwMlAwNuBCET20Hih@aL0RiEDIgYCGsYLxo94tJpqoGuDC//8DAA"
+"0∘×N","Zero array of shape, size, and structure of N","⎕←     0∘× 1 2 3 4 5
+⎕←disp 0∘× (8 8) (100 200) (5.3 ¯6)
+⎕←     0∘× 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFEDB41DHj8HQFQwUjBWMFEwVTLogcSAtMTsNCwUJTQcPQwEDByMAAyDLVM1Y4tN5MkwvTHGMF40e9Wx71brb8/x8A"
+"0∘<N","Strictly positive?","⎕← 0∘< 1 2 3 4
+⎕← 0∘< ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMsFEwVDBSMFYw4UIRPLTeCIgNFQxA0v//AwA"
+"0∘≤N","Non-negative?","⎕← 0∘≤ 1 2 3 4
+⎕← 0∘≤ ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS5RMFQwUjBWMGEC0340HojIDZUMAAp@P8fAA"
+"0∘=N","Zero?","⎕← 0∘= 1 2 3 4
+⎕← 0∘= ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMsFUwVDBSMFYw4UIRPLTeCIgNFQxA0v//AwA"
+"0∘≥N","Non-positive?","⎕← 0∘≥ 1 2 3 4
+⎕← 0∘≥ ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS5VMFQwUjBWMGEC0340HojIDZUMAAp@P8fAA"
+"0∘>N","Strictly negative?","⎕← 0∘> 1 2 3 4
+⎕← 0∘> ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMsFMwVDBSMFYw4UIRPLTeCIgNFQxA0v//AwA"
+"0∘≠N","Non-zero?","⎕← 0∘≠ 1 2 3 4
+⎕← 0∘≠ ¯2 ¯1 0 1 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS5QMFQwUjBWMGEC0340HojIDZUMAAp@P8fAA"
+"10∘*N","Common anti-logarithm","⎕← 10∘* 1 2 3 4
+⎕← 10∘* ¯1 ¯2 ¯3 ¯4
+⎕← 10∘* 1.32 1.54 1.75 1.99","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDR51zNBSMFQwUjBWMOFCFT203hCIjYDYGIjRZQ31jI2AhKkJkDA3BRKWlv//AwA"
+"10∘⍟N","Common logarithm","⎕← 10∘⍟ 1 10 100 1000 10000 1e5 1e6
+⎕← 10∘⍟ 132 15454 17501 199999","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDR51zHjUO1/BEMgEIjCGEEAy1RSIzbgw1BobKRiampiaKBiamxoAdVqCwP//AA"
+"⊢/Y","Fast: The last sub-array along the last axis of Y","⎕← ⊢/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← ⊢/ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3SVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B"
+"⊣/Y","Fast: The first sub-array along the last axis of Y","⎕← ⊣/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← ⊣/ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS3WVzBUMFIwVjBRMOWCiKqrQxkKQGCsYPyod8uj3s2WGLJgzQj5//8B"
+"+/N","Sum of N (row-wise)","⎕← +/ 1 2 3 4 5
+⎕←''
+⎕←    3 3⍴⍳9
+⎕←''
+⎕← +/ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09RUMFYwUjBVMFEy5IGLq6lCGAhAYKxg/6t3yqHezJYYsUCtC9v9/AA"
+"Is+/N","Running sum of Is consecutive elements of N","⎕← 2 +/ 2 2 3 2 2
+⎕←''
+⎕←      5 5⍴⍳9
+⎕←''
+⎕← 3 +/ 5 5⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFLT1gYSRgjGI5IKIqqtDGQpgYKpg@qh3y6PezZYY8sYg7Qj5//8B"
+"-/N","Row-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…","⎕← -/ 5 10 15 20 25 30","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR09RVMFQwNFAxNFYwMFIxMFYwN/v8HAA"
+"×/N","Product of N (row-wise)","⎕← ×/ 1 2 3 4 5
+⎕←''
+⎕←    5 5⍴⍳25
+⎕←''
+⎕← ×/ 5 5⍴⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT9dXMFQwUjBWMFEw5YIIqqtDGQpAYKpg@qh3y6PezUaY0iDNSPL//wMA"
+"×/Nv","Area of rectangle with sides Nv","⎕← ×/ 5 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT9dXMFUwNPj/HwA"
+"×/Nv","Volume of box with sides Nv","⎕← ×/ 10 10 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOT9dXMDQAIaP//wE"
+"∨/B","Are any true? (row-wise)","⎕← ∨/ 0 0 0 0 0
+⎕← ∨/ 0 0 0 1 0 0 0
+⎕← ∨/ 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedazQVzCAQS5MUUMsMoYg@P8/AA"
+"∧/Bv","Are all true?","⎕← ∧/ 0 0 0 0 0
+⎕← ∧/ 0 0 0 1 0 0 0
+⎕← ∧/ 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSzXVzCAQS5MUUMsMoYg@P8/AA"
+"⌈/N","Maximum of N","⎕← ⌈/ 58 15 22 80 26 11
+⎕← ⌈/ 0 0 0 1 0 0 0
+⎕←    3 3⍴ 2 1 3 6 5 4 7 9 8
+⎕←''
+⎕← ⌈/ 3 3⍴ 2 1 3 6 5 4 7 9 8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XToK5haKBiaKhgZKVgYKBiZKRgaciHLGoChIYSGyQCBsYLxo94tCkZAKWMFMwVTBRMFcwVLBQuoEnV1FFNwqf7/HwA"
+"⌊/N","Minimum of N","⎕← ⌊/ 58 15 22 80 26 11
+⎕← ⌊/ 0 0 0 1 0 0 0
+⎕←    3 3⍴ 2 1 3 6 5 4 7 9 8
+⎕←''
+⎕← ⌊/ 3 3⍴ 2 1 3 6 5 4 7 9 8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTpK5haKBiaKhgZKVgYKBiZKRgaciHLGoChIYSGyQCBsYLxo94tCkZAKWMFMwVTBRMFcwVLBQuoEnV1FFNwqf7/HwA"
+"÷/N","Alternating product of N","⎕← ÷/ 1 2
+⎕← ÷/ 1 2 3
+⎕← ÷/ 1 2 3 4
+⎕← ÷/ 1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOb9dXMFQw4kLlKhhjCCiYYBFSMP3/HwA"
+"≠/B","Boolean Parity (even number of 1s in vectors)","⎕← ≠/1
+⎕← ≠/1 1
+⎕← ≠/1 1 1
+⎕← ≠/1 0 0 1 0 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS7QN@RC5iigc9EFDIAQRBr@/w8A"
+"1∘/Y","Ensure minimum rank 1 (reshaping scalar into one-element vector)","⎕← ⍴     27
+⎕← ⍴ 1∘/ 27
+⎕← ⍴     27 30 35
+⎕← ⍴ 1∘/ 27 30 35","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAEjcy4kEcNHHTP00cQgqhSMDRSMTbGphcj8/w8A"
+"+⌿N","Sum of N (column-wise)","⎕←    3 3⍴1 2 3
+⎕←''
+⎕← +⌿ 3 3⍴1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFjB@FHvFkMFIwVjLoioujqUoaD9qGc/soL//wE"
+"-⌿N","Column-wise alternating sum: ((N[1]-N[2])+N[3])-N[4]+…","⎕←    5 3⍴3×⍳5
+⎕←''
+⎕← -⌿ 5 3⍴3×⍳5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAwFTB@FHvFuPD0x/1bjblgoirq0MZCrqPevajKvn/HwA"
+"0∘⌿Y","Empty array along first axis","⎕← ⍴     4 3⍴⍳12
+⎕←''
+⎕← ⍴ 0∘⌿ 4 3⍴⍳12","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAETBWMg81HvZkMjLoiUujoXkhqDRx0zHvXsR1b3/z8A"
+"1∘,Y","Preface a column of 1s","⎕← 1∘, 5 6 7 8
+⎕←''
+⎕← 1∘, 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XM0FEwVTBTMFew4IIIqqtzocgaKxg/6t3yqHez5f//AA"
+"X,¨Y","Join corresponding items","⎕← disp  5 6 7 ,¨ 10 11 12
+⎕← disp  5 6 7 ,¨ 15","https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLiCgqmCmYK5gs6hFQqGBgqGhgqGRly45E3//wcA"
+"1∘⍪Y","Preface a row of 1s","⎕← 1∘⍪ 2 3⍴8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XMeNS7SsFIwfhR7xaL//8B"
+"⍪/Yv","Fast: The enclose of the items of Yv (which must be of depth 2) catenated along their first axes","⎕← disp    (9 10) (20 40 60) (4 5)
+⎕← disp ⍪/ (9 10) (20 40 60) (4 5)
+
+⎕← disp    (3 3⍴⍳9) (3 3⍴⍳9)
+⎕← disp ⍪/ (3 3⍴⍳9) (3 3⍴⍳9)","https://tio.run/##SyzI0U2pTMzJT/@vnpJZXKD@qG@qc6R6Slpesfp/IPtR2wQFkLgCEGhYKhgaaCpoGBkomBgomIGYJgqmmlzIyh71rtLHqZAL3UBjBeNHvVse9W621EThYDESl1KF//8B"
+"⍳⍨Nv","Assign ranking based on non-descending scores Nv (ties all get highest ranking of used slots)","⎕← ⍳⍨ 3 3 3 5 8 8 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5@1LtCwRgMTRUsgNDI8P9/AA"
+"0∘∊B","Not all true?","⎕← 0∘∊ 1 1 1 1
+⎕← 0∘∊ 1 1 0 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNTRpWAIgVxYhA0UDP//BwA"
+"1∘∊B","Any true?","⎕← 1∘∊ 0 0 0 0
+⎕← 1∘∊ 0 1 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMH3XMeNTRpWAAgVwYwoZAaPD/PwA"
+"⍸⍨Nv","Assign ranking based on non-descending scores Nv (ties all get lowest ranking of used slots)","⎕← ⍸⍨ 3 3 3 5 8 8 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e541LtCwRgMTRUsgNDI8P9/AA"
+"+\N","Cumulative sum","⎕← +\ 1 1 1 1 1
+⎕← +\ 2 4 6 8 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0YxQMYZALIWakYKJgpmChYGjw/z8A"
+"∨\B","Turn on all 0s after first 1 (indicate all elements except leading 0s)","⎕← ∨\ 0 0 1 0 0 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedayIUTAAQkMoCYT//wMA"
+"∧\B","Turn off all 1s after first 0 (indicate all elements until the first 0)","⎕← ∧\ 1 1 0 0 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedSyPUTAEQgMgBNGG//8DAA"
+"⌈\N","Progressive maxima (row-wise)","⎕← ⌈\ 20 11 47 2 5 300 99","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTEKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A"
+"⌊\N","Progressive minima (row-wise)","⎕← ⌊\ 20 11 47 2 5 300 99","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9XTFKBgZKBgaKpiYKxgpmCoYGxgoWFr@/w8A"
+"<\B","Turn off all 1s after first 1 (indicate only the first 1)","⎕← <\ 0 1 0 1 0 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRsYhQMFAxh@P9/AA"
+"≤\B","Turn on all 0s after first 0 (indicate all elements except the first 0)","⎕← ≤\ 1 0 1 0 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS6JUTBUMIDh//8B"
+"⌈⍀N","Progressive maxima (column-wise)","col←⍪20 11 47 2 5 300 99
+⎕← col, ⌈⍀ col","https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XjU2wBi//8PAA"
+"⌊⍀N","Progressive minima (column-wise)","col←⍪20 11 47 2 5 300 99
+⎕← col, ⌊⍀ col","https://tio.run/##SyzI0U2pTMzJT///Pzk/51HbhEe9q4wMFAwNFUzMFYwUTBWMDQwULC25HvVNBUoqANXoKDzq6XrU2wBi//8PAA"
+"1 1∘⍉Ym","Main diagonal of matrix","⎕←      3 3⍴⍳9
+⎕←''
+⎕←1 1∘⍉ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvlke9my25IMLq6lCGoYLho44Zj3o7kdT8/w8A"
+"⊥⍨Bv","Count of trailing ones","⎕←⊥⍨ 1 0 1 0 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx51LX3Uu0LBUMEAioHw/38A"
+"0∘⊥N","Last major cell of numeric array","⎕← 0∘⊥ ⍳9
+⎕← 0∘⊥ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMHnXMeNS1VOFR72ZLLjQxYwXjR71bQDL//wMA"
+"100∘⊥Jv","Joining date YYYY M D to packed YYYYMMDD integer","⎕← 100∘⊥ 1969 7 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwedcx41LVUwdDSzFLBXMHI8P9/AA"
+"2∘⊥Bv","Integer representation of logical vector Bv","⎕← 2∘⊥ 0 0 1
+⎕← 2∘⊥ 0 1 0
+⎕← 2∘⊥ 0 1 1
+⎕← 2∘⊥ 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMHnXMeNS1VMEACA25MAQNFQywCWKoNAQZ8P8/AA"
+"0 1∘⊤N","Integral and fractional part of positive number","⎕← 0 1∘⊤ 8.75","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwfdcx41LVEwULP3PT/fwA"
+"0 100 100∘⊤Js","Separating packed YYYYMMDD date integer date","⎕← 0 100 100∘⊤ 19690721","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFAwNwPhRx4xHXUsUDC3NLA3MjQz//wcA"
+"{0}Y","Fast: 0 irrespective of Y","⎕← {0} (4 5 6) 'ABC'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWoVNEwUTBXMNBXUHZ2c1f//BwA"
+"+∘-N","Negate real part (“real conjugate”)","⎕← +∘- ¯7J3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H3XM0FU4tN7cy/j/fwA"
+"-∘+N","Mirror complex N across y-axis","⎕← -∘+ ¯7J3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0H3XM0FY4tN7cy/j/fwA"
+"⌽∘⊖Ym","Rotate 180°","⎕←       3 3⍴⍳9
+⎕←''
+⎕←  ⌽∘⊖  3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQgwFjB@FHvlke9my25IOLq6lwwBY969j7qmPGoaxqysv//AQ"
+"Iv⊢⍤/Y","Replicate along last axis of Y (forces / to be a function even with a function on its left)","⎕← 3 1 ¯2 2 / 6 7 8 9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQwVDq03UjBS0FcwUzBXsFCw/P8fAA"
+"Av⊢⍤/Y","Filtering columns of Y according to mask Av (forces / to be a function even with a function on its left)","⎕← 1 0 1 0 1 / 'Heart'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQygWF9B3SM1sahE/f9/AA"
+"Iv⊢⍤⌿Y","Replicate along leading axis of Y (forces ⌿ to be a function even with a function on its left)","mat ← 3 4⍴⍳12
+⎕← 1 0 2 ⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkqGCgYKTwqGe/AlDR//8A"
+"Av⊢⍤⌿Y","Filtering major cells of Y according to mask Av (forces ⌿ to be a function even with a function on its left)","mat ← 3 4⍴⍳12
+⎕← 1 0 1 ⌿ mat","https://tio.run/##SyzI0U2pTMzJT///PzexROFR2wQFYwWTR71bHvVuNjTietQ3FSRkqGAAxI969isAFf3/DwA"
+"Is/∘⍪Yv","Matrix with Is columns, each consisting of Yv","⎕← 4 /∘⍪ 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRMFPQfdcx41LtKwVDBSMH4/38A"
+"Iv⍴∘⊂Y","Array of shape Iv filled with copies of Y","⎕← 2 3 ⍴∘⊂ 'abc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFIwVHvVuedQx41FXk4J6YlKy@v//AA"
+"⊂∘⊃Y","Corner element of a (non-empty) array Y[1;1;1…]","⎕←      3 3⍴ 2 ,/ ⍳9
+⎕←''
+⎕← ⊂∘⊃  3 3⍴ 2 ,/ ⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTAwFjB@FHvFgUjBR19hUe9my25IJLq6lCGwqOupkcdMx51NWOq/f8fAA"
+"Ms×∘⍳Js","Arithmetic progression vector: Js steps of Ms","⎕← (⊂3 3⍴⍳9) ×∘⍳ 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GSsYP@rd8qh3s6WmwuHpjzpmAJkKxv//AwA"
+"⍳∘≢Ym","All row indices of matrix Ym","⎕←     4 3⍴0.25
+⎕← ⍳∘≢ 4 3⍴0.25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwETB@FHvFgM9I1MuqOij3s2POmY86lyEJPf/PwA"
+",∘⍳Jv","All tuples of corresponding elements of ⍳¨Jv (for small Jv of max length 15)","⎕← ,∘⍳ 3 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMeNS7WcFYwez/fwA"
+"C⍳∘⊂Dv","Position of first occurrence of string Dv in list of strings C","⎕← 'lorem' 'ipsum' 'dolor' 'sit' 'amet' ⍳∘⊂  'sit'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUc/KLUnPVFdQzC4pLQXRKPlAESBdnlgDJxNxUIPWod/OjjhmPupoUIOL//wMA"
+"Ms∊∘⍳Js","Is Ms in range 1…Js?","⎕← 27 ∊∘⍳ 50","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMzBUedXQ96pjxqHezgqnB//8A"
+"⍸@⊢B","Replace 1s in Boolean array B with their enumeration","⎕← ⍸@⊢ 1 0 1 1 0 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9e5weNS1SMFQwQCIQSSY/v8fAA"
+"X f⍣¯1⍣≡Y","Limit: apply inverse of X∘f until stable","f← +∘÷
+⎕← 1 f⍣¯1⍣≡ 0","https://tio.run/##SyzI0U2pTMzJT///P@1R2wQF7UcdMw5v53rUNxXEM1RIe9S7@NB6QyD5qHOhgsH//wA"
+"f⍣¯1⍣≡Y","Limit: apply inverse of f until stable","f← 1∘+∘÷
+⎕← f⍣¯1⍣≡ 0","https://tio.run/##SyzI0U2pTMzJT///P@1R2wQFw0cdM7SB@PB2rkd9U0EiaY96Fx9abwgkH3UuVDD4/x8A"
+"Iv⊢⍤\Y","Expand last axis of Y (forces \ to be a function even with a function on its left)","⎕← 3 ¯2 4 \ 7 8
+⎕← 1 0 1 0 1 \ 'Hat'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1IwUYhRMFew4IIKGioYQHGMgrpHYon6//8A"
+"Iv⊢⍤⍀Y","Expand leading axis of Y (forces ⍀ to be a function even with a function on its left)","mat←3 4⍴⍳12
+⎕← 1 0 2 1 ⍀ mat","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFk0e9Wx71bjY04nrUNxUoomCoYKBgBCQf9TYoABX9/w8A"
+"⌽∘⍉Ym","Rotate 90° clockwise","⎕←     3 3⍴⍳9
+⎕← ⌽∘⍉ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPevY@6pjxqLcTSe7/fwA"
+"⍉∘⌽Ym","Rotate 90° counter-clockwise","⎕←     3 3⍴⍳9
+⎕← ⍉∘⌽ 3 3⍴⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRAwFjB@FHvlke9my25oKKPejsfdcx41LMXSe7/fwA"
+"⍉∘⍪Yv","Forming first row of a matrix for later expansion","⎕← ⍴     1 2 3
+⎕← ⍴ ⍉∘⍪ 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAFDBSMFYy4kwUe9nY86ZjzqXQWR@v8fAA"
+"⍉∘⍪Yv","Reshaping vector Yv into a one-row matrix","⎕← ⍴     1 2 3
+⎕← ⍴ ⍉∘⍪ 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RAAFDBSMFYy4kwUe9nY86ZjzqXQWR@v8fAA"
+"A+.×Nv","Summation over subsets of Nv specified by rows of A","⎕← (4 3⍴1 0 1,0 1 1,1 1 1,1 0 0) +.× 3 1 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0TBSMH/VuMVQwUDDUAWIgaQglDRQMNBW09Q5PVzAGipj8/w8A"
+"X∧.=Yv","Comparing vector Yv with rows of array X","m ← ↑'Finn' 'Gary' 'Gary' 'Anna' 'Carl' 'Dana' 'Carl' 'Gary' 'Gary' 'Beau'
+⎕← m
+⎕← m ∧.= 'Gary'","https://tio.run/##SyzI0U2pTMzJT///P1fhUdsEIJ6o7paZl6euoO6eWFSJoBzz8hKBlHNiUQ6QcklE5qGqdEpNLFXnetQ3FWReLpyh8KhjuZ4tVNX//wA"
+"I∊⍨∘⍳Jv","Boolean array of shape Jv with ones in locations Iv (inverse of ⍸Bv)","⎕← 2 4 7 ∊⍨∘⍳ 10","https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgMiA0IDcg4oiK4o2o4oiY4o2zIDEw//8"
+",[⍳2]Y","Merge the leading two axes of Y","⎕← a ← 2 3 4⍴⍳24
+⎕← ⍴ a
+⎕← ,[⍳2] a
+⎕← ⍴ ,[⍳2] a","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hUQYRycaJBeLEADJwgX//wcA"
+"∘.⊢⍨Yv","Square matrix with Yv as rows","⎕← ∘.⊢⍨ 1 2 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S16FHvCgVDBSMFYwWT//8B"
+"∘.⊣⍨Yv","Square matrix with Yv as columns","⎕← ∘.⊣⍨ 1 2 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S1@FHvCgVDBSMFYwWT//8B"
+"Mv⊥⍨∘⍪Nv","Evaluate polynomial with descending coefficients Mv for point(s) Nv","⎕← 3 ¯1 4 ⊥⍨∘⍪ 0 1 2 3  ⍝ f(x) = 3x²-x+4 for x in {0,1,2,3}","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFQ6tN1QwUXjUtfRR74pHHTMe9a5SMFAwVDACSik86p2rkKZRoalgq2BccWiTboW2iUJafpFChUJmnkK1gY6hjpGOce3//wA"
+"Cv⎕NPUT⍨∘⊂Dv","Write text (vector or vector of vectors) Dv to Unicode file Cv","'myfile.txt' (⎕NPUT⍨∘⊂) 'Hello' 'World'
+⎕← ⎕NGET 'myfile.txt'","https://tio.run/##SyzI0U2pTMzJT///Xz23Mi0zJ1WvpKJEXUHjUd9Uv4DQkEe9Kx51zHjU1aSpoO6RmpOTr66gHp5flJOizgVU8ahtggJIobtriAKy9v//AQ"
+"M(⌊÷)N","Floored division","⎕← ¯10 10 ¯10 10 (⌊÷) ¯3 ¯3 3 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTc0UAAiGK3xqKfr8HZNIN8YjIHw/38A"
+"(¯1*~)B","Map 0/1 to ¯1/1","⎕← (¯1*~) 1 0 1 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031KrTVDBUMABiIPn/PwA"
+"(,⍤0)Y","Increment rank by inserting a new dimension after the trailing one","⎕← ⍴ (,⍤0) 'abc'
+⎕← ⍴ (,⍤0) 3 4⍴⎕A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0NB51LvEQFNBPTEpWZ0Li4SxggmQC5Rw/P8fAA"
+"Is(⊃⌽)Yv","Pick item of vector Yv at cyclic offset Is (like ⎕IO←0, default Is:¯1)","⎕← 7 (⊃⌽) 'abcdef'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTMFTQedTU/6tmrqaCemJSckpqm/v8/AA"
+"X(1=⍸)Y","Is Y within the range [ 1⌷X , 2⌷X ) ?","⎕← 1 3 (1=⍸) 0
+⎕← 1 3 (1=⍸) 1
+⎕← 1 3 (1=⍸) 2
+⎕← 1 3 (1=⍸) 3
+⎕← 1 3 (1=⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtH/Xu0FQw4MIiaIhN0AiboDE2QZP//wE"
+"X(1≠⍸)Y","Is Y outside the range [ 1⌷X , 2⌷X ) ?","⎕← 1 3 (1≠⍸) 0
+⎕← 1 3 (1≠⍸) 1
+⎕← 1 3 (1≠⍸) 2
+⎕← 1 3 (1≠⍸) 3
+⎕← 1 3 (1≠⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS541LtDU8GAC6uwIXZhI@zCxtiFTf7/BwA"
+"(↓⍉)Ym","Matrix to vector of column vectors","⎕← (↓⍉) 3 4⍴⍳12","https://tio.run/##ASkA1v9hcGwtZHlhbG9n///ijpXihpAgKOKGk@KNiSkgMyA04o204o2zMTL//w"
+"(⊃⎕NGET)Dv","Read Unicode text file Dv content as simple vector","(⊂'Hello' 'World')⎕NPUT 'myfile.txt'
+⎕← (⊃⎕NGET) 'myfile.txt'","https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6R2pOTr66gnp4flFOirrmo76pfgGhIQrquZVpmTmpeiUVJepcQMFHbRMUgOqbQfLuriGaKAr@/wcA"
+"M(⊢-|)N","Largest whole multiple of M less than or equal to N (N rounded down to closest smaller multiple of M)","⎕← 10 (⊢-|) 9 10 11 19 20 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0HnUt0q3RVLAEcQwNFQwtFYwMFIwM//8HAA"
+"(⌽≡⊢)Dv","Is Dv a palindrome?","⎕← (⌽≡⊢) 'racecar'
+⎕← (⌽≡⊢) 'carrace'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvXsfdS58FHXIk0F9aLE5NTkxCJ1LmySQAmQvPr//wA"
+"(=/⍴)Ym","Is Ym a square matrix?","⎕← (=/⍴) ↑'abc' 'def'
+⎕← (=/⍴) ↑'ab' 'cd'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bPUf9W7RVHjUNlE9MSlZXUE9JTVNnQurLFAyOUX9/38A"
+"Is(*/⍴)Ns","Tetration: ᴺˢIs","⎕← 3 (*/⍴) 2
+⎕← 2 (*/⍴) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFTS09B/1btFUMOKCChnBhUz@/wcA"
+"(⌈⌿|)N","Infinity-norm","⎕← (⌈⌿|) 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0POrZX6OpYKxg8v8/AA"
+"M(=⌿<)N","Is N outside the range ( 1⌷M , 2⌷M ] or ( 2⌷M , 1⌷M ] ?","⎕← 1 3 (=⌿<) 0
+⎕← 1 3 (=⌿<) 1
+⎕← 1 3 (=⌿<) 2
+⎕← 1 3 (=⌿<) 3
+⎕← 1 3 (=⌿<) 4
+⎕← 3 1 (=⌿<) 0
+⎕← 3 1 (=⌿<) 1
+⎕← 3 1 (=⌿<) 2
+⎕← 3 1 (=⌿<) 3
+⎕← 3 1 (=⌿<) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNGwf9ey30VQw4MIiaIhN0AiboDE2QROYoDFQGMMiZEFDbIJG2ASNsQma/P8PAA"
+"M(=⌿≤)N","Is N outside the range [ 1⌷M , 2⌷M ) or [ 2⌷M , 1⌷M ) ?","⎕← 1 3 (=⌿≤) 0
+⎕← 1 3 (=⌿≤) 1
+⎕← 1 3 (=⌿≤) 2
+⎕← 1 3 (=⌿≤) 3
+⎕← 1 3 (=⌿≤) 4
+⎕← 3 1 (=⌿≤) 0
+⎕← 3 1 (=⌿≤) 1
+⎕← 3 1 (=⌿≤) 2
+⎕← 3 1 (=⌿≤) 3
+⎕← 3 1 (=⌿≤) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNGwf9ex/1LlEU8GAC6uwIXZhI@zCxtiFTWDCxkAJLFaiChtiFzbCLmyMXdjk/38A"
+"M(≠⌿<)N","Is N within the range ( 1⌷M , 2⌷M ] or ( 2⌷M , 1⌷M ] ?","⎕← 1 3 (≠⌿<) 0
+⎕← 1 3 (≠⌿<) 1
+⎕← 1 3 (≠⌿<) 2
+⎕← 1 3 (≠⌿<) 3
+⎕← 1 3 (≠⌿<) 4
+⎕← 3 1 (≠⌿<) 0
+⎕← 3 1 (≠⌿<) 1
+⎕← 3 1 (≠⌿<) 2
+⎕← 3 1 (≠⌿<) 3
+⎕← 3 1 (≠⌿<) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNB51LnjUs99GU8GAC6uwIXZhI@zCxtiFTWDCxkAJLFaiChtiFzbCLmyMXdjk/38A"
+"M(≠⌿≤)N","Is N within the range [ 1⌷M , 2⌷M ) or [ 2⌷M , 1⌷M ) ?","⎕← 1 3 (≠⌿≤) 0
+⎕← 1 3 (≠⌿≤) 1
+⎕← 1 3 (≠⌿≤) 2
+⎕← 1 3 (≠⌿≤) 3
+⎕← 1 3 (≠⌿≤) 4
+⎕← 3 1 (≠⌿≤) 0
+⎕← 3 1 (≠⌿≤) 1
+⎕← 3 1 (≠⌿≤) 2
+⎕← 3 1 (≠⌿≤) 3
+⎕← 3 1 (≠⌿≤) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNB51LnjUs/9R5xJNBQMuHBKGuCSMcEkY45IwgUkYA6WwWo4uYYhLwgiXhDEuCZP//wE"
+"Xs(≠⊆⊢)Yv","Split Yv at occurrences of Xs (removes separators and empty segments)","⎕← '/' (≠⊆⊢) 'hello/there/world'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9dUVNB51LnjU1faoa5GmgnpGak5Ovn5JRmpRqn55flFOivr//wA"
+"(¯1+2×⍳)Js","Odd integers from 1 to 2×Js","⎕← (¯1+2×⍳) 5
+⎕← (¯1+2×⍳) 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq031DY6PP1R72ZNBVMubKJm//8DAA"
+"(⍳∘1⍤1)B","Convert permutation matrices in B to permutation vectors","⎕← (⍳∘1⍤1) ↑(1 0 0 0 0)(0 0 0 1 0)(0 1 0 0 0)(0 0 0 0 1)(0 0 1 0 0)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQxw/BR7xJDTYVHbRM1DBUMIFBTA8IwhDANUUWBAhAmWFzz/38A"
+"(0,2×⍳)Js","Even integers from 0 to 2×Js","⎕← (0,2×⍳) 5
+⎕← (0,2×⍳) 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DHSMDk9/1LtZU8GUC1PM7P9/AA"
+"X@(∊∘Y)Z","Replace all occurrences of elements from Y in array Z with X","⎕← 'x'@(∊∘'AEIOU') 'HELLO AND GOODBYE'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK9QdNB51dD3qmKHu6OrpH6quqaDu4erj46/g6Oei4O7v7@IU6ar@/z8A"
+"(⊢≡∪)Y","Are all major cells distinct?","⎕← (⊢≡∪) 'abcd'
+⎕← (⊢≡∪) 'abca'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHKk0F9cSk5BR1Lhwyier//wMA"
+"(∪⍳⊢)Y","Consecutive ids (indices with equal major cells mapping to same index)","⎕← (∪⍳⊢) 2 7 1 8 2 8 1 8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsetS7@VHXIk0FIwVzBUMFCyBtAaL//wcA"
+"(1↓0∘⍕)Js","Show all digits of integer Js (unknown digits as “_”)","⎕← 3.41252E10
+⎕← (1↓0∘⍕) 3.41252E10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSM9UwMjUyNXA0NuKAiGoaP2iYbPOqY8ah3qiaS/P//AA"
+"∘.<⍨∘⍳Js","Upper triangular matrix without diagonal: Js by Js","⎕← ∘.<⍨∘⍳ 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQs3nUuwJIP@rdrGD6/z8A"
+"∘.≤⍨∘⍳Js","Upper triangular matrix with diagonal: Js by Js","⎕← ∘.≤⍨∘⍳ 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S55FHvCiDrUe9mBdP//wE"
+"∘.≥⍨∘⍳Js","Lower triangular matrix with diagonal: Js by Js","⎕← ∘.≥⍨∘⍳ 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQe9S59FHvCiDrUe9mBdP//wE"
+"∘.>⍨∘⍳Js","Lower triangular matrix without diagonal: Js by Js","⎕← ∘.>⍨∘⍳ 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedczQs3vUuwJIP@rdrGD6/z8A"
+"(1=≢∘⍴)Y","Is Y a vector?","⎕← (1=≢∘⍴) 'Hello'
+⎕← (1=≢∘⍴) 'H'
+⎕← (1=≢∘⍴) ''","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUe8WTQV1j9ScnHx1LhySuCTU//8HAA"
+"(⌊1+10∘⍟)J","Number of digits in strictly positive integers in J","⎕← (⌊1+10∘⍟) 1618 1 271828","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GWobGjzqmPGod76mgqGZoYWCoYKRuaGFkcX//wA"
+"(⊢÷+⌿)N","Normalise N so that sum is 1","⎕← (⊢÷+⌿) 3 1 4 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOrxd@1HPfk0FYwVDBRMFw///AQ"
+"(1↑⍨⍤0-)I","Convert permutation vectors in I to permutation matrices","⎕← (1↑⍨⍤0-) 1 4 2 5 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB@1TXzUu@JR7xIDXU0FQwUTBSMFUwXj//8B"
+"Iv(↑⍴∘⊂)Y","Iv copies of Y","⎕← 3 (↑⍴∘⊂) 'abc'","https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgMyAo4oaR4o204oiY4oqCKSAnYWJjJ///"
+"(↑,∘⊂)Y","Increment rank by inserting a new dimension before the leading one","⎕← ⍴ (↑,∘⊂) 'abc'
+⎕← ⍴ (↑,∘⊂) 3 4⍴⎕A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNlHnUceMR11NmgrqiUnJ6ly4ZI0VTIBiQFnH//8B"
+"Xv(⍸-∊⍨)Yv","Indices of items of Yv in right-inclusive intervals with cut-offs Xv","⎕← 'AEIOU' (⍸-∊⍨) 'DYALOG'
+⎕← 2 4 6 (⍸-∊⍨) 1 2 3 4 5 6 7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHV09/UPVFTQe9e7QfdTR9ah3haaCukuko4@/uzoXVJGRgomCGaoSQ6CgMVDYFChh/v8/AA"
+"(1=≢∘∪)Y","Are all major cells of Y identical?","⎕← (1=≢∘∪) 'abc' 'abc' 'abc'
+⎕← (1=≢∘∪) 'abc' 'abc' 'abd'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUccqTQX1xKRkdWSSixhlKer//wMA"
+"M(⌊∘-⍣2)N","Force numbers N to range (-M)≤N≤M","⎕← 3 (⌊∘-⍣2) 0 1 ¯2 4 ¯5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFTQe9XQ96pih@6h3sZGmgoGCocKh9UYKJkDS9P9/AA"
+"(∧\<⊢)B","Turn off all 1s before first 0 (remove leading 1s)","⎕← (∧\<⊢) 1 1 0 0 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUsj7F51LVIU8EQCA2AEEQb/v8PAA"
+"(∨\≤⊢)B","Turn on all 0s before first 1 (add leading 0s)","⎕← (∨\≤⊢) 0 0 1 0 0 1 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWsiHnUueRR1yJNBQMgNISSQPj/PwA"
+"(⌊0.5+⊢)N","Rounding to nearest integer (favouring up)","⎕← (⌊0.5+⊢) 31.4 1.5 92.6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvV0GeiZaj/qWqSpYGyoZ6JgqGeqYGmkZ/b/PwA"
+"Mv(1⊥∘|-)Nv","Manhattan distance between two points in N-space","⎕← 0 0 ¯1 1 (1⊥∘|-) 0 3 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgPDQekMFQwUNw0ddSx91zKjR1QSKGYNk/v8HAA"
+"(3600÷⍨60∘⊥)Ns","Convert hours,minutes,seconds to decimal degrees/hours","⎕← (3600÷⍨60∘⊥) 1 15 0","https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKDM2MDDDt@KNqDYw4oiY4oqlKSAxIDE1IDD//w"
+"(¯1⊥¨⍪⍀)N","An array that begins with 1↑N and has pair-wise sums 1↓N","⎕← (¯1⊥¨,\) 3,4 5 5 6
+⎕← 2 +/ (¯1⊥¨,\) 3,4 5 5 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dq03fNS19NAKnRhNBWMdEwVTIDTjgsoaKWjr41Dy/z8A"
+"(1≡≡∧⍬≡⍴)Y","Is Y an object representation (⎕OR)?","Foo←{⍺+⍵}
+⎕←(1≡≡∧⍬≡⍴)⎕NR'Foo'
+⎕←(1≡≡∧⍬≡⍴)⎕OR'Foo'","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhOpHvbu0H/VureV61DcVyNcwfNS5EIQ6lj/qXQNi9G7RBEr5BakDNagTUOUPUfX/PwA"
+"(↑,∘⊂⍤1)Y","Increment rank by inserting a new dimension before the trailing one","⎕← ⍴ (↑,∘⊂⍤1) 2 3 4⍴⎕A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNlHnUceMR11Nj3qXGGoqGCkYK5gAZYBqHP//BwA"
+"X(6≠⍳+3×⍸)Y","Is Y outside the range ( 1⌷X , 2⌷X )","⎕← 1 3 (6≠⍳+3×⍸) 0
+⎕← 1 3 (6≠⍳+3×⍸) 1
+⎕← 1 3 (6≠⍳+3×⍸) 2
+⎕← 1 3 (6≠⍳+3×⍸) 3
+⎕← 1 3 (6≠⍳+3×⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNMwedS541LtZ2/jw9Ee9OzQVDLjwyRrilTXCK2uMV9bk/38A"
+"(×∘*⍨⍣¯1)N","Main branch of the Lambert W function (N≥-*¯1)","⎕← (×∘*⍨⍣¯1) 0 1 (*1) (*1+*1) (2÷⍨*÷2)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dk9/1DFD61Hvike9iw@tN9RUMFAwVNDQAjKAhDaYNjq8HSivdXi7keb//wA"
+"Is(⊃∘⍋⌷⊢)Y","Is-smallest (default: the smallest) major cell of Y","names ← 'Bob' 'Dan' 'Cal' 'Abe'
+⎕← 2 (⊃∘⍋⌷⊢) names
+⎕← (⊃∘⍋⌷⊢) names","https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNRb/ejnu2PuhZpKoA1wxTgkP7/HwA"
+"(⍳∘≢≡⍋)N","Is N Non-decreasing?","⎕← (⍳∘≢≡⍋) 31 41 59 26
+⎕← (⍳∘≢≡⍋) 31 41 59 265
+⎕← (⍳∘≢≡⍋) 27 1828 1828 4590","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/1dmsqGBsqmBgqmFoqGJlxEaPIFLcqI3MFQwsjCwhhYmpp8P8/AA"
+"Is(⊃∘⍒⌷⊢)Y","Is-largest (default: the largest) major cell of Y","names ← 'Bob' 'Dan' 'Cal' 'Abe'
+⎕← 2 (⊃∘⍒⌷⊢) names
+⎕← (⊃∘⍒⌷⊢) names","https://tio.run/##SyzI0U2pTMzJT///Py8xN7VY4VHbBAV1p/wkdQV1l8Q8IOmcmAMkHZNS1bke9U0FSRspaDzqan7UMeNR76RHPdsfdS3SVABrhinAIf3/PwA"
+"(⍳∘≢≡⍒)N","Is N Non-increasing?","⎕← (⍳∘≢≡⍒) 314 159 265
+⎕← (⍳∘≢≡⍒) 314 159 26 5
+⎕← (⍳∘≢≡⍒) 2700 1828 1828 459","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/1TtJUMDY0UTA0tVQwMjPlIkKRAh5VRuYGBgqGFkYWEMLE1PL/fwA"
+"(××0 60 60⊤3600×|)Ns","Convert decimal degrees/hours to hours,minutes,seconds","⎕← (××0 60 60⊤3600×|) 1.25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0Dk8/PN1AwQyEHnUtMTYzMDg8vUZTwVDPyPT/fwA"
+"Is(⊢+⊣×0=⊢)J","Change all 0s in J into Is","⎕← 10 (⊢+⊣×0=⊢) 3 1 0 2 7 0 0 1 6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDRQ0HnUt0n7UtfjwdANbIFNTwVjBUMFAwUjBHEgaANlm//8DAA"
+"(⊢÷⌈⌿∘|)N","Normalisation by Infinity-norm","⎕← (⊢÷⌈⌿∘|) 3 4","https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpAgKOKKosO34oyI4oy/4oiYfCkgMyA0//8"
+"(⊢⍴⍨¯2↑1 1,⍴)Ym","Increase rank scalar/vector/matrix Ym to 2 (matrix: 1-row if vector, 1-column if scalar)","⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 'a'
+⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 'abc'
+⎕← ⍴ ⎕← (⊢⍴⍨¯2↑1 1,⍴) 2 3⍴'abcdef'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5RgDI1HnUtAnIf9a44tN7oUdtEQwVDHSBfU0E9UZ2LJOVJySRpMFIwBtIgbSmpaer//wMA"
+"(2∘⍴⍴1,⍴∘0)Jv","Diagonal matrix of size Jv (n or m,n)","⎕←(2∘⍴⍴1,⍴∘0) 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSMHnXMeNS7BYgMdUB0xwwDTQXj//8B"
+"(↑∘,∘⊂⍤¯1)Y","Increment rank by inserting a new dimension after the leading one","⎕← ⍴ (↑∘,∘⊂⍤¯1) 2 3 4⍴⎕A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9W5R0HjUNvFRxwwdIH7U1fSod8mh9YaaCkYKxgomQGmgQsf//wE"
+"(+/1=⊢∨⍳)Js","Euler's totient function (fastest up to about 1000)","⎕← (+/1=⊢∨⍳) 1000","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tPUNbR91LXrUseJR72ZNBUMDA4P//wE"
+"(⍳∘≢↑¨⊂)Y","Prefixes","⎕← (⍳∘≢↑¨⊂) 'ABCD'
+⎕← (⍳∘≢↑¨⊂) ⍪'ABCD'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokdtEw@teNTVpKmg7ujk7KLOhUfFo95VEEX//wMA"
+"(2÷⍨⍳+⍸)⍨Nv","Assign ranking based on non-descending scores Nv (ties all get average ranking of used slots)","⎕← (2÷⍨⍳+⍸)⍨ 3 3 3 5 8 8 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lHvZu1HvTs0gUwFYzA0VbAAQiPD//8B"
+"X(1=4 9⍸⍳+3×⍸)Y","Is Y within the range [ 1⌷X , 2⌷X ]","⎕← 1 3 (1=4 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1=4 9⍸⍳+3×⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtTRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A"
+"X(1=6 9⍸⍳+3×⍸)Y","Is Y within the range ( 1⌷X , 2⌷X ]","⎕← 1 3 (1=6 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1=6 9⍸⍳+3×⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAxtzRQsH/XueNS7Wdv48HQgS1PBgIuQCkOCKowIqjAmqMLk/38A"
+"X(1≠4 9⍸⍳+3×⍸)Y","Is Y outside the range [ 1⌷X , 2⌷X ]","⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1≠4 9⍸⍳+3×⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wUbB81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A"
+"X(1≠6 9⍸⍳+3×⍸)Y","Is Y outside the range ( 1⌷X , 2⌷X ]","⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 0
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 1
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 2
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 3
+⎕← 1 3 (1≠6 9⍸⍳+3×⍸) 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYwVNAwfdS4wU7B81LvjUe9mbePD04EsTQUDLsJqDIlQY0SEGmMi1Jj8/w8A"
+"(1=≢∘∪∘,)Y","Are all elements of simple Y equal?","⎕← (1=≢∘∪∘,) 2 3⍴'a'
+⎕← (1=≢∘∪∘,) 2 3⍴'ab'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DG0fdS561DHjUccqIKmjqWCkYPyod4t6ojoXQSVJ6v//AwA"
+"(+⍀1⍪2≢⌿⊢)Y","Increment on change: Array of same shape as Y beginning with 1 and increasing for each change in adjacent values","⎕← (+⍀1⍪2≢⌿⊢) 'Mississippi'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tB/1Nhg@6l1l9Khz0aOe/Y@6FmkqqPtmFheDUEFBpvr//wA"
+"(⊃∘⎕NGET 1,⍨⊂)Dv","Read Unicode text file Dv content as nested vector","(⊂'Hello' 'World')⎕NPUT 'myfile.txt'
+⎕← (⊃∘⎕NGET 1,⍨⊂) 'myfile.txt'","https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6R2pOTr66gnp4flFOirrmo76pfgGhIQrquZVpmTmpeiUVJepcQMFHbRMUgOqbH3XMAClxdw1RMNR51LsCaIQmiuL//wE"
+"Is{,[⍳⍺]⍵}Y","Merge the leading Is axes of Y","⎕← a ← 2 3 4⍴⍳24
+⎕← ⍴ a
+⎕← ⍴ 1 {,[⍳⍺]⍵} a
+⎕← ⍴ 2 {,[⍳⍺]⍵} a
+⎕← ⍴ 3 {,[⍳⍺]⍵} a","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQSFUCkkYKxgsmj3i2PejcbmXBBpYB8hURkjqFCtU40UMmj3l2xj3q31qLKGuGVNcaQ/f8fAA"
+"((⎕EM⍳32767)⍳⊆)D","Error/interrupt number(s) for message(s) D","⎕←((⎕EM⍳32767)⍳⊆) 'INDEX ERROR' 'VALUE ERROR' 'INTERRUPT' 'TIMEOUT'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzQ0gLSr76PezcZG5mbmmkDGo642TQV1Tz8X1wgF16Ag/yB1BfUwR59QVzjP0y8EyAwNCAGyQzx9Xf1DQ9T//wcA"
+"(⌊1+10⍟|+0∘=)J","Number of digits in integers in J","⎕← (⌊1+10⍟|+0∘=) 1618 0 ¯271828","https://tio.run/##ATgAx/9hcGwtZHlhbG9n///ijpXihpAgKOKMijErMTDijZ98KzDiiJg9KSAxNjE4IDAgwq8yNzE4Mjj//w"
+"X(⍸-⍳≤∘≢⊣)Y","Indices of major cells of Y in right-inclusive intervals with cut-offs X","mat←3 2⍴⍳6
+⎕← mat (⍸-⍳≤∘≢⊣) 3 3
+⎕← mat (⍸-⍳≤∘≢⊣) 3 4","https://tio.run/##SyzI0U2pTMzJT///Pzex5FHbBGMFo0e9Wx71bjbjetQ3FSigABRX0HjUu0MXKPioc8mjjhmPOhc96lqsqWCsYEyMIpP//wE"
+"(+/∘∪⊢∨⍳)Js","Sum of positive divisors of Js","⎕← (+/∘∪⊢∨⍳) 12","https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAgKCsv4oiY4oiq4oqi4oio4o2zKSAxMv//"
+"(⊃∘⍋∘|⊃⊢)Nv","First number with smallest magnitude","⎕← (⊃∘⍋∘|⊃⊢) 3 ¯4 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ai3G0jWgDhdizQVjBUOrTdRMPr/HwA"
+"(⍳∘≢≡⌽∘⍋)N","Is N Strictly Decreasing?","⎕← (⍳∘≢≡⌽∘⍋) 314 159 265
+⎕← (⍳∘≢≡⌽∘⍋) 314 159 26 5
+⎕← (⍳∘≢≡⌽∘⍋) 2700 1828 1828 459","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxe7s1FYwNTRQMTS0VjMxMuYhWqkBQrZG5gYGCoYWRBYQwMbX8/x8A"
+"(⊃∘⍒∘|⊃⊢)Nv","First number with largest magnitude","⎕← (⊃∘⍒∘|⊃⊢) 3 ¯4 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1P@qY8ah3EpCsAXG6FmkqGCscWm@iYPT/PwA"
+"(⍳∘≢≡⌽∘⍒)N","Is N Strictly Increasing?","⎕← (⍳∘≢≡⌽∘⍒) 31 41 59 26
+⎕← (⍳∘≢≡⌽∘⍒) 31 41 59 265
+⎕← (⍳∘≢≡⌽∘⍒) 27 1828 1828 4590","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HvVuftQx41HnokedCx/17AWxeydpKhgbKpgYKphaKhiZcRGv1JSQWiNzBUMLIwsIYWJqafD/PwA"
+"(=∘⌊⍨*∘0.5)N","Indicate which numbers in N are perfect squares.","⎕← (=∘⌊⍨*∘0.5) 1 2 3 4 5 6 7 8 9 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0bB91zHjU0/Wod4UWkGWgZ6qpYKhgpGCsYKJgqmCmYK5goWCpYGjw/z8A"
+"(2=0+.=⍳|⊢)Ns","Is Ns a prime?","⎕← (2=0+.=⍳|⊢) 6
+⎕← (2=0+.=⍳|⊢) 7
+⎕← (2=0+.=⍳|⊢) 8
+⎕← (2=0+.=⍳|⊢) 9
+⎕← (2=0+.=⍳|⊢) 10
+⎕← (2=0+.=⍳|⊢) 11","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jGwNtPVsH/VurnnUtUhTwYwLh4Q5LgkLXBKWuCQMDXDKGP7/DwA"
+"(1⊥∘|-)⍤1⍤1 99⍨Nm","Manhattan distance table for points in N-space (one point per row)","⎕← (1⊥∘|-)⍤1⍤1 99⍨ ⎕← 4 2⍴0 0 0 1 1 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB91LX3UMaNGV/NR7xJDEFawtHzUu0IBqsBEwehR7xYDBRA0BEIw@f8/AA"
+"(↑⍴¨∘'⎕')J","Bar chart","⎕← (↑⍴¨∘'⎕') 3 1 4 1 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVNfNS75dCKRx0z1IFi6poKxgqGCiZAbPr/PwA"
+"(0~⍨∘,∘⍉⊢⌸)Y","Progressive index of (⍳) cyclic uniques (∪) without replacement","⎕← i ← (0~⍨∘,∘⍉⊢⌸) 'abracadabra'
+⎕← 'abracadabra'[i]","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQyFUCkhkHdo94Vjzpm6ADxo97OR12LHvXs0FRQT0wqSkxOTAFR6lxQLSiC0Zmx//8DAA"
+"Mv(2*∘÷⍨1⊥2*⍨-)Nv","Euclidean distance between two points in N-space","⎕← 0 0 0 0 (2*∘÷⍨1⊥2*⍨-) 0 3 4 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMoFDDSOtRx4zD2x/1rjB81LUUyOtdoasJlDBWMFEw@P8fAA"
+"(10⊥∘,∘⍉10∘⊥⍣¯1)Jv","Encode a vector of positive integers as equal-width fields of digits in an integer","⎕← (10⊥∘,∘⍉10∘⊥⍣¯1) 31 1 27 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DA0edS191DFDB4gf9XYCuUAaKNK7@NB6Q00FY0MFQwUjcwWD//8B"
+"M((××∘⌊|)÷)N","Truncated division","⎕← ¯10 10 ¯10 10 ((××∘⌊|)÷) ¯3 ¯3 3 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTc0UAAiGK2hcXj64emPOmY86umq0Ty8XRMoYwzGQPj/PwA"
+"X(<\@(=⍨)⍷)Y","Boolean one at first occurrence of X in Y","⎕← 'fab' (<\@(=⍨)⍷) 3 5⍴'abcdef'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU0xKT1BU0bGIcNGwf9a7QfNS7XVPBWMH0Ue8W9cSk5JTUNPX//wE"
+"(××∘⌊|+1>2||)N","Rounding to nearest odd number (favouring away from 0)","⎕← (××∘⌊|+1>2||) 1.6 2.7 3.1","https://tio.run/##ATQAy/9hcGwtZHlhbG9n///ijpXihpAgKMOXw5fiiJjijIp8KzE@Mnx8KSAxLjYgMi43IDMuMf//"
+"(⊢⊥⍨10*∘⌊1+10∘⍟)Jv","Join digits of strictly positive integers into a single integer","⎕← (10⊥∘∊10∘⊥⍣¯1¨) 31 1 27","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DA0edS191DHjUUcXkAmkgbzexYfWGx5aoalgbKhgqGBk/v8/AA"
+"M((+⌿÷≢)2*⍨-)N","Mean squared error","⎕← 1 2 3 ((+⌿÷≢)2*⍨-) 0.9 2.1 3.1","https://tio.run/##AToAxf9hcGwtZHlhbG9n///ijpXihpAgMSAyIDMgKCgr4oy/w7fiiaIpMirijagtKSAwLjkgMi4xIDMuMf//"
+"(⊃0⎕NINFO⍠1,∘'/*')Dv","List directory Dv (. for current directory)","⎕← (⊃0⎕ninfo⍠1,∘'/*')'/usr'
+⎕← (⊃0⎕ninfo⍠1,∘'/*')'.'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnU1GwDZeZl5afmPehcY6jzqmKGur6Wuqa5fWlykzkVYnZ76//8A"
+"Is(|∘⍳∘≢⊢∘⊂⌸⊢)Y","Distribute major cells of Y into Is (default Is:≢Y) groups as evenly as possible","UnZip ← |∘⍳∘≢⊢∘⊂⌸⊢
+var ← 'abcdef'
+⎕← 1 UnZip var
+⎕← 2 UnZip var
+⎕← 3 UnZip var
+⎕← 4 UnZip var
+⎕← 5 UnZip var
+⎕← 6 UnZip var
+⎕← 7 UnZip var
+⎕← 8 UnZip var
+⎕←   UnZip var","https://tio.run/##SyzI0U2pTMzJT///PzQvKrNA4VHbBIWaRx0zHvVuBpGdix51LQIxupoe9ewAsrnKEovAitQTk5JTUtPUuR71TQXxDRUgBgDlYUJGmELGmEImmEKmmEJmmELmmEIWmEIKCKH//wE"
+"(⊢×∘.<⍨∘⍳∘≢)Mm","Extract the upper triangular part of the matrix Mm without main diagonal","⎕← (⊢×∘.<⍨∘⍳∘≢) 5 5⍴⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMPZtHvSuA9KPezSCyc5GmgqmC6aPeLUABI9P//wE"
+"(⊢×∘.≤⍨∘⍳∘≢)Mm","Extract the upper triangular part of the matrix Mm with main diagonal","⎕← (⊢×∘.≤⍨∘⍳∘≢) 5 5⍴⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMvUedSx71rgCyHvVuBpGdizQVTBVMH/VuAQoYmf7/DwA"
+"(⊢×∘.≥⍨∘⍳∘≢)Mm","Extract the lower triangular part of the matrix Mm with main diagonal","⎕← (⊢×∘.≥⍨∘⍳∘≢) 5 5⍴⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMvUedSx/1rgCyHvVuBpGdizQVTBVMH/VuAQoYmf7/DwA"
+"(⊢×∘.>⍨∘⍳∘≢)Mm","Extract the lower triangular part of the matrix Mm without main diagonal","⎕← (⊢×∘.>⍨∘⍳∘≢) 5 5⍴⍳25","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtOjz9UccMPbtHvSuA9KPezSCyc5GmgqmC6aPeLUABI9P//wE"
+"(⊢≡∘.<⍨∘⍳∘≢)Bm","Is Bm a full upper triangular matrix without diagonal?","⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDD2bR70rgPSj3s0gsnORpgJUjbGC8aPeLYYKaJCLTCMMoKQBOUYgaQaTBuQYAdcMgf//AwA"
+"(⊢≡∘.≤⍨∘⍳∘≢)Bm","Is Bm a full upper triangular matrix with diagonal?","⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDL1HnUse9a4Ash71bgaRnYs0FaCqjBWMH/VuMVRAg1xkG2IAJQ3IMwRJO5g0IM8QuHYI/P8fAA"
+"(⊢≡∘.≥⍨∘⍳∘≢)Bm","Is Bm a full lower triangular matrix with diagonal?","⎕← (⊢≡∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDL1HnUsf9a4Ash71bgaRnYs0FaCqjBWMH/VuMVRAg1xkGWIAhCDtBuQbYgA1BG4U@YYgGfX/PwA"
+"(⊢≡∘.>⍨∘⍳∘≢)Bm","Is Bm a full lower triangular matrix without diagonal?","⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS58FHHDD27R70rgPSj3s0gsnORpgJUjbGC8aPeLYYKaJCLDCMMgBCk2YBcIwygRsANItcIJIP@/wcA"
+"Is(⊣*∘÷⍨1⊥*⍨∘|)N","Is-norm","⎕←2 (⊣*∘÷⍨1⊥*⍨∘|) 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LdZ61DHj8PZHvSsMH3Ut1QLSQH6NpoKxgsn//wA"
+"{⊃,/,¨⊆¨⍵}⍣≡Y","Enlist (∊Y) but keep leaf simple arrays intact","⎕← {⊃,/,¨⊆¨⍵}⍣≡ ('aaa' 'bbb')(('ccc' 'ccc' 'ccc') 'ddd') (⊂'eee')","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH3U16@jrHFrxqKsNSPRurX3Uu/hR50IFDfXExER1BfWkpCR1TQ0N9eTkZCAPQWoqqKekpAApjUddTeqpqanqmv//AwA"
+"(2÷⍨⍋∘⍋+⍒∘⍋∘⌽)Nv","Assign ascending ranking based on scores Nv (ties all get average ranking of used slots)","⎕← (2÷⍨⍋∘⍋+⍒∘⍋∘⌽) 3 3 3 5 8 8 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lFv96OOGUBS@1HvJAgLRPbs1VQwBkNTBQsgNDL8/x8A"
+"(2÷⍨⍋∘⍒+⍒∘⍒∘⌽)Nv","Assign descending ranking based on scores Nv (ties all get average ranking of used slots)","⎕← (2÷⍨⍋∘⍒+⍒∘⍒∘⌽) 3 3 3 5 8 8 21","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jA5vf9S74lFv96OOGY96J2kDMYQFInv2aioYg6GpggUQGhn@/w8A"
+"(2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨Nm","Euclidean distance table for points in N-space (one point per row)","⎕← (2*∘÷⍨1⊥2*⍨-)⍤1⍤1 99⍨ ⎕← 4 2⍴0 0 0 1 1 0 1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0jLQedcw4vP1R7wrDR11LgbzeFbqaj3qXGIKwgqUlkK8AVWuiYPSod4uBAggaAiGY/P8fAA"
+"(↓(⌊/≢¨)↑⍉∘↑)Yv","Merge vectors in Yv alternately (↓⍉↑ that removes trailing elements from longer vectors)","⎕← (↓(⌊/≢¨)↑⍉∘↑) 'Now' 'is' 'the' 'time'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HrVN1njU06X/qHPRoRWaj9omPurtfNQxA8jQVFD3yy9XV1DPLAYSJRmpIDIzN1X9/38A"
+"Cv⎕S{⍵.(1↓Lengths↑¨Offsets↓¨⊂Block)}Dv","Search text for PCRE regex(es) Cv returning vector of vector of capturing groups","⎕← '(\w+) (\d+)' ⎕S{⍵.(1↓Lengths↑¨Offsets↓¨⊂Block)} 'hello 123 456' 'apl 360'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUNWLKtTUVNGJStDXVFYCCwdWPerfqaRg@apvsk5qXXpJR/Kht4qEV/mlpxaklQPbkQysedTU55eQnZ2vWKqhnpObk5CsYGhkrmJiaqSuoJxbkKBibGaj//w8A"
+"('/'@('\'∘=))Dv","Replace backslashes with slashes","⎕← ('/'@('\'∘=)) 'path\to\file'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01PXVHTTUY9Qfdcyw1dRUUC9ILMmIKcmPScvMSVX//x8A"
+"(⊢≡⊢×∘.<⍨∘⍳∘≢)Nm","Is Nm an upper triangular matrix without diagonal?","⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡⊢×∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4aezaPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIRYk5BlDSgGxzkEwAkwZkmwM3AQL//wcA"
+"(⊢≡⊢×∘.≤⍨∘⍳∘≢)Nm","Is Nm an upper triangular matrix with diagonal?","⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (⊢≡⊢×∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4beo84lj3pXAFmPejeDyM5FmgpQpcYKxo96txgqoEEuykwygJIGFJiEZAaYNKDAJLgZEPj/PwA"
+"(⊢≡⊢×∘.≥⍨∘⍳∘≢)Nm","Is Nm a lower triangular matrix with diagonal?","⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡⊢×∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4beo86lj3pXAFmPejeDyM5FmgpQpcYKxo96txgqoEEu8k0yAEKQGQYUmmQANQluHoUmIZn3/z8A"
+"(⊢≡⊢×∘.>⍨∘⍳∘≢)Nm","Is Nm a lower triangular matrix without diagonal?","⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (⊢≡⊢×.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (⊢≡⊢×∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUtetS5EEgenv6oY4ae3aPeFUD6Ue9mENm5SFMBqtBYwfhR7xZDBTTIhcUcwoYYACFIuwFuQ4hwjAHUHLhpFJmDZNr//wA"
+"Is(⊢÷⊣*∘÷⍨1⊥*⍨∘|)N","Normalisation by Is-norm","⎕←2 (⊢÷⊣*∘÷⍨1⊥*⍨∘|) 3 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4wUNB51LTq8/VHXYq1HHTOAjN4Vho@6lmoBaSC/RlPBWMHk/38A"
+"(≢(⊢-⍨1↓⊢,1+⊣)⍸)Bv","Length of subvectors indicated by Bv (Fast ≢¨⊂⍨Bv)","⎕← (≢(⊢-⍨1↓⊢,1+⊣)⍸) 1 0 0 0 1 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnUu0njUtUj3Ue8Kw0dtk4FMHUPtR12LNR/17tBUMFQwAENDCOv/fwA"
+"Mm{,⍤2,[⍳2]1 3 2 4⍉⍺∘.×⍵}Nm","Kronecker product","A ← 2 3⍴1 ¯4 7,¯2 3 3
+B ← 4 4⍴8 ¯9 ¯6 5,1 ¯3 ¯4 7,2 8 ¯8 ¯3,1 2 ¯5 ¯1
+⎕← A {,⍤2,[⍳2]1 3 2 4⍉⍺∘.×⍵} B","https://tio.run/##SyzI0U2pTMzJT///31HhUdsEBSMF40e9WwwVDq03UTDXObQeyFcw5nICy5komADlLIBylkBspmCqA1JnDFVrpACSAWFjoLgRkDYFYkOuR31TQZodFap1HvUuMdKJftS72SjWEGiuEci8zke9ux51zNA7PP1R79ZaBaf//wE"
+"{⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}B","Signal an error if any condition is not met (optional left argument: message on failure)","assert ← {⍺←'assertion failure' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}","https://tio.run/##SyzI0U2pTMzJT///P7G4OLWoROFR2wSF6ke9u4C0OkQoMz9PIS0xM6e0KFVd4VF3i4LBo46uR71brYCqFB71TQ32dPdz9FGwAMsVZ1QCdRrUws0ztTNUMFE4tN6ICypgDBMAAA"
+"(~0∊×∘|≤∘.<⍨∘⍳∘≢)Bm","Is Bm an upper triangular matrix without diagonal?","⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (~0∊×∘|≤∘.<⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ06gwedXQdnv6oY0bNo84lQErP5lHvCiD9qHcziOxcpKkAVWusYPyod4uhAhrkotAoAyhpQIlRSIaASQNKjIIbAoH//wMA"
+"(~0∊×∘|≤∘.≤⍨∘⍳∘≢)Bm","Is Bm an upper triangular matrix with diagonal?","⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 0 1 1 0 0 1
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 1 1 0 0 1 0 0 0
+⎕← (~0∊×∘|≤∘.≤⍨∘⍳∘≢) ⎕← 3 3⍴0 0 1 0 0 0 0 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ06gwedXQdnv6oY0bNo84lQEoPRPWuALIe9W4GkZ2LNBWgqo0VjB/1bjFUQINcFBtmACUNKDMMyRgwaUCZYXBjIPD/fwA"
+"(~0∊×∘|≤∘.≥⍨∘⍳∘≢)Bm","Is Bm a lower triangular matrix with diagonal?","⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (~0∊×∘|≤∘.≥⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ06gwedXQdnv6oY0bNo84lQErvUefSR70rgKxHvZtBZOciTQWoamMF40e9WwwV0CAXRYYZACHIGAPKDTOAGgY3knLDkIz8/x8A"
+"(~0∊×∘|≤∘.>⍨∘⍳∘≢)Bm","Is Bm a lower triangular matrix without diagonal?","⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 1 1 1 1 1 1 1 1
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴1 0 0 1 1 0 1 1 1
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 1 0 0 1 1 0
+⎕← (~0∊×∘|≤∘.>⍨∘⍳∘≢) ⎕← 3 3⍴0 0 0 0 0 0 1 0 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ06gwedXQdnv6oY0bNo84lQErP7lHvCiD9qHcziOxcpKkAVWusYPyod4uhAhrkosAoAyAEGWJAqVEGUKPgBlJqFJKB//8DAA"
+"('[%&\\]'⎕R'\\&')Dv","Escape special characters for transformation pattern of ⎕R and ⎕S","⎕← ('[%&\\]'⎕R'\\&') '\per%cent'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01KNV1WJiYtWB/CD1mBg1dU0F9ZiC1CLV5NS8EvX//wE"
+"(+/∘⊃2⎕NINFO⍠1⍠'Recurse' 1,∘'/*')Dv","Size (in bytes) of all contents in directory Dv (recursively)","⎕← (+/∘⊃2⎕NINFO⍠1⍠'Recurse' 1,∘'/*') '/opt/mdyalog/17.1/64/unicode/Library'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0tPUfdcx41NVsBBTw8/Rz83/Uu8AQiNWDUpNLi4pT1RUMdYAq1PW11DUV1PXzC0r0cyFm6Bua6xnqm5nol@ZlJuenpOr7ZCYVJRZVqv//DwA"
+"⌽@(1(⌽∨⊢)0<\⍤,2>/⊢)⍣≡Nv","Bubble sort","⎕← ⌽@((<\∨1⌽<\)0,2>/⊢)⍣≡ 3 1 4 1 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQe9ex10NCwiXnUscIQyLaJ0TTQMbLTf9S1SPNR7@JHnQsVjBUMFUyA2PT/fwA"
+"((⎕FUNTIE⊢⊢⎕FREAD⍤,¯1+2↓∘⍳/2↑⎕FSIZE)⎕FSTIE∘0)Dv","Read all components from component file Dv","tn ← 'file.dcf' ⎕FCREATE 0
+'abc' ⎕FAPPEND tn
+⎕← ⎕FREAD tn 1","https://tio.run/##SyzI0U2pTMzJT///vyRP4VHbBAX1tMycVL2U5DR1hUd9U92cg1wdQ1wVDLjUE5OSIUKOAQGufi4KJXlcQB5IC0gQqAwkpGD4/z8A"
+"(⍕,{2↑'thstndrd'↓⍨2×⊃⍵⌽∊1 0 8\⊂10↑0,⍳3})Js","Ordinal suffix for positive integer Js","Ord ← ⍕,{2↑'thstndrd'↓⍨2×⊃⍵⌽∊1 0 8\⊂10↑0,⍳3}
+⎕← Ord 0
+⎕← Ord¨⍳121
+⎕← Ord 1000000","https://tio.run/##SyzI0U2pTMzJT///378oReFR2wSFR71TdaqNHrVNVC/JKC7JSylKUX/UNvlR7wqjw9MfdTU/6t36qGfvo44uQwUDBYuYR11NhgZAxQY6j3o3G9dyPeqbCjIEZJgBEufQCqC0oZEhsryhARj8/w8A"
+"(×/({(¯1+⍺*⍵+1)÷⍺-1}⌿2∘dfns.pco))Js","Sum of positive divisors of Js (fast +/∘∪⊢∨⍳)","'pco'⎕CY'dfns'
+⎕← (×/({(¯1+⍺*⍵+1)÷⍺-1}⌿2∘pco)) 12","https://tio.run/##SyzI0U2pTMzJT///X70gOV/9Ud9U50j1lLS8YnUuIPtR2wQFjcPT9TWqNQ6tN9R@1LtL61HvVm1DzcPbgWxdw9pHPfuNHnXMAGrV1FQwNPr/HwA"
+"As{((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵}Bv","Convert bits Bv representing a signed integer of As-endianess (0:big, 1:little) into a number","⎕← 1 {((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵} 64↑1 1
+⎕← 1 {((¯1*⊃)×2⊥⊃≠,)⊖⍣⍺⊢(8÷⍨≢⍵)8⍴⍵} ~64↑1 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFao1NA6tN9R61NWseXi60aOupUDWo84FOpqPuqY96l38qHfXo65FGhaHtz/qXfGoc9Gj3q2aFo96twDpWgUzk0dtEw0VDLmoYlodzLj//wE"
+"(1⌽'$^','\*' '\?' '\W'⎕R'.*' '.' '\\&')Dv","Convert globbing pattern to regex","⎕← (1⌽'$^','\*' '\?' '\W'⎕R'.*' '.' '\\&') 'abc???xyz.d*'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DB/17FVXiVPXUY/RUldQj7EHEeHqQOkgdT2QiB5IIEZNXVNBPTEp2d7evqKySi9FS/3/fwA"
+"Xv(1⊥=)Yv","Count number of trailing elements that are equal between two vectors of equal length","⎕← 'Cloud' (1⊥=) 'Proud'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUnXPyS1PUFTQMH3UttdVUUA8oAvH//wcA"
+"Xv(1⊥≠)Yv","Count number of trailing elements that are unequal between two vectors of equal length","⎕← 'Analyst' (1⊥≠) 'Anatomy'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfMScyqLS9QVNAwfdS191LlAEyxWkp9bqf7/PwA"
+"{⎕CSV ⍵ ⍬ 4 1}Dv","Data matrix and column titles as 2-element vector from CSV (file or vector of vectors), with apparent numbers as numbers","(⊂'42.0' '-1e-3' '+2e+2')⎕NPUT'nums.txt'
+⎕← {,⎕CSV ⍵ ⍬ 2} 'nums.txt'","https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6iZGegbqCuq5hqq4xkNY2StU2Utd81DfVLyA0RD2vNLdYr6SiRJ0LKPKobYJCtQ6Q4RwcpvCodysQr1EwqlVAqPr/HwA"
+"{,⎕CSV ⍵ ⍬ 2}Dv","Numeric vector from text file with one number on each line","(⊂'42.0' '-1e-3' '+2e+2')⎕NPUT'nums.txt'
+⎕← {,⎕CSV ⍵ ⍬ 2} 'nums.txt'","https://tio.run/##SyzI0U2pTMzJT///X@NRV5O6iZGegbqCuq5hqq4xkNY2StU2Utd81DfVLyA0RD2vNLdYr6SiRJ0LKPKobYJCtQ6Q4RwcpvCodysQr1EwqlVAqPr/HwA"
+"Ms{0 ⍺⊤⍵}N","Integer quotient and remainder (new leading length-2 axis) of N divided by Ms","⎕← 3 {0 ⍺⊤⍵} 10 11 12 13","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoNFB717nrUteRR79ZaBUMDBUNDBUMjBUPj//8B"
+"(+/1 1∘⍉)Nm","Matrix Trace: Sum of main diagonal","⎕← A ← 3 3⍴⍳9
+⎕← (+/1 1∘⍉) A","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQcFUCksYLxo94tj3o3W3JBxTW09Q0VDB91zHjU26mp4Pj/PwA"
+"(0∧.=1 1∘⍉)Nm","Is Nm traceless?","⎕← A ← 3 3⍴⍳9
+⎕← (0∧.=1 1∘⍉) A
+⎕← B ← 3 3⍴0 1 2 3
+⎕← (0∧.=1 1∘⍉) B","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQcFUCksYLxo94tj3o3W3JBxTUMHnUs17M1VDB81DHjUW@npoIjTMoJSYuBgqGCkYIxbl1O//8DAA"
+"X{>/⍋⍺⍵}Y","Is X lexically greater than Y?","⎕← 'Anna' {>/⍋⍺⍵} 'Bob'
+⎕← 'Anna' {>/⍋⍺⍵} 'Anna'
+⎕← 'Bob' {>/⍋⍺⍵} 'Anna'
+⎕← 'Anna' {>/⍋⍺⍵} 'Anna '  ⍝ a trailing space comes after no trailing space","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfPyEtUVqu30H/V2P@rd9ah3a62CulN@kjoXXhVgQbgSkHr8KnAaoqCuoPCod65CokJJUWJmTmZeukJxQWJyqkJyfm5qsUJiWklqkUJePprs//8A"
+"X{>/⍒⍺⍵}Y","Is X lexically less than Y?","⎕← 'Anna' {>/⍒⍺⍵} 'Bob'
+⎕← 'Anna' {>/⍒⍺⍵} 'Anna'
+⎕← 'Bob' {>/⍒⍺⍵} 'Anna'
+⎕← 'Anna' {>/⍒⍺⍵} 'Anna '  ⍝ a trailing space comes after no trailing space","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUHfPyEtUVqu30H/VOetS761Hv1loFdaf8JHUuvCrAgnAlIPX4VeA0REFdQeFR71yFRIWSosTMnMy8dIXigsTkVIXk/NzUYoXEtJLUIoW8fDTZ//8B"
+"M{⍵⊤⍨↑⍬⍺}N","Integer quotient and remainder (new leading length-2 axis) of all combinations of an element from N divided by an element from M","⎕← 2 3 4 5 6 {⍵⊤⍨↑⍬⍺} 10","https://tio.run/##ATYAyf9hcGwtZHlhbG9n///ijpXihpAgMiAzIDQgNSA2IHvijbXiiqTijajihpHijazijbp9IDEw//8"
+"Cv{≢⍺⎕S 3⊢⍵}Dv","Count number of matches for PCRE regex Cv in Dv","⎕←'(\w)\1'{≢⍺⎕S⍬⊢⍵}'Mississippi'  ⍝ double-letters","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Q1Yso1YwzVqx91LnrUuwsoGPyod82jLiBna626b2ZxMQgVFGSqKyg86p2rkJJfmpSTqpuTWlKSWlT8/z8A"
+"Bv{⍺⍀⍺⌿⍵}Y","Replacing major cells of Y not satisfying Bv with prototypical cells","⎕← 1 1 0 1 1 1 0 1 {⍺⍀⍺⌿⍵} 'Amazing!'
+⎕← 1 1 0 {⍺⍀⍺⌿⍵} (3 1 4)(2 7 18)(1 6 18)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMgdAATELo6ke9ux71NoDInv2PerfWKqg75iZWZealK6pzoejBVKlhDJQw0dQwUjBXMLTQ1DBUMAPR//8DAA"
+"{1=-/¨⍳2⍴⍵}Jv","Subdiagonal matrix of size Jv (n or m,n)","⎕←{1=-/¨⍳2⍴⍵} 6 7","https://tio.run/##ASoA1f9hcGwtZHlhbG9n///ijpXihpB7MT0tL8Ko4o2zMuKNtOKNtX0gNiA3//8"
+"{¯1=-/¨⍳2⍴⍵}Jv","Superdiagonal matrix of size Jv (n or m,n)","⎕←{¯1=-/¨⍳2⍴⍵} 6 7","https://tio.run/##ASwA0/9hcGwtZHlhbG9n///ijpXihpB7wq8xPS0vwqjijbMy4o204o21fSA2IDf//w"
+"Iv{1@⍵⊢0⍴⍨2⍴⍺}Jv","Adjacency matrix of size Iv (n or m,n) from list of (a,b) arcs Jv","⎕←4 7 {1@⍵⊢0⍴⍨2⍴⍺} (1 6)(2 7)(3 1)","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wUzBWqDR0e9W591LXI4FHvlke9K4zA1K5aBQ1DBTNNDSMFc00NYwVDzf//AQ"
+"{1≥|-/¨⍳2⍴⍵}Jv","Tridiagonal matrix of size Jv (n or m,n)","⎕←{1≥|-/¨⍳2⍴⍵} 6 7","https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MeKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8"
+"{2≥|-/¨⍳2⍴⍵}Jv","Pentadiagonal matrix of size Jv (n or m,n)","⎕←{2≥|-/¨⍳2⍴⍵} 6 7","https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7MuKJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8"
+"{3≥|-/¨⍳2⍴⍵}Jv","Heptadiagonal matrix of size Jv (n or m,n)","⎕←{3≥|-/¨⍳2⍴⍵} 6 7","https://tio.run/##AS0A0v9hcGwtZHlhbG9n///ijpXihpB7M@KJpXwtL8Ko4o2zMuKNtOKNtX0gNiA3//8"
+"((⌽∨⊖)1∊¨⍳)Jv","All-zero matrix of shape Jv with ones along edges","⎕← ((⌽∨⊖)1∊¨⍳) 4 5","https://tio.run/##AS8A0P9hcGwtZHlhbG9n///ijpXihpAgKCjijL3iiKjiipYpMeKIisKo4o2zKSA0IDX//w"
+"Av{⍵⌷⍨⊂⍒+\⍺}Y","Reverse order of partitions in Y as indicated by Av (Fast ∊⌽Av⊂Yv)","⎕← 1 0 0 0 1 1 0 0 {⍵⌷⍨⊂⍒+\⍺} 'abcd-XYZ'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzA0BDKqn7Uu/VRz/ZHvSsedTU96p2kHfOod1etgnpiUnKKbkRklPr//wA"
+"{⍵/⍨~'  '⍷⍵}Dv","Remove multiple blanks","⎕← {⍵/⍨~'  '⍷⍵} 'If     only I    knew  how to   do   proper word   spacing'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu6JOXUFB/VHvdiC3VkHdM00BBPLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnp6v//AwA"
+"{⎕D[1+⍉10⊥⍣¯1⊢⍵]}Jv","Zero-padded character matrix from vector of integers","⎕← {⎕D[1+⍉10⊥⍣¯1⊢⍵]} 31 0 2718","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqgbRLtKH2o95OQ4NHXUsf9S4@tN7wUdeiR71bY2sVjA0VDBSMzA0t/v8HAA"
+"Is{⍺=-⍨/¨⍳2⍴⍵}Jv","Is-diagonal matrix of size Jv (n or m,n)","⎕←¯2 {⍺=-⍨/¨⍳2⍴⍵} 6 7","https://tio.run/##ATMAzP9hcGwtZHlhbG9n///ijpXihpDCrzIge@KNuj0t4o2oL8Ko4o2zMuKNtOKNtX0gNiA3//8"
+"X{⍵⌿⍨⍺∊⍨⊣/⍵}Ym","Rows of non-empty matrix Y starting with an element in X","m ← ↑'Lorem' 'ipsum' 'dolor' 'sit' 'amet' 'consectetur' 'adipiscing' 'elit'
+⎕← 'aeiou' {⍵⌿⍨⍺∊⍨⊣/⍵} m","https://tio.run/##SyzI0U2pTMzJT///P1fhUdsEIJ6o7pNflJqrrqCeWVBcCqJT8nPyi4B0cWYJkEzMTQVRyfl5xanJJaklpSCpxJTMgszi5My8dCAnNQeokOtR31SQgeqJqZn5peoK1Y96tz7q2f@od8Wj3l2POrpAjK7F@kDRWoXc//8B"
+"Iv{⍵⌷⍨⊂⍺∪⍳≢⍵}Y","Move major cells at positions Iv to the front/top","⎕← 3 2 {⍵⌷⍨⊂⍺∪⍳≢⍵} 'Hello'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFYwUqh/1bn3Us/1R74pHXU2Penc96lj1qHfzo85FQPFaBXWP1JycfPX//wE"
+"Av{≠\⍵\⍺≠¯1↓0,⍺}Bv","Compression vector Av for partitioned array indicated by Bv (Fast Av/⍨≢¨⊆⍨Bv)","⎕← 1 0 1 0 {≠\⍵\⍺≠¯1↓0,⍺} 1 0 0 1 0 1 0 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAuPpR54KYR71bgXgXkHloveGjtskGOkBeLVjeAK4SiP//BwA"
+"Av{⍵[⍋⍺++\⍺]}Bv","1-rotate on each subvector of Bv indicated by Av (Fast ∊1⌽¨Av⊂Bv)","⎕← 1 0 0 0 1 0 0 {⍵[⍋⍺++\⍺]} 'abcdEFG'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXP@rdGv2ot/tR7y5t7RggGVuroJ6YlJzi6uau/v8/AA"
+"{⍵/⍨' '∨.≠⍵}Dm","Remove blank columns","⎕← mat ← 2 8⍴' 2   a     a a  '
+⎕← {⍵/⍨' '∨.≠⍵} mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLSRgsWj3i3qQFpBIVFBAUwCaXUuqLrqR71b9R/1rlBXUH/UsULvUecCoEAtSPv//wA"
+"{⍵⌿⍨⍵∨.≠' '}Dm","Remove blank rows","⎕← mat ← 8 2⍴'  2    a  aa    '
+⎕← '--'
+⎕← {⍵⌿⍨⍵∨.≠' '} mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLSFgtGj3i3qCgpGCkCQCESJIIY6F1Sduq4unF39qHfro579j3pXgBgdK/QedS5QV1CvBRn2/z8A"
+"(∪(⌿⍨)1≠⊢∘≢⌸)Y","Non-unique major cells","⎕← (∪(⌿⍨)1≠⊢∘≢⌸) 'abracadabra!'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0HnWs0njUs/9R7wpNw0edCx51LXrUMeNR56JHPTs0FdQTk4oSkxNTQJSi@v//AA"
+"{n⍪⍉↑⍵⍎¨n←⍵.⎕NL¯2}Ys","Convert namespace of column vectors into table (matrix with names in header row)","⎕← {n⍪⍉↑⍵⍎¨n←⍵.⎕NL¯2} ⎕JSON'{""Age"":[""21"",""32""],""Name"":[""Bob"",""Sally""],""Zipcode"":[""30102"",""43001""]}'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSq8x71rnrU2/mobeKj3q2PevsOrcgDigPZekAVfj6H1hvVKgBZXsH@furVSo7pqUpW0UpGhko6SsZGSrE6Sn6JuWAhp/wkoFhwYk5OJUg4KrMgOT8FLGNsYGhgBJQzMTYwMFSKrVX//x8A"
+"{⍵/⍨2∨/0,' '≠⍵}Dv","Remove leading and multiple blanks","⎕← ( {⍵/⍨2∨/0,' '≠⍵} '      If     only I    knew  how to   do   proper word   spacing    ' ), '.'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FKof9W7Vf9S7wuhRxwp9Ax11BfVHnQuAYrUK6gpg4JkGpvLzcioVPEGs7LzUcgWFjPxyhZJ8IDcFRBQU5RekFimU5xelAHnFBYnJmXnpIMXqCpo6Cup66v//AwA"
+"Cv{⍺⎕S'&'⍠'OM'1⊢⍵}Dv","Find all matches (even overlapping) for regex Cv in Dv","⎕← 'a.' {⍺⎕S'&'⍠'OM'1⊢⍵} 'abaac'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE/XUFaof9e4C8oPV1dQf9S5Q9/dVN3zUtehR79ZaoHxSYmKy@v//AA"
+"Is{⎕A[1+26|⍺-1-⎕A⍳⍵]}D","Caesar's cipher for uppercase D (Is:encryption, -Is:decryption)","⎕← 3 {a[27|⍺+⍵⍳⍨a←27↑⎕A]} 'HELLO'
+⎕← ¯3 {a[27|⍺+⍵⍳⍨a←27↑⎕A]} 'KHOOR'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFaoTo43Max717tJ@1Lv1Ue/mR70rEoEyRuaP2iYCFTnG1iqoe7j6@Pirc0H1HFpPnC5vD3//IPX//wE"
+"{⍵/⍨2∨/0,⍨' '≠⍵}Dv","Remove multiple and trailing blanks","⎕← {⍵/⍨2∨/0,⍨' '≠⍵} '      If     only I    knew  how to   do   proper word   spacing    '","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu8LoUccKfQMdIEtdQf1R5wKgcK2CugIYeKaBqfy8nEoFTxArOy@1XEEhI79coSQfyE0BEQVF@QWpRQrl@UUpQF5xQWJyZl46SLH6//8A"
+"Ms{⍵×⍺÷⍵[⊃⍒|⍵]}Nv","Scale Nv so the maximum element is Ms","⎕←5 {⍵×⍺÷⍵[⊃⍒|⍵]} ¯2 ¯1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE0wVqh/1bj08/VHvrsPbgazoR13Nj3on1QCZsbUKh9YbAbHh//8A"
+"Cv{~⍺'$'⎕S 3⍠'ML'1⊢⍵}Dv","Indicate which lines of Dv have a match for regular expression Cv","⎕← '.o' {~⍺'$'⎕S 3⍠'ML'1⊢⍵} 'Hello' 'world' 'how' 'are' 'you'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTU9fLVFarrHvXuUldRB4oFKxg/6l2g7uujbvioa9Gj3q21CuoeqTk5QFXq5flFOSlAOiO/HEgmFqUCycr8UvX//wE"
+"Is{⊃⍺⎕DT⊢/'-: T.'⎕VFI⍵}Dv","Convert Extended ISO date ('1234-05-06 10:20:30.456' or '1234-05-06T10:20:30.456' or prefix thereof) to ⎕DR type Is","⎕← ⎕VFI '2 -2 ¯2'
+⎕← ',' ⎕VFI '3.9,2.4,,76,'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVJibp4K6kYKukcKh9UbqXFAJdR11uKSxnqWOkZ6Jjo65mY76//8A"
+"{⍵/⍨⌽∨\⌽' '∨.≠⍵}Dm","Remove trailing blank columns","⎕← ( 2 10⍴' 2    a       a a    ' ), '||'
+⎕← ( {⍵/⍨⌽∨\⌽' '∨.≠⍵} 2 10⍴' 2    a       a a    ' ), '||'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0FIwUDA0e9W5RBzKAIFEBAhIhLHUFTR0F9ZoadS64@upHvVv1H/WueNSz91HHihggpa6gDmTpPepcAJSqJdLA//8B"
+"Mv{×11○(⍵-1↓⍺)×+2-/⍺}Ns","Sign (side) of point Ns relative to bisections of complex plane by directed edges of Mv","⎕← 0J¯1 0J1 {×11○(⍵-1↓⍺)×+2-/⍺} 1J0
+⎕← 0J¯1 0J1 {×11○(⍵-1↓⍺)×+2-/⍺} 0J0
+⎕← 0J1 0J¯1 {×11○(⍵-1↓⍺)×+2-/⍺} 1J0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMvA6tNwSShgrVh6cbGj6a3q3xqHerruGjtsmPendpHp6ubaSrD2TVKhh6GXCRrMkAWZMhVCMRNv3/DwA"
+"{⌿∘⍵¨↓⌽⍉2⊥⍣¯1⍳¯1+2*≢⍵}Y","Powerset: All subsets of Y, including the empty set (0⌿Y) but excluding Y itself","⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⍳¯1+2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⍳¯1+2*≢⍵} 3 2⍴'AaBbCc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qHczkNQ20nrUuQioplZB3dHJ2UWdi0zdxgpGj3q3qDsmOiU5J6v//w8A"
+"Av{⍵/⍨(+\⍵=⊃⍵)∊⍸⍺}Dv","Compress delimited string Dv (where the first character is the delimiter) using compression vector Av","⎕← 1 0 1 {⍵/⍨(+\⍵=⊃⍵)∊⍸⍺} '/here/be/dragons'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQyAuPpR71b9R70rNLRjgCzbR13NQErzUUfXo94dj3p31Sqo62ekFqXqJ6XqpxQlpufnFav//w8A"
+"{⍵(⊢⍪∘.⍎)(⊃⍵).⎕NL¯2}Yv","Convert vector of record namespaces into table (matrix with names in header row)","⎕← {⍵(⊢⍪∘.⍎)(⊃⍵).⎕NL¯2} ⎕JSON'[{""Age"":""21"",""Name"":""Bob"",""Zipcode"":""30102""},{""Age"":""32"",""Name"":""Sally"",""Zipcode"":""43001""}]'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1XjUtehR76pHHTP0HvX2aQK5zUBRTT2gEj@fQ@uNahWALK9gfz/16Golx/RUJSslI0MlHSW/xFwQ2yk/CciJyixIzk8B8Y0NDA2MlGp1YGqNjRBqgxNzcipRVJsYGxgYKtXGqv//DwA"
+"{0⎕NCREATE⍠'Unique'1⍨(739⌶0),'/',⍵}Dv","Create and tie temporary file with pattern Dv (returns tie number)","⎕← tn ← {0⎕NCREATE⍠'Unique'1⍨(739⌶0),'/',⍵} '_.tmp'
+⎕← ⊃⎕NINFO tn","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRK8hRAVLUBkO/nHOTqGOL6qHeBemheZmFpqrrho94VGubGlo96thlo6qjrq@s86t1aq6Aer1eSW6DOBTXjUVczSLenn5s/0Lz//wE"
+"{⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢⍳¯2+2*≢⍵}Y","Powerset: All subsets of Y, excluding the empty set (0⌿Y) and Y itself","⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢⍳¯2+2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢⍳¯2+2*≢⍵} 3 2⍴'AaBbCc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qGvRo97Nh9YbaRtpPeoEsrfWKqg7Ojm7qHORb4CxgtGj3i3qjolOSc7J6v//AwA"
+"{⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳2*≢⍵}Y","Powerset: All subsets of Y, including the empty set (0⌿Y) and Y itself","⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳2*≢⍵} 3 2⍴'AaBbCc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qGsRkNR@1LvZSOtR5yKgsloFdUcnZxd1LvINMFYwetS7Rd0x0SnJOVn9/38A"
+"{(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵}Yv","Mesh major cells of elements of Yv","⎕← {(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵} 'abc'⎕D'ABCDEF'
+⎕← {(⊂⍋∊⍳∘≢¨⍵)⌷⊃⍪/⍵} (4 2⍴'aabbccdd')(2 2⍴'AABB')","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqNR51NT3q7X7U0fWod/OjjhmPOhcdWvGod6vmo57tj7qaH/Wu0gfyahXUE5OS1YGaXNQdnZxdXN3UuUg1QcNEwehR7xb1xMSkpOTklBR1TQ0jiIijo5OTuub//wA"
+"{⍵↓⍨-+/∧\⌽⍵∧.=' '}Dm","Remove trailing blank rows","⎕← mat ← 10 2⍴'  2    a  aa        '
+⎕← '--'
+⎕← {⍵↓⍨-+/∧\⌽⍵∧.=' '} mat","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExRyE0sUQLShgYLRo94t6goKRgpAkAhEiQpQoM4FVayuqwtnVz/q3fqobfKj3hW62vqPOpbHPOrZCxLqWK5nq66gXgsy@f9/AA"
+"{⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳¯1+2*≢⍵}Y","Powerset: All subsets of Y, excluding the empty set (0⌿Y) but including Y itself","⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳¯1+2*≢⍵} 'ABCD'
+⎕← {⌿∘⍵¨↓⌽⍉2⊥⍣¯1⊢¯1+⍳¯1+2*≢⍵} 3 2⍴'AaBbCc'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Xsf9Qx41Hv1kMrHrVNftSz91Fvp9GjrqWPehcfWm/4qGsRkNR@1LsZRBlpPepcBFRaq6Du6OTsos5FmSHGCkaPereoOyY6JTknq///DwA"
+"{⍵/⍨(∨\∧∘⌽∨\∘⌽)' '≠⍵}Dv","Remove leading and trailing blanks","⎕← {⍵/⍨(∨\∧∘⌽∨\∘⌽)' '≠⍵} '      If     only I    knew  how to   do   proper word   spacing    '","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1X/Uu0LjUceKmEcdyx91zHjUsxfCAbE01RXUH3UuAKqqVVBXAAPPNDCVn5dTqeAJYmXnpZYrKGTklyuU5AO5KSCioCi/ILVIoTy/KAXIKy5ITM7MSwcpVv//HwA"
+"Av{(⍺≤⍵)>b\z<¯1↓1,z←⍵/⍨b←⍵≤⍺}Bv","Cumulative less than or equal scan on each subvector of Bv indicated by Av (Fast ∊≤\¨Av⊂Bv)","⎕← 1 0 0 0 1 0 0 {(⍺≤⍵)>b\z<¯1↓1,z←⍵/⍨b←⍵≤⍺} 1 0 1 0 1 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXazzq3fWoc8mj3q2adkkxVTaH1hs@aptsqFMFVAsU1H/UuyIJwgSr2lUL1gjBQPL/fwA"
+"{⍵+.×⍨*○0J¯2×n÷⍨∘.×⍨¯1+⍳n←≢⍵}Nv","Discrete Fourier Transformation","⎕← {⍵+.×⍨*○0J¯2×n÷⍨∘.×⍨¯1+⍳n←≢⍵} 1 2j¯1 0j¯1 ¯1j2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/Vu1dY7PP1R7wqtR9O7DbwOrTc6PD3v8HagwKOOGRCZQ@sNtR/1bs4DanjUuQioo1bBUMEoCyisYAAmgTjL6P9/AA"
+"{(']'≢⊃⌽⍕⍵)⊣∘⍵.⎕DF⍵.⎕DF⎕NULL}Ys","Is object Ys named?","'named'⎕NS⍬
+anonymous ← ⎕NS⍬
+⎕← {(']'≢⊃⌽⍕⍵)⊣∘⍵.⎕DF⍵.⎕DF⎕NULL} named
+⎕← {(']'≢⊃⌽⍕⍵)⊣∘⍵.⎕DF⍵.⎕DF⎕NULL} anonymous","https://tio.run/##SyzI0U2pTMzJT///Xz0vMTc1Rf1R31S/4Ee9a7gS8/LzKnPzS4sVHrVNUIALAxkgfrWGeqz6o85Fj7qaH/XsfdQ79VHvVs1HXYsfdcwAsvSAqlzcEAyg5lAfn1oFsBWUGQF31v//AA"
+"{n÷⍨⍵+.×⍨*○0J2×n÷⍨∘.×⍨¯1+⍳n←≢⍵}Nv","Inverse Discrete Fourier Transformation","⎕← {n÷⍨⍵+.×⍨*○0J2×n÷⍨∘.×⍨¯1+⍳n←≢⍵} 2 ¯2J¯2 0J¯2 4J4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSq8w5vf9S74lHvVm29w9OBLK1H07sNvIwOT4dKdMyAiB9ab6j9qHdzHlDTo85FQPW1CkYKh9YbeQGxggGYNPEy@f8fAA"
+"{(⎕NS⍬)(⍎⊢⊣)⍕(⊣⌿⍵)'←↓⍉1↓⍵'}Ym","Convert table (matrix with names in header row) into namespace of column vectors","⎕← ⎕JSON {(⎕NS⍬)(⍎⊢⊣)⍕(⊣⌿⍵)'←↓⍉1↓⍵'} 3 3⍴'Name' 'Age' 'Zipcode' 'Bob' '21' '30102' 'Sally' '32' '43001'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlFewv59CtQaQ5Rf8qHeNpsaj3r5HXYsedS3WfNQ7VQNIP@rZ/6h3q6Y6UMOjtsmPejsNwdRW9VoFYwXjR71b1P0Sc1PVFdQd00FkVGZBcn4KiOWUnwQkjQyBhLGBoYERkA5OzMmpBPFBHBNjAwND9f//AQ"
+"Iv{⍺(≥∘(2⊃⊢,-)∧≤∘⊃)⍨-/¨⍳2⍴⍵}Jv","Iv (k or k₁,k₂) band matrix of size Jv (n or m,n)","⎕←1 ¯2 {⍺(≥∘(2⊃⊢,-)∧≤∘⊃)⍨-/¨⍳2⍴⍵} 5 6","https://tio.run/##AVMArP9hcGwtZHlhbG9n///ijpXihpAxIMKvMiB74o26KOKJpeKImCgy4oqD4oqiLC0p4oin4omk4oiY4oqDKeKNqC0vwqjijbMy4o204o21fSA1IDb//w"
+"{⍵ ⍵⍴⍋+\a/(≢a←1↓⌽2/⍳⍵)⍴,∘-⍨1⍵}Js","Number Spiral of order Js","⎕← {⍵ ⍵⍴⍋+\a/(≢a←1↓⌽2/⍳⍵)⍴,∘-⍨1⍵} 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/VuVQDiR71bHvV2a8ck6ms86lyUCJQyfNQ2@VHPXiP9R72bgQo0gSp0HnXM0H3Uu8IQyK9VMP3/HwA"
+"{⌽⊃¨{⍵,⍨⊂1↓+\⊃⍵}⍣(⍵-1)⊂⍵↑1}Js","First Js Catalan numbers (number of ways to nest Js pairs of parentheses)","⎕← {⌽⊃¨{⍵,⍨⊂1↓+\⊃⍵}⍣(⍵-1)⊂⍵↑1} 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqH/XsfdTVfGhF9aPerTqPelc86moyfNQ2WTsGKAoUqn3Uu1gDSOsaagJlgIxHbRMNaxUMDf7/BwA"
+"{r⊣{2|⍵:1+3×⍵ ⋄ ⍵÷2}⍣{1=r,←⍵}⍵⊣r←⍬}Js","Collatz sequence for positive integer Js","⎕← {r⊣{2|⍵:1+3×⍵ ⋄ ⍵÷2}⍣{1=r,←⍵}⍵⊣r←⍬} 27","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqix51La42qnnUu9XKUNv48HQgQ@FRd4sCkD683aj2Ue/iakPbIh2gWqAIkLsVqL4IzFtTq2Bk/v8/AA"
+"Xv{'`\d+`'⎕R(⍕⍺⊃⍨∘⍎1↓¯1↓⍎∘'Match')⍵}Dv","Replace backtick-quoted (e.g. `1`) indices in Dv with elements from Xv","⎕←', ' '!' {'`\d+`'⎕R(⍕⍺⊃⍨∘⍎1↓¯1↓⍎∘'Match')⍵} 'Hello`1`world`2`'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9R1FNQV1BXVFarVE2JStBPUgcJBGo96pz7q3fWoq/lR74pHHTMe9fYZPmqbfGg9iARygELqvoklyRnqmo96t9YqqHuk5uTkJxgmlOcX5aQkGCWo//8PAA"
+"Av{(⍋⍵++\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺}Nv","Grade up in each subvector of Bv indicated by Av (Fast ∊⍋¨Av⊂Nv)","⎕← 1 0 0 0 1 0 0 {(⍋⍵++\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺} 10 20 40 30 ¯5 ¯10 ¯7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXazzq7X7Uu1VbO@ZR764Yo8PTH/V06NcY6ADFNHWBbLDwofWG2o96dwCZtQqGBgpGBgomBgrGBgqH1psCsSGIYf7/PwA"
+"Av{(⍋⍵-⍨+\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺}Nv","Grade down in each subvector of Bv indicated by Av (Fast ∊⍒¨Av⊂Nv)","⎕← 1 0 0 0 1 0 0 {(⍋⍵-⍨+\⍺\2×⌈/|0,⍵)-⌈\⍺\¯1+⍸⍺} 10 20 40 30 ¯5 ¯10 ¯7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXazzq7X7Uu1X3Ue8K7ZhHvbtijA5Pf9TToV9joAMU1tQFssHCh9Ybaj/q3QFk1ioYGigYGSiYGCgYGygcWm8KxIYghvn//wA"
+"Av{(x/⍵)≥(z/1⌽z←⍺/⍨⍺≥z)∧⍺/z←⍵∨x←1⌽⍺}Bv","Less than or equal reduction on each subvector of Bv indicated by Av (Fast ≤/¨Av⊂Bv)","⎕← 1 0 0 0 1 0 0 {(x/⍵)≥(z/1⌽z←⍺/⍨⍺≥z)∧⍺/z←⍵∨x←1⌽⍺} 1 0 1 0 1 1 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFQzAEEJXa1ToP@rdqvmoc6lGlb7ho569VUBFj3p3AUVXACmgeJXmo47lIBGIzNZHHSsqgCyQWqBoLdggCAaS//8DAA"
+"{0=⍵:1 0⍴0 ⋄ ,[⍳2](⍒⍤1∘.=⍨⍳⍵)[;1,1+∇ ⍵-1]}Js","Numeric matrix of all permutations of length Js in lexicographical order","⎕← {0=⍵:1 0⍴0 ⋄ ,[⍳2](⍒⍤1∘.=⍨⍳⍵)[;1,1+∇ ⍵-1]} 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSqDWwf9W61MlQweNS7xUDhUXeLgk70o97NRrEaj3onPepdYvioY4YeUM0KoCBQpWa0taGOofajjnYFIE/XMLZWwfj/fwA"
+"Is{⍋j+(i|⍺)[j←+\⍵]≥+\1-⍵\¯1↓0,i←i-¯1↓0,i←⍸1⌽⍵}Bv","Permutation vector for Is-rotate on each subvector indicated by Bv (Fast ∊Is⌽¨⍵⊂⍳≢Bv)","⎕← p ← 2 {⍋j+(i|⍺)[j←+\⍵]≥+\1-⍵\¯1↓0,i←i-¯1↓0,i←⍸1⌽⍵} 1 0 0 0 0 1 0 0 0
+⎕← 'abcdeABCD'[p]","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQKFECkkUL1o97uLG2NzJpHvbs0o7OAgtoxj3q3xj7qXKodY6gLZMYcWm/4qG2ygU4mUDJTF5n3qHeH4aOevUBFtQqGCgZQCGVxQW1ST0xKTkl1dHJ2UY8uiP3/HwA"
+"'`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match}Dv","Replace backtick-quoted (e.g. `2+3`) expressions with their result","a←3
+⎕← '`(''[^'']*''|[^`])*`'⎕R{⍕⍎1↓¯1↓⍵.Match} 'hello`1+a`world'","https://tio.run/##SyzI0U2pTMzJT///P/FR2wRjrkd9U4G0gnqChrp6dJy6eqyWunpNdFxCrKZWgjpQMqj6Ue/UR719ho/aJh9aDyIf9W7V800sSc6oVVDPSM3JyU8w1E5MKM8vyklR//8fAA"
+"Iv{⊂[2×⍳k](,s,⍪r)⍴⍵↑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)↑⍺-1}Y","Tesselate: Cut Y into tiles of size Iv (padding Y if necessary)","'disp'⎕CY'dfns'
+⎕← disp 2 3 {⊂[2×⍳k](,s,⍪r)⍴⍵↑⍨r×s←⌈R÷r←1+(-k←≢R←⍴⍵)↑⍺-1} 4 5⍴⎕A","https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1LiD7UdsEBZC4gpGCsUL1o66maKPD0x/1bs6O1dAp1nnUu6pI81Hvlke9Wx@1TXzUu6Lo8PRioJZHPR1Bh7cXAVmG2hq62SCRzkVBIAqsVhOseJeuYa2CiYIpSKxvquP//wA"
+"Iv{m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵})¨⍨⍺÷⍨m←×/⍺}Jv","Chinese Remainder Theorem for moduli Iv and desired remainders Jv","⎕← 3 5 7 {m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵})¨⍨⍺÷⍨m←×/⍺} 2 3 2
+⎕← 11 12 13 {m|⍵+.×⍺(⊣×⊢|∘⊃{0=⍵:1 0 ⋄ (⍵∇⍵|⍺)+.×0 1,⍪1,-⌊⍺÷⍵})¨⍨⍺÷⍨m←×/⍺} 10 4 12","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFUwVzBWqc2se9W7V1js8/VHvLo1HXYuBjK5FNY86Zjzqaq42sAVKWhkqGCg86m5R0AByHnW0A0mgnl2aIE0GCoY6j3pXGeroPurpAgoe3g6UrdU8tOJR7wood0Uu0LbD0/WB3FoFI6C1RlxQFxgaKhgaKRga09sRhgYKJkCb//8HAA"
+"X f{⍺⍺ ⍺ ⍵}Y","Apply monadic function taking two-element argument as a dyadic function","Sum ← +/
+⎕← Sum 3 4
+⎕← 3 Sum{⍺⍺ ⍺ ⍵} 4","https://tio.run/##SyzI0U2pTMzJT///P7g0V@FR2wQFbX2uR31TQSyQiLGCCYxrDBKoftS7C4gUIHhrrYLJ//8A"
+"f{⊃⍺⍺/⍵}X Y","Apply dyadic function as a monadic function on a two-element vector of arguments","⎕← 'Hello' ~ 'World'
+⎕← ~{⊃⍺⍺/⍵} 'Hello' 'World'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUPVJzcvLVFeoU1MPzi3JS1LmgEnXVj7qaH/XuAiL9R71ba@Eqoer@/wcA"
+"f{⍵÷⍺⍺ ⍵}N","Normalise to norm given by f equal to 1","⎕← +⌿{⍵÷⍺⍺ ⍵} 3 1 4 1","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0H/Xsr37Uu/Xw9ke9u4BIAciuVTBWMFQwUTD8/x8A"
+"{⊃,/⍪⌿⍵}Ym","Join matrix of matrixes to single matrix","'disp'⎕CY'dfns'
+mat ← 6 6⍴⍳36
+⎕←disp 1 1 0 1 0 0 {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵} mat
+⎕←disp (1 1 0 1 0 0)(1 0 1 0 1 0) {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵} mat","https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B"
+"X f{⍺∘⍺⍺¨⍵}Y","Each-Right: Pair up the entirety of X with each element of Y","⎕←1 2 3 ,{⍺∘⍺⍺¨⍵} 10 20 30","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVjBSMFXSqH/XuetQxA0T27jq04lHv1loFQwMFIwMFY4P//wE"
+"X f{⍺⍺∘⍵¨⍺}Y","Each-Left: Pair up each element of X with the entirety of Y","⎕←1 2 3 ,{⍺⍺∘⍵¨⍺} 10 20 30","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwVjBSMFXSqH/XuAqGOGY96tx5aAWTWKhgaKBgZKBgb/P8PAA"
+"{⍺⍺⍀¯1↓⍵⍪⍨⍺⍺⌿⍬}Y","Exclusive Scan First: scan with identity element as seed value","⎕← +{⍺⍺⍀¯1↓⍵⍪⍨⍺⍺⌿⍬}1 2 3 4 5
+⎕← ×{⍺⍺⍀¯1↓⍵⍪⍨⍺⍺⌿⍬}1 2 3 4 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS0qx/17gKjhkPrDR@1TX7Uu/VR76pHvSug4j37H/WuqTVUMFIwVjBRMOWC6js8nUSN//8DAA"
+"f{⍵⍵ ⍵:⍵ ⋄ ∇⍺⍺ ⍵}g Y","Power: Iterating f on Y until condition g Y is true","⎕← ,∘0 {⍵⍵ ⍵:⍵ ⋄ ∇⍺⍺ ⍵} (7<≢) 1 2 3
+⎕← ,∘0 {⍵⍵ ⍵:⍵ ⋄ ∇⍺⍺ ⍵} (2<≢) 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0HnXMMFCoftS7FYgUgNgKTHe3KDzqaH/UuwuIQKK1ChrmNo86F2kqGCoYKRhzkazbCEn3//8A"
+"X f{c←⍺ ⋄ ⍺⍺{c⊢←c ⍺⍺ ⍵}¨⍵}Yv","Left Scan with initial value: f⍨/⌽(⊂X),Yv with intermediate values","⎕← 10-{c←⍺ ⋄ ⍺⍺{c⊢←c ⍺⍺ ⍵}¨⍵}3 1 4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDXSrk4GMR727FB51tygAaSACCnUtAoomQ/lAamvtoRUg0ljBUMHk/38A"
+"Is(Ms{⍺/[⌈⍺⍺],[⍺⍺]⍵})Y","Is-replicating along new dimension at fractional axis Ms","⎕← 2 (0.5{⍺/[⌈⍺⍺],[⍺⍺]⍵}) 2 3⍴⍳6
+⎕← 2 (2.5{⍺/[⌈⍺⍺],[⍺⍺]⍵}) 2 3⍴⍳6
+⎕← 2 (1.5{⍺/[⌈⍺⍺],[⍺⍺]⍵}) 2 3⍴⍳6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFDQM9EyrH/Xu0o9@1NMBpIEoVicaynjUu7VWE6jI@FHvlke9m824ENqMyNNmSIK2//8B"
+"X f{⍺ ⍺⍺⍤(-⌊/≢∘⍴¨⍺⍵)⊢⍵}Y","Apply f with leading axis agreement","⎕←10 20 30 +{⍺ ⍺⍺⍤(-⌊/≢∘⍴¨⍺⍵)⊢⍵} 3 2 4⍴8/⍳3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEwwNFIwMFIwNFLSrH/XuUgBiMFqiofuop0v/UeeiRx0zHvVuObQCLLxV81HXIiBVq2CsYKRgApSw0H/Uu9n4/38A"
+"Av{↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵}Ym","Partition (⊂) Ym along both axes (Av can be one or two partitioning vectors)","'disp'⎕CY'dfns'
+mat ← 6 6⍴⍳36
+⎕←disp 1 1 0 1 0 0 {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵} mat
+⎕←disp (1 1 0 1 0 0)(1 0 1 0 1 0) {↑(⊢/⊆⍺)⊂¨(⊃⊆⍺)⊂[1]⍵} mat","https://tio.run/##SyzI0U2pTMzJT///Xz0ls7hA/VHfVOdI9ZS0vGJ1rtzEEoVHbRMUzBTMHvVuedS72diMCygPFAIpVTAEQgMwNlCoftQ2UeNR1yL9R11tj3p3aT7qajq0AijQjOBHG8Y@6t1aqwA0FdkUDSRjNDVgTCDWJNHQ//8B"
+"X f{⍺←⍣0 ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}g Y","Under: preprocess (g) argument(s) before applying main function (f), then undo preprocessing","⎕←  +⍨{⍺←⍣0 ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}⍟ 4  ⍝ squaring is doubling under logarithm
+⎕← 3 +{⍺←⍣0 ⋄ ⍵⍵⍣¯1⊢(⍵⍵ ⍺)⍺⍺(⍵⍵ ⍵)}⍟ 4  ⍝ multiplication is summation under logarithm","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQUtB/1rqh@1LsLyHnUu9hA4VF3i8Kj3q1gtPjQesNHXYs0IHyg8C5NkMreXQiRrZq1j3rnK5goANlzFYoLSxOLMvPSFTKLFVLyS5NyQOzSvJTUIgWgpUCpkoxcLqjNxgraVLM3tzSnJLMgJzM5sSQzPw9ke3Fpbi6Eg2b9//8A"
+"I f{⍺⍺{⍺⍺⍣(⍵⍵ ⍵)⊢⍵}⍵⍵⍣⍺⊢⍵}g Y","Power: Iterating f on Y while condition g Y is true but at most I times","⎕← 2 ,∘0 {⍺⍺{⍺⍺⍣(⍵⍵ ⍵)⊢⍵}⍵⍵⍣⍺⊢⍵} (7>≢) 1 2 3
+⎕← 9 ,∘0 {⍺⍺{⍺⍺⍣(⍵⍵ ⍵)⊢⍵}⍵⍵⍣⍺⊢⍵} (7>≢) 1 2 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMFHQedcwwUKh@1LsLiKDUo97FGo96twKRAhBrPupaBKRqISJAOZAKiJCChrndo85FmgqGQJOMuaCGWlLT0P//AQ"
+"f{c←⊃⍵ ⋄ (1↑⍵),⍺⍺{c⊢←c ⍺⍺ ⍵}¨1↓⍵}Yv","Left Scan: f⍨/⌽Yv with intermediate values","⎕← -{c←⊃⍵ ⋄ (11e⍵ ⋄ (,≶≶≶RRRRRRRR	""","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExR0q5OB1KOu5ke9WxUedbcoaBg@apsI5GjqPOrdBURA@a5FQCXJChA@kNpae2gFUNVkEMvQQMFYwVDB5P9/AA"
+"(Xv{⍺⍺(⍵⍵⌷⍨∘⊂⍳)@(∊∘⍺⍺)⍵}Yv)Z","Replacing elements of Z that appear in Xv with the corresponding element from Yv","⎕← ('aeiou' {⍺⍺(⍵⍵⌷⍨∘⊂⍳)@(∊∘⍺⍺)⍵} 'AEIOU') 'education'
+⎕← ('bike' 'car' {⍺⍺(⍵⍵⌷⍨∘⊂⍳)@(∊∘⍺⍺)⍵} 'bicycle' 'automobile') 'ship' 'bike' 'car' 'plane' 'train' 'bike'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ01BNTM/NL1RWqH/XuAiKNR71bQahn@6PeFY86ZjzqanrUu1nTQeNRRxeIC1akCVRRq6Du6OrpH6quqaCemlKanFiSmZ@nzgU3NikzO1VdQT05sYgss5MykyuTc0AmJJaW5OfmJ2UCOUCrijMyC9QVUExXL8hJzAPxSooSM/Ngkv//AwA"
+"mantEexp","Scaled Notation","⎕← 1000 = 1E3
+⎕← 10*23","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMDQwMFGwVDF2NueAiWkbG//8DAA"
+"realJimag","Complex Notation","⎕← ¯1 * 0.5
+⎕← 0J2 * 2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTdU0FIw0DPlggoYeBkBBYz@/wcA"
+"¯","Negative number indicator","⎕← ¯1 + 3
+⎕← 1 - 3","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQOrTdU0FYw5oJyDRV0FYz//wcA"
+"○2","tau (2 pi)","⎕← ○2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQeTe82@v8fAA"
+"f/⍬","Identity element for function f","⎕← +/⍬
+⎕← ×/⍬","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExS09R/1ruGCcg5PB/H@/wcA"
+"]name","Invoke user command 'name'","⎕CY'salt' ⋄ enableSALT","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSuYGAEA"
+"int.frac","Decimal Point","⎕← 1.2 × 3.4","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQM9YwUDk9XMNYz@f8fAA"
+"ns.name","Namespace Member","'a' ⎕NS ⍬
+a.var ← 42
+⎕← a.var","https://tio.run/##SyzI0U2pTMzJT///Xz1RXeFR31S/YIVHvWu4EvXKEosUHrVNUDAx4gIKg1hgsf//AQ"
+"⍬⊤⍬","zero-by-zero numeric matrix","⎕← (0 0⍴0) ≡ ⍬⊤⍬","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQ0DBQMHvVuMdBUeNS5UOFR75pHXUuA5P//AA"
+"1111⌶Jv","Number of Threads","'cmpx'⎕CY'dfns'
+
+a←?100000⍴0
+b←?100000⍴0
+
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'","https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NQOBR7xYDriQ0PhdQNVBIAawz8VHHiiSFR12LFQyB4FHPNgVDdQUsokbq//8DAA"
+"1112⌶Js","Parallel Execution Threshold","'cmpx'⎕CY'dfns'
+
+a←?10000⍴0
+b←?10000⍴0
+
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'
+
+1112⌶10000
+⎕← cmpx'a∨b ⊣ 1111⌶ 1' 'a∨b ⊣ 1111⌶ 2'","https://tio.run/##SyzI0U2pTMzJT///Xz05t6BC/VHfVOdI9ZS0vGJ1Lq7ER20T7A0NgOBR7xYDriRULhdQLVBEAawv8VHHiiSFR12LFQyB4FHPNgVDdQUsokZAY4FMIyAbbBKZhvz/DwA"
+"180⌶Dv","Canonical Representation (⎕CR) for methods",":Class c
+∇ Secret
+  ⍝ Shh…
+∇
+:EndClass
+
+⎕← ≢⎕← c.(180⌶) 'Secret'
+⎕← ≢⎕← c.⎕CR 'Secret'","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZ61FHu0JwanJRagmXgsKj3rkKwRkZjxqWgcS5rFzzUsDquLge9U191DZB4VHnIigrWU/D0MLgUc82TQV1iH51bIqADOcguIr//wE"
+"181⌶Y","Unsqueezed Type (⎕DR)","⎕← ⎕DR 1↑1 1000
+⎕← 181⌶ 1↑1 1000","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAlEuQguGjtomGCoYGBgZcUHFDC8NHPduQJP7/BwA"
+"183⌶Dv","Name classes for pieces of function/operator Dv (unofficial)","Avg←+⌿÷≢
+⎕←⎕NR 'Avg'
+⎕←183⌶'Avg'","https://tio.run/##SyzI0U2pTMzJT///37Es/VHbBO1HPfsPb3/UuYjrUd9UIB9I@gUpqAMl1aEihhbGj3q2gUX@/wcA"
+"2031⌶6","List all system primitive code points (unofficial)","⎕← ⎕UCS 2031⌶6","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVKhzsIKRgbHho55tZv//AwA"
+"2031⌶7","List all system function names (unofficial)","⎕← 2031⌶7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDIwNH/VsM///HwA"
+"⎕UCS 0","Null character (NUL)","⎕← 1 ⎕JSON ⎕UCS 0","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPD/PwA"
+"⎕UCS 10","Line Feed (LF)","⎕← 1 ⎕JSON ⎕UCS 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGjw/z8A"
+"⎕UCS 11","Vertical Tab character (VT)","⎕← 1 ⎕JSON ⎕UCS 11","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj4/z8A"
+"⎕UCS 12","Form Feed character (FF)","⎕← 1 ⎕JSON ⎕UCS 12","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj0/z8A"
+"⎕UCS 127","Delete character (DEL)","⎕← 1 ⎕JSON ⎕UCS 127","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGhk/v8/AA"
+"⎕UCS 13","Carriage Return character (CR)","⎕← 1 ⎕JSON ⎕UCS 13","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGj8/z8A"
+"⎕UCS 13 10","Carriage Return-Line Feed pair (CRLF)","⎕← 1 ⎕JSON ⎕UCS 13 10","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGisYGjw/z8A"
+"⎕UCS 26","End-Of-File character (EOF)","⎕← 1 ⎕JSON ⎕UCS 26","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGT2/z8A"
+"⎕UCS 27","Escape character (ESC)","⎕← 1 ⎕JSON ⎕UCS 27","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYGT@/z8A"
+"⎕UCS 7","Bell character (BEL)","⎕← 1 ⎕JSON ⎕UCS 7","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYP7/PwA"
+"⎕UCS 8","Backspace character (BS)","⎕← 1 ⎕JSON ⎕UCS 8","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPH/PwA"
+"⎕UCS 9","Horizontal Tab character (HT)","⎕← 1 ⎕JSON ⎕UCS 9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQMFYAMr2B/PxAd6hysYPn/PwA"
+"⋄","Statement Separator","⎕←'one' ⋄ ⎕←'two'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9Tz81LVFR51tyhA@SXl@er//wMA"
+":If",":If bx ⋄ block ⋄ :AndIf bx│:OrIf bx ⋄ block ⋄ :ElseIf bx│:Else ⋄ block ⋄ :EndIf","∇ r←foo
+  :If 1
+    r←'yes'
+  :EndIf
+  :If 0
+    r←'no'
+  :EndIf
+∇
+⎕← foo","https://tio.run/##SyzI0U2pTMzJT////1FHu0LRo7YJafn5XAoKVp5pCoZAWgEspl6ZWqwOEnXNS/FMg0obIKTz8pFkgQZxPeqbChRXAJr1/z8A"
+":Implements Constructor","Function is a class constructor",":Class c
+    ∇ Ctor
+      :Access public
+      :Implements constructor
+      ⎕←'Hi!'
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIHnW0KziX5BeBOQoKVo7JyalAyYLSpJzMZJigZ25BTmpual4JUFd@XnFJUWkyQsujvqmP2iaoe2QqqsNM5LJyzUsB2/L/P1DazzVcIRkA"
+":Implements Destructor","Function is a class destructor",":Class c
+    ∇ Dtor
+      :Implements destructor
+      ⎕←'Bye!'
+    ∇
+:EndClass","https://tio.run/##SyzI0U2pTMzJT///38o5J7G4WCGZSwEIHnW0K7iU5BeBOQoKVp65BTmpual5JcUKKanFJUWlyQjJR31TH7VNUHeqTFVUh2nmsnLNSwEb@P8/UN7PNVwhGQA"
+"'","Character delimiter","⎕← 'abc'
+⎕← '5' = 5","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUE5OS1blgHFN1BVsF0///AQ"
+"⍝","Comment symbol (disables rest of line)","⎕← 'yes'  ⍝ ⎕← 'no'
+⍝ ⎕← 'also not'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUK1OL1RUUHvXOVYCJ5OWrcyHzE3OK8xXy8kvU//8HAA"
+"⊃83⎕DR 256","Is the current machine big-endian?","⎕← ⊃83⎕DR 256","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedTVbGAPZLkEKRqZm//8DAA"
+"⍺←Y","Default left argument in dfn/dop","root←{      ⍝ ⍺th root
+    ⍺←2     ⍝ default to sqrt
+    ⍵*÷⍺
+}
+⎕←2 root 9
+⎕←root 9","https://tio.run/##SyzI0U2pTMzJT///vyg/v@RR24RqBTB41DsXiHeVZCiAxLkgQruA8kZw6ZTUtMTSnBKFknyF4sIimJqtWoe3A1Vy1XI96psKVg8yQMESyoVw/v8HAA"
+"]name -?","Print help for user command 'name'","⎕CY'salt' ⋄ enableSALT","https://tio.run/##SyzI0U2pTMzJT////1HfVOdI9eLEnBJ1hUfdLQqpeYlJOanBjj4h///HpiUml@QXFSvo2gMA"
+"⎕NL-⍳9","List names of existing members","⎕← ⎕SE.⎕NL-⍳9","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSAVLCrHpD089F91LvZ8v9/AA"
+"name f∘⊢←Y","Modified Assignment (also dfns/dops)","Foo←{
+    a←⍵
+    b←⍵
+
+    Plus←+
+
+    a Plus∘⊢←1
+    b Plus←1
+
+    a b
+}
+⎕←Foo 3","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGouBSBIBLIe9W4Fs5OgbDAnIKe0GMjXhvASIfyOGY@6FgFFDSHqYYoMYYqSuGq5HvVNBQoB7VAw/v8fAA"
+"0(220⌶)Jv","Deserialise Array","⎕←s←1(220⌶)2 2⍴2 7 1 8
+⎕←0(220⌶)s","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4qB2FDDyMjgUc82TSMFo0e9W4wUzBUMFSy4IAoMYJLF//8DAA"
+"0(7162⌶)Dv","Translate JSON name to valid APL name (mangle if necessary)","⎕←0(7162⌶)'abc-xyz'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww0zA3NjB71bNNUT0xK1q2orFL//x8A"
+"1(220⌶)Y","Serialise Array","⎕←s←1(220⌶)2 2⍴2 7 1 8
+⎕←0(220⌶)s","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE4qB2FDDyMjgUc82TSMFo0e9W4wUzBUMFSy4IAoMYJLF//8DAA"
+"1(7162⌶)Dv","Translate possibly mangled APL name to JSON name (demangle if mangled)","⎕←1(7162⌶)'⍙abc⍙45⍙xyz'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEww1zA3NjB71bNNUf9Q7MzEpGUiamAKJisoq9f//AQ"
+"Xv(8⌶)Yv","Inverted Table Index-of (X⍳Y where X and Y are unverted Xv and Yv)","name ← ↑'Abe' 'Bob' 'Bob'
+age ← 31 27 16
+⎕← name age (8⌶) (↑'Bob' 'Abe') (16 31)","https://tio.run/##SyzI0U2pTMzJT///Py8xN1XhUdsEIJ6o7piUqq6g7pSfBCW5EtMhksaGCkbmCoZmXI/6poL4YF0gSQ2LRz3bNBU0QLoh@kBmAAUMzYCaNP//BwA"
+"Is(86⌶)Dv","Execute expression Dv (⍎Dv) but Is frames up the stack (unofficial)","Foo←{Goo ⍬}
+Goo←{1(86⌶)'⍵'}
+⎕←Foo 42","https://tio.run/##SyzI0U2pTMzJT///3y0//1HbhGr3/HyFR71rarncIXxDDQuzRz3bNNUf9W5Vr@V61DcVKApUq2Bi9P8/AA"
+"(name1 name2)←Y","Multiple assignment","(a b)←1 2
+⎕← a+b","https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEQwUjrkd9U4EshUTtpP//AQ"
+"(name1 name2)←name2 name1","Swap variable values","(a b)←5 8
+(a b)←b a
+⎕← a-b","https://tio.run/##SyzI0U2pTMzJT///XyNRIUnzUdsEUwULLhg7SSGR61HfVCBLIVE36f9/AA"
+"2÷¯1+5*÷2","Golden ratio (direct formula)","⎕← 2÷¯1+5*÷2","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMDm8/tN5Q21Tr8Haj//8B"
+"''''","Quote character","⎕← ''''
+⎕← 'can''t'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUgYALxk5OzFNXL1H//x8A"
+"≢⍕!⍋⎕D","Meaning of life (short)","⎕← ≢⍕!⍋⎕D","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExQedS561DtV8VFvN1DA5f9/AA"
+"+∘÷⍣=⍨1","Golden ratio (as a limit)","⎕← +∘÷⍣=⍨1","https://tio.run/##ASMA3P9hcGwtZHlhbG9n///ijpXihpAgK@KImMO34o2jPeKNqDH//w"
+"⍎⌽⍕⌈*○≡⍬","Meaning of life (modern)","⎕← ⍎⌽⍕⌈*○≡⍬","https://tio.run/##ASsA1P9hcGwtZHlhbG9n///ijpXihpAg4o2O4oy94o2V4oyIKuKXi@KJoeKNrP//"
+"'R'∊4⊃#⎕WG'APLVersion'","Is interpreter a runtime?","⎕← 'R'∊4⊃#⎕WG'APLVersion'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExTUg9QfdXSZPOpqVgaKhLurOwb4hKUWFWfm56n//w8A"
+"⍞↓⍨≢⍞←'What? '","Prompt and response on same line","⎕←⍞↓⍨≢⍞←'What? '","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEx71znvUNvlR74pHnYvA7Anq4RmJJfYK6v//l2RkFgMA"
+"'-64'~⍨⊃#⎕WG'APLVersion'","Report Operating System","⎕←'-64'~⍨⊃#⎕WG'APLVersion'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtE9R1zUzU6x71rnjU1awMFAp3V3cM8AlLLSrOzM9T//8fAA"
+"32×1+'4'∊⊃#⎕WG'APLVersion'","Report Interpreter bit-width","⎕← 32×1+'4'∊⊃#⎕WG'APLVersion'","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtExSMjQ5PN9RWN1F/1NH1qKtZGSgc7q7uGOATllpUnJmfp/7/PwA"
+"(⎕NS⍬).(_←enableSALT⊣⎕CY'salt')","Enable SALT when not in session file","(⎕NS⍬).(_←enableSALT⊣⎕CY'salt')","https://tio.run/##SyzI0U2pTMzJT///X@NR31S/4Ee9azT1NOIftU1IzUtMykkNdvQJedS1GCjnHKlenJhToq75/39sSmZxQU5ipcKj3s5HvavUHQN81AE"
+"({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).name","Call function “name” from the dfns workspace without polluting the current workspace","⎕←({⍵⊣⍵.⎕CY'dfns'}⎕NS⍬).cal 1966 11","https://tio.run/##SyzI0U2pTMzJT////1Hf1EdtEzSqH/VufdS1GEjqAUWcI9VT0vKK1WuBbL/gR71rNPWSE3MUDC3NzBQMDf//BwA"
+"⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0","Meaning of life (traditional)","⎕←⍎⊖⍕⊃⊂|⌊-*+○⌈×÷!⌽⍉⌹~⍴⍋⍒,⍟?⍳0","https://tio.run/##AVEArv9hcGwtZHlhbG9n///ijpXihpDijY7iipbijZXiioPiioJ84oyKLSor4peL4oyIw5fDtyHijL3ijYnijLl@4o204o2L4o2SLOKNnz/ijbMw//8"
+"⎕DMX.(OSError{⍵,2⌽(×≢⊃⍬⍴2⌽⍺,⊂'')/'"") (""',⊃⍬⍴2⌽⊆⍺}Message{⍵,⍺,⍨': '/⍨×≢⍺}⊃⍬⍴DM,⊂'')","Construct first line of printed error message (works with any ⎕IO and ⎕ML)","∇ msg←Foo file
+  :Trap 0
+      ⎕NGET file
+  :Else
+      msg←⎕DMX.(OSError{⍵,2⌽(×≢⊃⍬⍴2⌽⍺,⊂'')/'"") (""',3⊃⍺}Message{⍵,⍺,⍨': '/⍨×≢⍺}⊃⍬⍴DM,⊂'')
+  :EndTrap
+∇
+⎕←Foo 'not-here.txt'","https://tio.run/##SyzI0U2pTMzJT////1FHu0Jucfqjtglu@fkKaZk5qVwKClYhRYkFCgZAFgg86pvq5@4aApd0zSlOhUpBdAIVuPhG6Gn4B7sWFeUXVT/q3apj9Khnr8bh6Y86Fz3qan7Uu@ZR7xaQ0KPeXTqPuprU1TX11ZU0FTSU1HWMwQp21fqmFhcnpqeCdYOV9a5Qt1JQ1wfSEHOAauBmufhCjQE7KC8F5GAuoF@4gG6B@kU9L79ENyO1KFWvpKJE/f9/AA"
